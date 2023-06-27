@@ -1,0 +1,51 @@
+#fixed-container {
+    position: fixed;
+    top: 70%;
+    padding: 4%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 998;
+    background-color: var(--black);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#whatsapp-logo {
+    width: 70px;
+    border-radius: 50px;
+}
+
+#fixed-sign-container {
+    color: var(--red);
+    font-size: larger;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 7.5vh;
+}
+
+#sign-arrow {
+    animation: bounce 1s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0% {transform: translateY(0px);}
+    20% {transform: translateY(8px);}
+    100% {transform: translateY(0px);}
+}
+
+#fixed-sign-container:hover #sign-arrow {
+    animation: bouncer .5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bouncer {
+    0% {transform: translateY(0px);}
+    20% {transform: translateY(8px);}
+    100% {transform: translateY(0px);}
+}

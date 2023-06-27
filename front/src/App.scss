@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+
 #app-container {
     --red: rgb(233,30,99);
+    --black: rgb(15,19,35);
+    font-family: 'Alef', sans-serif;
 }
 
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
