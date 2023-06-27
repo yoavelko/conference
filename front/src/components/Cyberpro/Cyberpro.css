@@ -1,0 +1,14 @@
+#cyberpro-container {
+    padding: 10%;
+    line-height: 4.5vh;
+}
+
+.about-show {
+    color: var(--red);
+}
+
+.cyberpro-headers {
+    color: var(--red);
+    font-size: x-large;
+    font-weight: bolder;
+}

@@ -13,7 +13,7 @@ function App() {
   return (
     <div id='app-container'>
       <Routes>
-        <Route path='/' element={<div id='outlet-container'><Header /><Fixed /><Outlet /><Footer /></div>}>
+        <Route path='/' element={<div id='outlet-container'><Header /><Fixed /><div style={{top:'10vh', position:'absolute'}}><Outlet /><Footer /></div></div>}>
           <Route index element={<Homepage />}/>
           <Route path='/cyberpro' element={<Cyberpro />}/>
           <Route path='/contact' element={<Contact />}/>
