@@ -7,6 +7,8 @@ import RegisterForm from "./RegisterForm";
 import Schedule from "./Schedule";
 import Speakers from "./Speakers";
 import Logos from "./logos";
+import Intro from "./Intro";
+
 
 function Homepage({ isNavigating, setIsNavigating }) {
   useEffect(() => {
@@ -17,7 +19,8 @@ function Homepage({ isNavigating, setIsNavigating }) {
   }, []);
   return (
     <div className="homepage-container">
-      <Logos />
+      <Intro />
+      {/* <Logos /> */}
       <InvationSummary />
       <Schedule />
       <Speakers />
