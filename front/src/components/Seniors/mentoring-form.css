@@ -1,0 +1,21 @@
+.logos-mentoring-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.mentoring-form-title{
+    text-align: center;
+    font-size: xx-large;
+}
+.logos-line1{
+    display: grid;
+    grid-template-columns: 20vw  20vw 20vw 20vw;
+    grid-template-rows: 20vw  20vw 20vw 20vw;
+    grid-gap: 1vw;
+}
+.test{
+    height: 20vw;
+    background-color: aqua;
+    border-radius: 50%;
+}
