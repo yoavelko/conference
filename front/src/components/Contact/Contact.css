@@ -5,9 +5,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    line-height: 40px;
 }
 
-#contact-header{
+#contact-row {
+    margin-bottom: 5vh;
+}
+
+#contact-header {
     width: 100%;
     text-align: center;
     color: var(--red);
@@ -40,6 +45,36 @@
     bottom: -2px;
 }
 
+#contact-travel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #contact-travel h1 {
     color: var(--red);
+    text-align: center;
+}
+
+#contact-travel-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width: 500px) {
+    #contact-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #contact-container iframe {
+        width: 70%;
+    }
 }

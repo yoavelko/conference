@@ -38,16 +38,32 @@ exports.status = async (req, res) => {
 
 exports.filterByStatus = async (req, res) => {
     try {
-        const {status} = req.body;
-        if(!(status === 'pending' || status === 'approved' || status === 'disapproved')) {
+        const { status } = req.body;
+        if (!(status === 'pending' || status === 'approved' || status === 'disapproved')) {
             res.status(400).send({ message: 'Status must be pending, approved, disapproved' })
         }
         else {
-            const filter = await Visitor.find({status});
-            res.send({message: 'Filtered by ' + req.body.status, data: filter});
+            const filter = await Visitor.find({ status });
+            res.send({ message: 'Filtered by ' + status, data: filter });
         }
     }
-    catch(err) {
+    catch (err) {
+        res.send(err.message)
+    }
+}
+
+exports.filterByRole = async (req, res) => {
+    try {
+        const { role } = req.body;
+        if(!(role === 'alumni' || role === 'partner')) {
+            res.status(400).send({message: 'Role must be alumni or partner'})
+        }
+        else {
+            const filter = await Visitor.find({role});
+            res.send({message: 'Filtered by ' + role, data: filter})
+        }
+    }
+    catch (err) {
         res.send(err.message)
     }
 }
