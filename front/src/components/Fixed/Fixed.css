@@ -1,6 +1,7 @@
 #fixed-container {
     position: fixed;
     top: 70%;
+    left: 0;
     padding: 4%;
     height: 25vh;
     display: flex;
@@ -8,8 +9,8 @@
     justify-content: space-evenly;
     z-index: 998;
     background-color:  rgba(15, 19, 35, 0.521);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #whatsapp-logo {
