@@ -36,8 +36,12 @@
 .info-event {
     margin-right: 1vw;
 }
+.info-event-mini {
+    font-size: 15px;
+}
 
 .schedule-event-all {
+    margin-right: 2vw;
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -49,6 +53,16 @@
     height: 0px;
     border-style: solid;
     border-width: 15px 30px 15px 0;
+    border-color: transparent #a40447 transparent transparent;
+    transform: rotate(0deg);
+
+}
+.arrow-triangle-mini {
+    margin-left: 5vw;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 7.5px 15px 7.5px 0;
     border-color: transparent #a40447 transparent transparent;
     transform: rotate(0deg);
 

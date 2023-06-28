@@ -1,8 +1,11 @@
+import OurSeniors from './OurSeniors'
 import './Seniors.css'
 
 function Seniors() {
     return (
-        <div id='seniors-container'></div>
+        <div className='seniors-container'>
+            <OurSeniors />
+        </div>
     )
 }
 
