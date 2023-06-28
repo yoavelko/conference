@@ -21,13 +21,13 @@ function RegisterForm() {
         <br />
         <br />
         <form onSubmit={(e) => handleSubmit(e)}>
-            <input className='input-text-style' type="text" placeholder='שם מלא*'  required/>
+            <input className='input-text-style' type="text" placeholder=' שם מלא*'  required/>
             <br />
             <br />
-            <input className='input-text-style' type="text" placeholder='הנייד שלך*' required/>
+            <input className='input-text-style' type="text" placeholder=' הנייד שלך*' required/>
             <br />
             <br />
-            <input className='input-text-style' type="text" placeholder='האימייל שלך*'  required/>
+            <input className='input-text-style' type="text" placeholder=' האימייל שלך*'  required/>
             <br />
             <br />
             <select name="" className='input-text-style'>
@@ -37,13 +37,13 @@ function RegisterForm() {
             </select>
             <br />
             <br />
-            <input className='input-text-style' type="text" placeholder='שם החברה' />
+            <input className='input-text-style' type="text" placeholder=' שם החברה' />
             <br />
             <br />
-            <input className='input-text-style' type="text" placeholder='תפקיד' />
+            <input className='input-text-style' type="text" placeholder=' תפקיד' />
             <br />
             <br />
-            <input className='input-text-style' type="text" placeholder='לינק לפרופיל שלך בלינקדאין' />
+            <input className='input-text-style' type="text" placeholder=' לינק לפרופיל שלך בלינקדאין' />
             <br />
             <br />
             <label className='spam-checkbox' htmlFor="">

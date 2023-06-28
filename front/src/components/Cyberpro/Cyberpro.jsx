@@ -140,8 +140,11 @@ function Cyberpro() {
                         </div>
                 }
             </div>
+            <br />
             <div id='video-container' ref={myRef}>
-                <div className='cyberpro-headers'>סייברפרו-גלובאל</div>
+                <a href="https://www.cyberpro-global.com/" target="_blank" rel="noopener noreferrer">
+                    <div className='cyberpro-headers' style={{ textAlign: 'center' }}>CYBERPRO GLOBAL</div>
+                </a>
                 <br />
                 {
                     auto ?

@@ -6,6 +6,8 @@ import MiniVideo from "./MiniVideo";
 import RegisterForm from "./RegisterForm";
 import Schedule from "./Schedule";
 import Speakers from "./Speakers";
+import Intro from "./Intro";
+
 
 
 function Homepage({ isNavigating, setIsNavigating }) {
@@ -17,6 +19,7 @@ function Homepage({ isNavigating, setIsNavigating }) {
   }, []);
   return (
     <div className="homepage-container">
+      <Intro />
       <InvationSummary />
       <Schedule />
       <Speakers />

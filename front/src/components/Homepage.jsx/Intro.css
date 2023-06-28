@@ -1,0 +1,13 @@
+#intro-container {
+    background-image: url("../../media/portrait2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0% 0%;
+    height: 550px;
+}
+
+#intro-background {
+    width: 100%;
+    background-color: rgba(15, 19, 35, 0.137);
+}
