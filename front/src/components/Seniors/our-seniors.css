@@ -1,0 +1,12 @@
+.our-seniors-container{
+    background-color: var(--black);
+    color: white;
+    height:80vh;
+    
+}
+.our-seniors-title{
+    text-align: center;
+    font-size: xx-large;
+    color: var(--red);
+    font-weight: 600;
+}
