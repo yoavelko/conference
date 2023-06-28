@@ -1,0 +1,45 @@
+#contact-container {
+    width: 100vw;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-header{
+    width: 100%;
+    text-align: center;
+    color: var(--red);
+}
+
+#contact-links {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-link-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-link-section img {
+    margin-left: 15px;
+}
+
+#contact-phone-text {
+    position: relative;
+    bottom: 3px
+}
+
+#contact-email-text {
+    position: relative;
+    bottom: -2px;
+}
+
+#contact-travel h1 {
+    color: var(--red);
+}
