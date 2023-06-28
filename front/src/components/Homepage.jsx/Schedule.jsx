@@ -3,16 +3,6 @@ import "./schedule.css";
 function Schedule() {
   return (
     <div className="schedule-container">
-      <div className="schedule-opening">
-        <div>כל אחד היה</div>
-        <div>ג'וניור פעם</div>
-      </div>
-      <br />
-      <div className="schedule-subtitle">
-        <div>מי היה הראשון שנתן לך </div>
-        <div>הזדמנות?</div>
-      </div>
-      <br />
       <div className="schedule-title">לוז הכנס:</div>
       <br />
       <div className="the-schedule">
@@ -100,6 +90,11 @@ function Schedule() {
             <div className="info-event">הוקרה למנטורים פעילים</div>
           </div>
         </div>
+      </div>
+      <div className="schedule-opening">
+        <span className="reder">הזדמנות</span><span> יחידה במינה</span>
+        <br />
+        <span>לתת <span className="reder">למישהו</span> את <span className="reder">ההזדמנות</span> הראשונה</span>
       </div>
       <div className="space-holder"></div>
     </div>
