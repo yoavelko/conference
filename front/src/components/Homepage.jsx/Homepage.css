@@ -1,6 +1,6 @@
 .homepage-container{
     background-color: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Alef', sans-serif;
     color: white;
 }
 .logos-container{
@@ -10,7 +10,7 @@
     font-family: Arial, Helvetica, sans-serif;
     border-top: solid rgb(143, 143, 143) 0.1vw;
     border-bottom: solid rgb(143, 143, 143) 0.1vw;
-    background-color: #231922;
+    background-color: var(--black);
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -23,9 +23,13 @@
 .invation-red-title{
     text-align: center;
     color: var(--red);
-    font-size: xx-large;
+    font-size: 28px;
     font-weight: bold;
     text-shadow: 3px 3px 3px #000000;
+}
+.soldier{
+    font-weight: bold;
+    font-size: 35px;
 }
 .invation-black-title{
     font-weight: bold;

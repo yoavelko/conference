@@ -4,7 +4,7 @@ function InvationSummary() {
     return (
         <div className='invationSummary-container'>
             <div className="invation-red-title">
-                מתגייסים למען הלוחמים שלנו
+                מתגייסים למען <span className='soldier'>הלוחמים</span> שלנו
             </div>
             <div className="invation-black-title">
                 <div>

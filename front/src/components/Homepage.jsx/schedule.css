@@ -1,32 +1,58 @@
-.schedule-container{
-    height: 150vw;
+.schedule-container {
+    background-color: rgb(3, 3, 3);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
-.schedule-opening{
+
+.schedule-opening {
     text-align: center;
     font-weight: bold;
     font-size: 50px;
     color: var(--red);
 }
-.schedule-subtitle{
+
+.schedule-subtitle {
     text-align: center;
     font-weight: bold;
     font-size: xx-large;
     color: var(--red);
 }
-.schedule-title{
+
+.schedule-title {
     font-weight: bold;
     font-size: xx-large;
 }
-.schedule-event{
-display: flex;
+
+.schedule-event {
+    display: flex;
 }
-.time-event{
+
+.time-event {
     margin-left: 1vw;
 }
-.info-event{
+
+.info-event {
     margin-right: 1vw;
+}
+
+.schedule-event-all {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.arrow-triangle {
+    margin-left: 5vw;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 15px 30px 15px 0;
+    border-color: transparent #a40447 transparent transparent;
+    transform: rotate(0deg);
+
+}
+.more-details-event{
+    margin-right:  15vw;
 }
