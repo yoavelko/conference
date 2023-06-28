@@ -48,3 +48,7 @@
     cursor: pointer;
     background-color: var(--red);
 }
+
+.syllabus-files {
+    margin-top: 50vh;
+}

@@ -1,6 +1,11 @@
 import './Cyberpro.css'
 import { useState, useRef } from 'react'
 import video from '../../media/video/2d-compressed.mp4'
+import ACE from '../../media/schedule/Syllabus-ACE.pdf'
+import CE from '../../media/schedule/Syllabus-CE.pdf'
+import BT from '../../media/schedule/Syllabus-BlueTeam.pdf'
+import RT from '../../media/schedule/Syllabus-RedTeam.pdf'
+import FS from '../../media/schedule/Syllabus-Fullstack.pdf'
 
 function Cyberpro() {
 
@@ -56,7 +61,7 @@ function Cyberpro() {
                     blueTeam ?
                         <>
                             <div>קורס הכשרת  Blue Team Defender מכין את בוגריו להתמודד בהצלחה עם האיומים העדכניים ביותר שיש למערכות המידע הארגוניות כיום. הידע הנלמד בקורס מגן סייבר יסייע לך לנטר ולנתח תקשורת נתונים חשודה, לחקור נזקי פוגענים ועוד. <span className='about-show' onClick={() => setBlueTeam(!blueTeam)}>הצג עוד...</span></div>
-                            <button className='syllabus-btn'>סילבוס הקורס</button>
+                            <a className='syllabus-files' href={BT} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
                         </>
                         :
                         <div>קורס הכשרת  Blue Team Defender מכין את בוגריו להתמודד בהצלחה עם האיומים העדכניים ביותר שיש למערכות המידע הארגוניות כיום. הידע הנלמד בקורס מגן סייבר יסייע לך לנטר ולנתח תקשורת נתונים חשודה, לחקור נזקי פוגענים ועוד.
@@ -66,7 +71,7 @@ function Cyberpro() {
                             בסיום הקורס תוכלו להגן ולאבטח מערכות מידע, לצוד אירועי חדירה ולזהות התקפות שמתרגשות לבוא. הקורס יכשיר אתכם לתעשיית הסייבר לתפקידים כגון: Incident Responder, מפעיל SOC, אנליסט סייבר וחוקר סייבר
                             <span className='about-show' onClick={() => setBlueTeam(!blueTeam)}> הצג פחות</span>
                             <br />
-                            <button className='syllabus-btn'>סילבוס הקורס</button>
+                            <a className='syllabus-files' href={BT} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
                         </div>
                 }
             </div>
@@ -76,7 +81,7 @@ function Cyberpro() {
                     redTeam ?
                         <>
                             <div>קורס הכשרת מגן סייבר Red Team מכין את בוגריו לפעול באופן פרואקטיבי על מנת לגלות פרצות אבטחה, לחסן את הארגון מפני התקפות מבחוץ ומבפנים ולסגור כל נקודת חולשה אפשרית. <span className='about-show' onClick={() => setRedTeam(!redTeam)}>הצג עוד...</span></div>
-                            <button className='syllabus-btn'>סילבוס הקורס</button>
+                            <a className='syllabus-files' href={RT} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
                         </>
                         :
                         <div>
@@ -87,7 +92,7 @@ function Cyberpro() {
                             בסיום הקורס תוכלו לתכנן, לבצע ולזהות פרצות אפשריות במערכות מידע ובמערכיי תקשורת, לזהות נקודות חולשה בארגון ולבנות אסטרטגיות הגנה שיחסנו את הארגון. הקורס יכשיר אתכם לתעשיית הסייבר לתפקידי מפתח בעולם הסייבר, כגון: בודקי חדירות, חברי צוותים אדומים וחוקרי פגיעויות.
                             <span className='about-show' onClick={() => setRedTeam(!redTeam)}> הצג פחות</span>
                             <br />
-                            <button className='syllabus-btn'>סילבוס הקורס</button>
+                            <a className='syllabus-files' href={RT} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
                         </div>
                 }
             </div>
@@ -97,7 +102,7 @@ function Cyberpro() {
                     cyberEssentials ?
                         <>
                             <div>מסלול הכשרה לטכנולוגיות הליבה של עולם הסייבר המהווה מקפצה להתמחות בעולמות הסייבר. <span className='about-show' onClick={() => setCyberEssentials(!cyberEssentials)}>הצג עוד...</span></div>
-                            <button className='syllabus-btn'>סילבוס הקורס</button>
+                            <a className='syllabus-files' href={CE} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
                         </>
                         :
                         <div>
@@ -110,7 +115,7 @@ function Cyberpro() {
                             המסלול הזה הינו קרוס טכנולוגי ומעשי לעולמות הידע שהן הליבה של טכנולוגיות המידע – והצעד הראשון לקריירה בסייבר.
                             <span className='about-show' onClick={() => setCyberEssentials(!cyberEssentials)}> הצג פחות</span>
                             <br />
-                            <button className='syllabus-btn'>סילבוס הקורס</button>
+                            <a className='syllabus-files' href={CE} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
                         </div>
                 }
             </div>
@@ -120,7 +125,7 @@ function Cyberpro() {
                     acceleratedEssentials ?
                         <>
                             <div>קורס Accelerated Cyber Essentials נועד להכשיר ולהכין את בוגריו בצעדיהם הראשונים לקראת קריירה מצליחה בעולם הסייבר. הקורס הינו מכינה טכנולוגית אינטנסיבית ומעשית לעולמות הידע העדכניים והרלבנטיים ביותר למי שמעוניין להתחיל את צעדיו הראשונים בתעשיית הסייבר הצומחת. <span className='about-show' onClick={() => setAcceleratedEssentials(!acceleratedEssentials)}>הצג עוד...</span></div>
-                            <button className='syllabus-btn'>סילבוס הקורס</button>
+                            <a className='syllabus-files' href={ACE} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
                         </>
                         :
                         <div>
@@ -131,7 +136,7 @@ function Cyberpro() {
                             הקורס יכשיר אתכם למגוון תפקידים בעולם ה-IT וכבוגריו תהיו זכאים לגשת למספר גדול של הסמכות בינלאומיות מוכרות. כמו כן, יקנה לכם הקורס את הידע והכלים הנדרשים להתקדם לקורסי הסייבר שלנו בדרך לתפקידי מפתח בעולם הסייבר.
                             <span className='about-show' onClick={() => setAcceleratedEssentials(!acceleratedEssentials)}> הצג פחות</span>
                             <br />
-                            <button className='syllabus-btn'>סילבוס הקורס</button>
+                            <a className='syllabus-files' href={ACE} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
                         </div>
                 }
             </div>
