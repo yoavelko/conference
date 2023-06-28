@@ -1,14 +1,50 @@
 #cyberpro-container {
     padding: 10%;
     line-height: 4.5vh;
+    color: white;
+    background-color: var(--black);
 }
 
 .about-show {
     color: var(--red);
 }
 
+.about-show:hover {
+    color: rgb(204, 94, 130);
+    cursor: pointer;
+}
+
 .cyberpro-headers {
     color: var(--red);
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bolder;
+}
+
+.cyberpro-small-headers {
+    color: var(--red);
+    font-size: larger;
+    margin-top: 2vh;
+}
+
+.cyberpro-containers {
+    margin-bottom: 5vh;
+}
+
+#lochamim-link {
+    color: var(--red);
+}
+
+.syllabus-btn {
+    width: 150px;
+    height: 5vh;
+    border-radius: 25px;
+    border: 2px solid var(--red);
+    background-color: var(--black);
+    color: white;
+    transition: .15s;
+}
+
+.syllabus-btn:hover {
+    cursor: pointer;
+    background-color: var(--red);
 }
