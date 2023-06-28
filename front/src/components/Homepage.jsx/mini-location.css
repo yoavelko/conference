@@ -1,0 +1,15 @@
+.mini-location-container{
+    border-top: solid rgb(143, 143, 143) 0.1vw;
+    border-bottom: solid rgb(143, 143, 143) 0.1vw;
+
+}
+.links-to-address{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.link-adress-a{
+    display: flex;
+    align-items: center;
+}
