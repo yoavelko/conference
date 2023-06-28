@@ -31,7 +31,7 @@ function RegisterForm() {
             <br />
             <br />
             <select name="" className='input-text-style'>
-                <option value="0">מי את/ה?</option>
+                <option disabled  selected value="0">מי את/ה?</option>
                 <option value="alumni">בוגר סייבר פרו</option>
                 <option value="partner">שותף עסקי</option>
             </select>

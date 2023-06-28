@@ -9,6 +9,7 @@ import Speakers from "./Speakers";
 import Intro from "./Intro";
 
 
+
 function Homepage({ isNavigating, setIsNavigating }) {
   useEffect(() => {
     if (isNavigating) {
