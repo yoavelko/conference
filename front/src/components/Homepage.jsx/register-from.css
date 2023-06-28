@@ -1,0 +1,45 @@
+.register-form-container{
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.register-form-title{
+
+}
+.input-text-style{
+    width: 280px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.spam-checkbox{
+    margin-right: 2vw;
+    display: flex;
+    width: 280px;
+    align-items: start;
+}
+.label-spam{
+    margin-right: 3vw;
+    font-weight: bold;
+    color: rgb(174, 173, 173);
+}
+.submit-register{
+    height: 12vw;
+    background: rgb(241,133,18);
+    background: linear-gradient(17deg, rgba(241,133,18,1) 0%, rgba(233,30,99,1) 50%);  
+    width: 280px;
+    border-radius: 10px;
+    border: solid white 0.5vw;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+.submit-register:hover{
+    background-color: #231922;
+}
+.space-holder{
+    height: 6vw;
+}
