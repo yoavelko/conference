@@ -120,7 +120,7 @@ function Cyberpro() {
                     acceleratedEssentials ?
                         <>
                             <div>קורס Accelerated Cyber Essentials נועד להכשיר ולהכין את בוגריו בצעדיהם הראשונים לקראת קריירה מצליחה בעולם הסייבר. הקורס הינו מכינה טכנולוגית אינטנסיבית ומעשית לעולמות הידע העדכניים והרלבנטיים ביותר למי שמעוניין להתחיל את צעדיו הראשונים בתעשיית הסייבר הצומחת. <span className='about-show' onClick={() => setAcceleratedEssentials(!acceleratedEssentials)}>הצג עוד...</span></div>
-                            <button>סילבוס הקורס</button>
+                            <button className='syllabus-btn'>סילבוס הקורס</button>
                         </>
                         :
                         <div>
