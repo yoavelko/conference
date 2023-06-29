@@ -19,10 +19,6 @@ mongoose.connect(process.env.SERVER, {})
 app.use('/mentor', mentorRoute);
 app.use('/visitor', visitorRoute);
 
-app.use('/', (req, res) => {
-    res.send('hello world')
-})
-
 app.listen(3000, () => {
     console.log('banana initiated');
 })
