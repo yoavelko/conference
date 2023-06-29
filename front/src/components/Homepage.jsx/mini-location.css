@@ -1,6 +1,10 @@
 .mini-location-container{
     border-top: solid rgb(143, 143, 143) 0.1vw;
     border-bottom: solid rgb(143, 143, 143) 0.1vw;
+    text-align: center;
+    padding: 10%;
+    line-height: 7vh;
+    font-size: larger;
 
 }
 .links-to-address{
@@ -12,4 +16,14 @@
 .link-adress-a{
     display: flex;
     align-items: center;
+}
+
+.title-mini-location {
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--red);
+}
+
+.adress-mini-location {
+    margin-bottom: 3vh;
 }

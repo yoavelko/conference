@@ -9,16 +9,19 @@ app.use(express.json())
 
 app.use(cors());
 mongoose.connect(process.env.SERVER, {})
-.then(() => {
-    console.log('The mongeese chose to come');
-})
-.catch(err => {
-    console.log('The mongeese chose not to come because ' + err);
-})
+    .then(() => {
+        console.log('The mongeese chose to come');
+    })
+    .catch(err => {
+        console.log('The mongeese chose not to come because ' + err);
+    })
 
 app.use('/mentor', mentorRoute);
 app.use('/visitor', visitorRoute);
 
+app.use('/', (req, res) => {
+    res.send('hello world')
+})
 
 app.listen(3000, () => {
     console.log('banana initiated');

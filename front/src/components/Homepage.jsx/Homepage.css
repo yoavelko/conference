@@ -92,3 +92,41 @@
 .invation-summary-button-div:hover{
     background: linear-gradient(17deg, rgb(170, 100, 24) 0%, rgb(155, 26, 69) 50%);    
 }
+
+
+@media screen and (min-width: 768px) {
+
+    .homepage-container {
+        width: 100vw;
+    }
+
+    #intro-container {
+        display: none;
+    }
+
+    .invation-black-title {
+        font-size: xx-large;
+        line-height: 10vh;
+        padding: 5%;
+        margin-top: 10vh;
+        height: auto;
+    }
+
+    .invation-summary-button-div {
+        height: 10vh;
+        width: 25%;
+    }
+
+    .schedule-container {
+        margin-top: 10vh;
+        line-height: 4vh;
+    }
+
+    .schedule-opening {
+        padding-top: 15vh;
+    }
+
+    .schedule-title {
+        margin-bottom: 5vh;
+    }
+}

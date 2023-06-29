@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+
 #header-inner-container {
     background-color: var(--black);
     height: 10vh;
@@ -17,6 +19,12 @@
 #header-logo {
     width: 150px;
     margin-top: 10px;
+    transition: .2s;
+}
+
+#header-logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 #dropmenu-content {
@@ -41,11 +49,11 @@
 
 .toggle {
     position: relative;
-    width: 40px;
+    width: 30px;
     cursor: pointer;
     margin: auto;
     display: block;
-    height: calc(4px * 3 + 11px * 2);
+    height: calc(4px * 3 + 8px * 2);
 }
 
 .bar {
@@ -61,19 +69,19 @@
 }
 
 .bar--top {
-    bottom: calc(50% + 11px + 4px/ 2);
+    bottom: calc(50% + 8px + 3px/ 2);
     transition-property: bottom, transform;
     transition-delay: calc(0s + 0.35s) * .6;
 }
 
 .bar--middle {
-    top: calc(50% - 4px/ 2);
+    top: calc(50% - 3px/ 2);
     transition-property: opacity, transform;
     transition-delay: calc(0s + 0.35s * .3);
 }
 
 .bar--bottom {
-    top: calc(50% + 11px + 4px/ 2);
+    top: calc(50% + 8px + 3px/ 2);
     transition-property: top, transform;
     transition-delay: 0s;
 }
@@ -91,7 +99,7 @@
 }
 
 #checkbox:checked+.toggle .bar--bottom {
-    top: calc(50% - 4px/ 2);
+    top: calc(50% - 3px/ 2);
     transform: rotate(-225deg);
     transition-delay: calc(0s + 0.35s * .6);
 }
@@ -103,4 +111,38 @@ a:link {
 
 a:visited {
     color: white;
+}
+
+#header-responsive-container {
+    display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    #header-inner-container {
+        display: none;
+    }
+
+    #header-responsive-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 24px;
+        font-family: "Alef", sans-serif;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        background-color: var(--black);
+        border-bottom: 2px solid var(--red);
+        height: 12vh;
+    }
+
+    .header-links:hover {
+        color: rgba(255, 255, 255, 0.404);
+    }
+
+    #header-logo-container {
+        width: 10%;
+    }
 }

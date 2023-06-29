@@ -6,7 +6,8 @@
     align-items: center;
 }
 .register-form-title{
-
+    font-size: xx-large;
+    color: var(--red);
 }
 .input-text-style{
     width: 280px;
