@@ -1,21 +1,27 @@
-.mini-location-container{
-    border-top: solid rgb(143, 143, 143) 0.1vw;
-    border-bottom: solid rgb(143, 143, 143) 0.1vw;
+.mini-location-container {
     text-align: center;
     padding: 10%;
     line-height: 7vh;
     font-size: larger;
-
+    background-color: var(--black);
 }
-.links-to-address{
+
+.links-to-address {
     display: flex;
     justify-content: space-evenly;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-.link-adress-a{
+
+.link-adress-a {
     display: flex;
     align-items: center;
+
+    transition: .2s;
+}
+
+.link-adress-a:hover {
+    transform: scale(1.1);
 }
 
 .title-mini-location {
@@ -26,4 +32,28 @@
 
 .adress-mini-location {
     margin-bottom: 3vh;
+}
+
+.location-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .links-to-address {
+        width: 50%;
+        margin-right: 25%;
+    }
+
+    .mini-location-container {
+        line-height: 10vh;
+    }
+
+    .location-icons {
+        margin-left: 0.6vw;
+    }
 }

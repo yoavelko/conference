@@ -2,7 +2,7 @@ import './mini-video.css'
 
 function MiniVideo() {
   return (
-    <div className='mini-video-container'>סרטון תדמית</div>
+    <div className='mini-video-container'></div>
   )
 }
 

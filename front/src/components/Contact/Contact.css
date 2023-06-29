@@ -33,6 +33,11 @@
     align-items: center;
 }
 
+.icon-container:hover {
+    color: rgba(255, 255, 255, 0.514);
+    transform: scale(1.05);
+}
+
 .contact-link-section {
     width: 100%;
     display: flex;
@@ -97,5 +102,10 @@ iframe {
 @media screen and (min-width: 768px) {
     #contact-container iframe {
         width: 70%;
+    }
+
+    #contact-row {
+        display: flex;
+        align-items: flex-end;
     }
 }

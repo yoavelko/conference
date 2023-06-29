@@ -34,14 +34,20 @@
     color: var(--red);
 }
 
+#lochamim-link:hover {
+    color: rgb(204, 94, 130)
+}
+
 .syllabus-btn {
     width: 150px;
-    height: 5vh;
+    height: 6vh;
     border-radius: 25px;
     border: 2px solid var(--red);
     background-color: var(--black);
     color: white;
     transition: .15s;
+    font-size: 17px;
+    margin-top: 2vh;
 }
 
 .syllabus-btn:hover {
@@ -51,4 +57,21 @@
 
 .syllabus-files {
     margin-top: 50vh;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    #cyberpro-container {
+        line-height: 8vh;
+        padding: 15%;
+    }
+
+    .syllabus-btn {
+        background-color: var(--red);
+    }
+
+    .syllabus-btn:hover {
+        background-color: var(--black);
+    }
 }
