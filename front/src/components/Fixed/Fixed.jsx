@@ -11,6 +11,7 @@ function Fixed({ setIsNavigating }) {
 
   return (
     <div id="fixed-container">
+      <div></div>
       <a
         href="https://api.whatsapp.com/send?phone=972502449054&text=שלום,%20ארצה%20לשמוע%20עוד%20על%20הכנס%20שיקרה%20ב-2.8"
         target="_blank"
