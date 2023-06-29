@@ -5,6 +5,7 @@
     justify-content: center;
     background-color: var(--black);
     line-height: 4.5vh;
+    background-color: var(--black);
 }
 .speakers-title{
     font-size: xx-large;

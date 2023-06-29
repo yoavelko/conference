@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--black);
 }
 .register-form-title{
     font-size: xx-large;
@@ -38,9 +39,53 @@
     font-weight: bold;
     font-size: large;
 }
+
 .submit-register:hover{
-    background-color: #231922;
+    background: linear-gradient(17deg, rgb(170, 100, 24) 0%, rgb(155, 26, 69) 50%);    
+    cursor: pointer;
 }
+
 .space-holder{
     height: 6vw;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .register-form-title {
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    .input-text-style {
+        width: 50%;
+        height: 6vh;
+    }
+
+    #form-container {
+        width: 100vw;
+        margin-right: 50vw;
+        line-height: 5vh;
+    }
+
+    .label-spam {
+        width: 100%;
+    }
+
+    .spam-checkbox {
+        width: 45vw;
+        font-size: large;
+    }
+
+    .submit-register {
+        height: 8vh;
+        border: 3px solid white;
+        border-radius: 25px;
+    }
+
+    #submit-container {
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+    }
 }

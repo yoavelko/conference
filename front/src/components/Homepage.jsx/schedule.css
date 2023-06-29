@@ -6,6 +6,7 @@
     justify-content: space-evenly;
     padding: 5%;
     padding-top: 10%;
+    background-color: var(--black);
 }
 
 .schedule-opening {
@@ -73,4 +74,26 @@
 }
 .more-details-event{
     margin-right:  15vw;
+}
+
+@media screen and (min-width: 768px) {
+
+    .arrow-triangle-mini {
+        margin-left: 1vw;
+    }
+
+    .arrow-triangle {
+        margin-left: 2vw;
+    }
+
+    .more-details-event {
+        margin-right: 12vw;
+    }
+
+    .schedule-opening {
+        line-height: 12vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 40px;
+    }
 }

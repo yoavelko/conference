@@ -56,6 +56,23 @@ function Cyberpro() {
             </div>
             <div className='cyberpro-containers'>
                 <div className='cyberpro-headers'>הקורסים שלנו</div>
+                <div className='cyberpro-containers'>
+                <div className='cyberpro-small-headers'>קורס הכשרת Full Stack Development</div>
+                {
+                    fullstack ?
+                        <>
+                            <div>קורס הכשרת Full Stack Development מכין את בוגריו לפתח מוצרים , אתרים, אפליקציות ופלטפורמות בעזרת עבודה עם הטכנולוגיות המתקדמות והנפוצות ביותר בתעשייה. <span className='about-show' onClick={() => setFullstack(!fullstack)}>הצג עוד...</span></div>
+                            <a className='syllabus-files' href={FS} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
+                        </>
+                        :
+                        <div>
+                            קורס הכשרת Full stack development מכין את בוגריו לפתח מוצרים , אתרים, אפליקציות ופלטפורמות בעזרת עבודה עם הטכנולוגיות המתקדמות והנפוצות ביותר בתעשייה. הידע הנרכש בקורס מפתח פול סטאק יסייע לך לפתח מוצר מרגע האפיון עד מוצר מוגמר. בהכשרה הייחודית של CYBERPRO הושם דגש על עבודה מעשית רבה שתבוצע בפרויקטים בצוותים ובעזרת הטכנולוגיות המבוקשות בתחום. בסיום הקורס תוכלו ליצור מוצר מאובטח, בעל מסובכות מורכבת ביותר, אשר יכול להכין מאות אלפי משתמשים. הקורס יכשיר אתכם לתעשיית הפיתוח לתפקידים כגון: Full stack developer, Front end developer, ו-Backend developer.
+                            <span className='about-show' onClick={() => setFullstack(!fullstack)}> הצג פחות</span>
+                            <br />
+                            <a className='syllabus-files' href={FS} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
+                        </div>
+                }
+            </div>
                 <div className='cyberpro-small-headers'>קורס הכשרת Blue Team Defender</div>
                 {
                     blueTeam ?

@@ -5,6 +5,7 @@
     background-size: 100%;
     background-position: 0% 0%;
     height: 550px;
+    background-color: var(--black);
 }
 
 #intro-background {
