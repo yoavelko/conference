@@ -10,6 +10,9 @@ import Fixed from "./components/Fixed/Fixed";
 import { useState } from "react";
 import Admin from "./components/Admin/Admin";
 
+import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
+import TermsOfUse from "./components/TermsOfUse/TemrsOfUse";
+
 function App() {
   const [isNavigating, setIsNavigating] = useState(false);
 
@@ -42,6 +45,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/seniors" element={<Seniors />} />
           <Route path="/admin" element={<Admin/>}/>
+          <Route path="/termsOfUse" element={<TermsOfUse />} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
         </Route>
       </Routes>
     </div>

@@ -1,14 +1,14 @@
 #fixed-container {
     position: fixed;
-    top: 70%;
+    top: 60%;
     left: 0;
     padding: 3%;
-    height: 20vh;
+    height: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     z-index: 998;
-    background-color:  rgba(15, 19, 35, 0.521);
+    background-color:  rgba(15, 19, 35, 0.664);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -55,4 +55,13 @@
     0% {transform: translateY(0px);}
     20% {transform: translateY(8px);}
     100% {transform: translateY(0px);}
+}
+
+
+@media screen and (min-width: 768px) {
+
+    #fixed-container {
+        top: 63%;
+        left: 45px;
+    }
 }

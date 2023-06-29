@@ -34,8 +34,7 @@
 }
 
 .icon-container:hover {
-    color: rgba(255, 255, 255, 0.514);
-    transform: scale(1.05);
+    color: rgba(255, 255, 255, 0.836);
 }
 
 .contact-link-section {
@@ -52,7 +51,10 @@
 
 #contact-phone-text {
     position: relative;
-    bottom: 3px
+    bottom: 3px;
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
 }
 
 #contact-email-text {
