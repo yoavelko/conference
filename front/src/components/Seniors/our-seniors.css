@@ -45,3 +45,21 @@
     font-weight: bold;
     font-size: 20px;
 }
+
+.responsive-seniors{
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.carousel-div{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+   .responsive-seniors{
+    display: none;
+   }
+   .carousel-div{
+    display: block;
+   }
+  }

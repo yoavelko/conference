@@ -41,7 +41,9 @@ function Header() {
                                     <div className="bar bar--bottom"></div>
                                 </label>
                             </div>
-                            <div id='header-logo-container'><img id='header-logo' src={cyberprologo} alt="" /></div>
+                            
+                            <div id='header-logo-container'><Link to={'/'}><img id='header-logo' src={cyberprologo} alt="" /></Link></div>
+                            
                         </div>
                     </div>
             }

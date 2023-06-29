@@ -12,7 +12,7 @@ exports.fetch = async (req, res) => {
 
 exports.create = async (req, res) => {
     try {
-        const visitor = await Visitor.create(req.body)
+        const visitor = await Visitor.create({...req.body, status: 'pending'})
         res.send({ message: 'Success', data: visitor })
     }
     catch (err) {

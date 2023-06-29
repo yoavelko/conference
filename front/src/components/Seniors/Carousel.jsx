@@ -1,7 +1,7 @@
 import "./carousel.css";
 import { useState, useEffect } from "react";
 
-function Carousel({children}) {
+function Carousel({ children }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(children.length);
   const [touchPosition, setTouchPosition] = useState(null);
@@ -49,12 +49,12 @@ function Carousel({children}) {
     <div className="carousel-container" dir="ltr">
       <div className="carousel-wrapper">
         {currentIndex > 0 && (
-          <button  onClick={prev} className="left-arrow arrow-button">
+          <button onClick={prev} className="left-arrow arrow-button">
             <img
-              width="30"
-              height="30"
-              src="https://img.icons8.com/ios-filled/50/737373/double-left.png"
-              alt="double-left"
+              width="24"
+              height="24"
+              src="https://img.icons8.com/ios-glyphs/30/EBEBEB/double-left--v1.png"
+              alt="double-left--v1"
             />
           </button>
         )}
@@ -73,9 +73,9 @@ function Carousel({children}) {
         {currentIndex < length - 1 && (
           <button onClick={next} className="right-arrow arrow-button">
             <img
-              width="30"
-              height="30"
-              src="https://img.icons8.com/ios-filled/50/737373/double-right.png"
+              width="24"
+              height="24"
+              src="https://img.icons8.com/material-rounded/24/EBEBEB/double-right.png"
               alt="double-right"
             />
           </button>

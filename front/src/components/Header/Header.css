@@ -26,8 +26,8 @@
     background-color: var(--black);
     width: 100%;
     text-align: center;
-    line-height: 8vh;
-    font-size: x-large;
+    line-height: 5vh;
+    font-size: 15px;
     z-index: 999;
 }
 
