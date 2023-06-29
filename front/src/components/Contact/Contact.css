@@ -64,6 +64,15 @@
     justify-content: space-evenly;
 }
 
+
+iframe {
+    margin-bottom: 50px;
+}
+
+.i4ewOd-pzNkMb-haAclf {
+    display: none !important;
+}
+
 @media screen and (min-width: 500px) {
     #contact-row {
         width: 100%;
@@ -73,7 +82,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
     #contact-container iframe {
         width: 70%;
     }
