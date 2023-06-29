@@ -19,9 +19,10 @@ const visitorSchema = new mongoose.Schema({
         unique: true
     },
     association: {
-        type: String
+        type: String,
+        required: true
     },
-    cooperation : {
+    cooperation: {
         type: String
     },
     role: {
