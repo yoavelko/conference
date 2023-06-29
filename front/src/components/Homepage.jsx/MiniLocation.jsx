@@ -3,10 +3,10 @@ function MiniLocation() {
   return (
     <div className='mini-location-container' >
         <div className="title-mini-location">
-            איך מגיעים? 
+            איפה? 
         </div>
         <div className="mini-location-links">
-            <div className="adress-mini-location">כתובת: דרך מנחם בגין 121, תל אביב-יפו</div>
+            <div className="adress-mini-location">דרך מנחם בגין 121, תל אביב-יפו</div>
             <div className="links-to-address">
                <a className='link-adress-a' href="https://www.waze.com/he/live-map/directions?to=ll.32.071474%2C34.789345">
                 <span style={{marginLeft:"2vw"}}><img width="30" height="30" src="https://img.icons8.com/color/48/waze.png" alt="waze"/></span>
