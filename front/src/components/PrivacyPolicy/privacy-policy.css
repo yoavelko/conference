@@ -1,0 +1,22 @@
+.privacy-policy-container{
+    background-color: var(--black);
+    color: white;
+
+}
+.privacy-policy-dry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.privacy-policy-title{
+    font-size: xx-large;
+}
+.privacy-policy-details{
+    margin-right: 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.fusion-text{
+    color: white;
+}

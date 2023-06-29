@@ -24,7 +24,6 @@ function Header() {
                             <div id='header-logo-container'><img id='header-logo' src={cyberprologo} alt="" /></div>
                         </div>
                         <div id='dropmenu-content'>
-                            <Link to={'/'} onClick={() => window.scrollTo(0, 0)}><div onClick={() => setMenu(false)}>כנס אוגוסט 23'</div></Link>
                             <Link to={'/cyberpro'} onClick={() => window.scrollTo(0, 0)}><div onClick={() => setMenu(false)}>אודות סייבר-פרו ישראל</div></Link>
                             <Link to={'/seniors'} onClick={() => window.scrollTo(0, 0)}><div onClick={() => setMenu(false)}>הבוגרים שלנו</div></Link>
                             <Link to={'/contact'} onClick={() => window.scrollTo(0, 0)}><div onClick={() => setMenu(false)}>צור קשר</div></Link>

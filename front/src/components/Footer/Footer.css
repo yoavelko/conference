@@ -8,9 +8,10 @@
 }
 
 #footer-outer-container {
-    padding: 10%;
+    padding: 5%;
     background-color: var(--black);
     color: white;
+    width: 100vw;
 }
 
 #footer-container::after {
@@ -26,12 +27,12 @@
 .footer-column {
     display: flex;
     flex-direction: column;
-    font-size: large;
+    font-size: medium;
 }
 
 .footer-column-link {
     color: white;
-    font-size: medium;
+    font-size: small;
 }
 
 #copyrights {

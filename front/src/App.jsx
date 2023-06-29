@@ -8,6 +8,8 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Fixed from "./components/Fixed/Fixed";
 import { useState } from "react";
+import TermsOfUse from "./components/TermsOfUse/TermsOfUse.JSX";
+import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 
 function App() {
   const [isNavigating, setIsNavigating] = useState(false);
@@ -40,6 +42,8 @@ function App() {
           <Route path="/cyberpro" element={<Cyberpro />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/seniors" element={<Seniors />} />
+          <Route path="/termsOfUse" element={<TermsOfUse />} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
         </Route>
       </Routes>
     </div>
