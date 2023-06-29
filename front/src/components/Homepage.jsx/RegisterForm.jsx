@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './register-from.css'
-
+import axios from 'axios';
+import { createVisitor, HOST } from '../../utils/VisitorRoute';
 function RegisterForm() {
     const [spam, setSpam] = useState(false);
     const handleSubmit = (e) =>{
@@ -12,6 +13,15 @@ function RegisterForm() {
         const cooperation = e.target[4].value
         const role = e.target[5].value
         const linkedin = e.target[6].value
+
+        axios.post(createVisitor, {name,phone, email, association, cooperation,role,linkedin, spam} )
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
     }
   return (
     <div className='register-form-container' id='registration'> 

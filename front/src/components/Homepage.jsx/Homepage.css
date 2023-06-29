@@ -85,7 +85,7 @@
     background: rgb(241,133,18);
     background: linear-gradient(17deg, rgba(241,133,18,1) 0%, rgba(233,30,99,1) 50%);    
     width: 50%;
-    border-radius: 15px;
+    border-radius: 8px;
     border: solid white 2px;
 }
 
