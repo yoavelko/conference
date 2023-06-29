@@ -13,7 +13,7 @@ function Speakers() {
                 {
                     speaker?.map((speaker,index) =>{
                         return(
-                            <div className="speaker-box">
+                            <div key={index} className="speaker-box">
                             <div className="speaker-image">
                                 <img className='speaker-img' src={speaker.image} alt="" />
                             </div>

@@ -17,9 +17,12 @@ function RegisterForm() {
         axios.post(createVisitor, {name,phone, email, association, cooperation,role,linkedin, spam} )
         .then(data => {
             console.log(data);
+            alert("תודה רבה! מייל ישלח עם פרטים נוספים בהמשך")
+            
         })
         .catch(error => {
             console.error(error);
+            alert(error.response)
         });
 
     }
@@ -37,7 +40,7 @@ function RegisterForm() {
                 <input className='input-text-style' type="text" placeholder=' הנייד שלך*' required />
                 <br />
                 <br />
-                <input className='input-text-style' type="text" placeholder=' האימייל שלך*' required />
+                <input className='input-text-style' type="email" placeholder=' האימייל שלך*' required />
                 <br />
                 <br />
                 <select name="" className='input-text-style'>
@@ -63,7 +66,7 @@ function RegisterForm() {
                 <br />
                 <br />
                 <div id='submit-container'>
-                    <input className='submit-register' type="submit" />
+                    <input className='submit-register' value={"הרשמה"} type="submit" />
                 </div>
             </form>
             <div className='space-holder'></div>
