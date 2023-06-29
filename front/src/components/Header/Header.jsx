@@ -1,7 +1,7 @@
 import './Header.css'
 import cyberprologo from '../../media/logos/cyber-pro.png'
 import { useState } from 'react'
-import { Link } from 'react-router-dom' 
+import { Link } from 'react-router-dom'
 
 function Header() {
 
@@ -34,7 +34,7 @@ function Header() {
                     <div id='header-container'>
                         <div id='header-inner-container'>
                             <div id="menuToggle">
-                                <input id="checkbox" type="checkbox"  value={menu} onChange={() => setMenu(!menu)}/>
+                                <input id="checkbox" type="checkbox" value={menu} onChange={() => setMenu(!menu)} />
                                 <label className="toggle" htmlFor="checkbox">
                                     <div className="bar bar--top"></div>
                                     <div className="bar bar--middle"></div>
@@ -45,6 +45,13 @@ function Header() {
                         </div>
                     </div>
             }
+            <div id='header-responsive-container'>
+                <div id='header-logo-container'><img id='header-logo' src={cyberprologo} alt="" /></div>
+                <Link to={'/'} onClick={() => window.scrollTo(0, 0)} className='header-links'><div onClick={() => setMenu(false)}>כנס אוגוסט 23'</div></Link>
+                <Link to={'/cyberpro'} onClick={() => window.scrollTo(0, 0)} className='header-links'><div onClick={() => setMenu(false)}>אודות סייבר-פרו ישראל</div></Link>
+                <Link to={'/seniors'} onClick={() => window.scrollTo(0, 0)} className='header-links'><div onClick={() => setMenu(false)}>הבוגרים שלנו</div></Link>
+                <Link to={'/contact'} onClick={() => window.scrollTo(0, 0)} className='header-links'><div onClick={() => setMenu(false)}>צור קשר</div></Link>
+            </div>
         </>
 
     )

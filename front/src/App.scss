@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 
 *{
     scroll-behavior: smooth;
@@ -8,7 +9,7 @@
 #app-container {
     --red: rgb(233,30,99);
     --black: rgb(15,19,35);
-    font-family: 'Alef', sans-serif;
+    font-family: 'Heebo', sans-serif;
     background-color: var(--black);
 }
 

@@ -13,7 +13,8 @@
 .all-speakers{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 100vw;
 }
 .speaker-box{
     width: 250px;
