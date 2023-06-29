@@ -2,8 +2,8 @@
     position: fixed;
     top: 70%;
     left: 0;
-    padding: 4%;
-    height: 25vh;
+    padding: 3%;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -14,13 +14,19 @@
 }
 
 #whatsapp-logo {
-    width: 70px;
+    width: 50px;
     border-radius: 50px;
+}
+
+#whatsapp-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #fixed-sign-container {
     color: var(--red);
-    font-size: larger;
+    font-size: large;
     font-weight: bolder;
     display: flex;
     flex-direction: column;

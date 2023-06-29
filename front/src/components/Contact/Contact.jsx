@@ -5,7 +5,6 @@ function Contact() {
         <div id='contact-container'>
             <div id='contact-row'>
                 <div>
-
                     <div id="contact-header">
                         <h1>
                             צור קשר
