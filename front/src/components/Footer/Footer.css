@@ -4,8 +4,9 @@
     color: var(--red);
     position: relative;
     display: flex;
-    justify-content: space-evenly;
-    line-height: 30px;
+    justify-content: space-between;
+    line-height: 40px;
+    padding: 10%;
 }
 
 #footer-container::after {
@@ -21,8 +22,10 @@
 .footer-column {
     display: flex;
     flex-direction: column;
+    font-size: large;
 }
 
 .footer-column-link {
     color: white;
+    font-size: medium;
 }
