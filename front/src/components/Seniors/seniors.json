@@ -1,0 +1,25 @@
+{
+    "seniros":
+    [
+        {
+            "fullName": "עמית ברחנין",
+            "role": "מפתח FullStack בחברת Intel",
+            "image": "https://images.pexels.com/photos/4307869/pexels-photo-4307869.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+            "fullName": "עומר אצילי",
+            "role": "מפתח Front-End בחברת WINWARD",
+            "image": "https://img.freepik.com/free-photo/close-up-portrait-young-indian-man-with-beard-white-shirt-isolated-standing-smiling_155003-23823.jpg?w=2000"
+        },
+        {
+            "fullName": "אוסקר גלוך",
+            "role": "מנהל מוצר בחברת Unity",
+            "image": "https://t3.ftcdn.net/jpg/03/96/78/06/360_F_396780640_mO95sH5ITG2sD3RdOd7fh3olapEkupXW.jpg"
+        },
+        {
+            "fullName": "ליאל עבדה ",
+            "role": "תוקף סייבר בחברת Cyberness",
+            "image": "https://live.staticflickr.com/65535/48977465818_fa612bde63_b.jpg"
+        }
+    ]
+}

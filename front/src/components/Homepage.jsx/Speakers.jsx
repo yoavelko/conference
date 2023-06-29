@@ -1,5 +1,7 @@
 import './speakers.css'
+import SpeakersData from './speakers.json'
 function Speakers() {
+    const speaker = SpeakersData.speakers
     return (
         <div className='speakers-container'>
             <br />
@@ -8,42 +10,22 @@ function Speakers() {
             <br />
             <br />
             <div className="all-speakers">
-                <div className="speaker-box">
-                    <div className="speaker-image">
-                        <img className='speaker-img' src="https://pbs.twimg.com/profile_images/1130817225911349249/esj5eMkU_400x400.jpg" alt="" />
-                    </div>
-                    <div className="speaker-details">
-                        <div className="speaker-name">גבי אשכנזי</div>
-                        <div className="speaker-background"> פוליטיקאי ואיש צבא ישראלי. בעבר היה שר החוץ, חבר הכנסת מטעם מפלגת חוסן לישראל בסיעת כחול לבן. כיום תפקידו הוא י"ור הקבוצה</div>
-                    </div>
-                </div>
-                <div className="speaker-box">
-                    <div className="speaker-image">
-                        <img className='speaker-img' src="https://pbs.twimg.com/profile_images/1130817225911349249/esj5eMkU_400x400.jpg" alt="" />
-                    </div>
-                    <div className="speaker-details">
-                        <div className="speaker-name">גבי אשכנזי</div>
-                        <div className="speaker-background"> פוליטיקאי ואיש צבא ישראלי. בעבר היה שר החוץ, חבר הכנסת מטעם מפלגת חוסן לישראל בסיעת כחול לבן. כיום תפקידו הוא י"ור הקבוצה</div>
-                    </div>
-                </div>
-                <div className="speaker-box">
-                    <div className="speaker-image">
-                        <img className='speaker-img' src="https://pbs.twimg.com/profile_images/1130817225911349249/esj5eMkU_400x400.jpg" alt="" />
-                    </div>
-                    <div className="speaker-details">
-                        <div className="speaker-name">גבי אשכנזי</div>
-                        <div className="speaker-background"> פוליטיקאי ואיש צבא ישראלי. בעבר היה שר החוץ, חבר הכנסת מטעם מפלגת חוסן לישראל בסיעת כחול לבן. כיום תפקידו הוא י"ור הקבוצה</div>
-                    </div>
-                </div>
-                <div className="speaker-box">
-                    <div className="speaker-image">
-                        <img className='speaker-img' src="https://pbs.twimg.com/profile_images/1130817225911349249/esj5eMkU_400x400.jpg" alt="" />
-                    </div>
-                    <div className="speaker-details">
-                        <div className="speaker-name">גבי אשכנזי</div>
-                        <div className="speaker-background"> פוליטיקאי ואיש צבא ישראלי. בעבר היה שר החוץ, חבר הכנסת מטעם מפלגת חוסן לישראל בסיעת כחול לבן. כיום תפקידו הוא י"ור הקבוצה</div>
-                    </div>
-                </div>
+                {
+                    speaker?.map((speaker,index) =>{
+                        return(
+                            <div className="speaker-box">
+                            <div className="speaker-image">
+                                <img className='speaker-img' src={speaker.image} alt="" />
+                            </div>
+                            <div className="speaker-details">
+                                <div className="speaker-name">{speaker.fullName}</div>
+                                <div className="speaker-background">{speaker.description}</div>
+                            </div>
+                        </div>
+                        )
+                    })
+
+                }
             </div>
 
         </div>
