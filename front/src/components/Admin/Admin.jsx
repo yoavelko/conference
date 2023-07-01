@@ -2,9 +2,25 @@ import { useEffect, useState } from 'react';
 import './Admin.scss'
 import { getAllVisitors, multipleFieldFilter, statusBulkUpdate, statusUpdate } from '../../utils/VisitorRoute'
 import axios from 'axios';
+import { adminVerify } from '../../utils/AdminRoute';
+import { useNavigate } from 'react-router-dom'
 function Admin() {
     const [data, setData] = useState();
+    const navigate = useNavigate();
     useEffect(() => {
+        if (!localStorage.getItem('token')) {
+            navigate('/')
+        }
+        else {
+            axios.post(adminVerify, {token: localStorage.getItem('token')})
+                .then(res => {
+                    console.log(res);
+                })
+                .catch(err => {
+                    console.log(err)
+                    navigate('/')
+                })
+        }
         axios.get(getAllVisitors)
             .then(({ data }) => {
                 setData(data.data.map(v => {
@@ -81,12 +97,12 @@ function Admin() {
                 }))
             })
             .catch(err => console.log(err))
-            const form = document.getElementById('filter-data');
-            form[0].checked = false;
-            form[1].checked = false;
-            form[2].checked = false;
-            form[3].checked = false;
-            form[4].checked = false;
+        const form = document.getElementById('filter-data');
+        form[0].checked = false;
+        form[1].checked = false;
+        form[2].checked = false;
+        form[3].checked = false;
+        form[4].checked = false;
     }
     async function complexFilter(e) {
         const filter = {
