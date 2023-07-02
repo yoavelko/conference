@@ -4,7 +4,9 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    line-height: 40px;
+    line-height: 55px;
+    padding-top: 3vh;
+    margin-top: 3vh;
 }
 
 #footer-outer-container {
@@ -32,7 +34,11 @@
 
 .footer-column-link {
     color: white;
-    font-size: small;
+    font-size: 15px;
+}
+
+.footer-column-link:hover {
+    color: rgba(255, 255, 255, 0.404);
 }
 
 #copyrights {
@@ -40,4 +46,19 @@
     font-size: x-small;
     color: rgba(255, 255, 255, 0.575);
     margin-top: 10%;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    #footer-container {
+        justify-content: space-evenly;
+        padding-top: 10vh;
+        margin-top: 10vh;
+    }
+
+    #footer-outer-container {
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
 }

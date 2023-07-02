@@ -6,15 +6,16 @@ function Footer() {
     <div id="footer-outer-container">
       <div id="footer-container">
         <div className="footer-column">
+        <Link to="contact">
+            <div className="footer-column-link">יצירת קשר ודרכי הגעה</div>
+          </Link>
           <Link to="/cyberpro">
             <div className="footer-column-link">אודות</div>
           </Link>
           <Link to="/seniors">
             <div className="footer-column-link">הבוגרים שלנו</div>
           </Link>
-          <Link to="contact">
-            <div className="footer-column-link">יצירת קשר ודרכי הגעה</div>
-          </Link>
+          
         </div>
         <div className="footer-column">
           <a href="https://cyberpro-israel.co.il/">

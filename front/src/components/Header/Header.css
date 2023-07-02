@@ -13,7 +13,7 @@
 }
 
 #header-logo-container {
-    width: 50%;
+    width: 33%;
 }
 
 #header-logo {
@@ -40,7 +40,11 @@
 }
 
 #menuToggle {
-    width: 50%;
+    width: 33%;
+}
+
+#spacer {
+    width: 33%;
 }
 
 #checkbox {
@@ -144,5 +148,9 @@ a:visited {
 
     #header-logo-container {
         width: 10%;
+    }
+
+    #spacer {
+        width: auto;
     }
 }
