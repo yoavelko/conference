@@ -4,6 +4,6 @@ const router = express.Router();
 
 router.post('/create', create);
 router.post('/login', login);
-router.post('/verify', verify)
+router.post('/verify', verify);
 
 module.exports = router;

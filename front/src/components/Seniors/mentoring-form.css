@@ -18,6 +18,11 @@
     height: 20vw;
     width: 20vw;
     border-radius: 50%;
+    transition: .2s;
+}
+
+.image-logo-mentor:hover {
+    transform: scale(1.05);
 }
 
 @media screen and (min-width: 600px) {

@@ -27,7 +27,7 @@ function Header() {
             <div id="header-logo-container">
               <img id="header-logo" src={cyberprologo} alt="" />
             </div>
-            <div id="spacer">wf</div>
+            <div id="spacer"></div>
           </div>
           <div id="dropmenu-content">
             <Link to={"/cyberpro"} onClick={() => window.scrollTo(0, 0)}>
