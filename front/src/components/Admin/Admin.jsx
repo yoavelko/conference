@@ -3,7 +3,8 @@ import './Admin.scss'
 import { getAllVisitors, multipleFieldFilter, statusBulkUpdate, statusUpdate } from '../../utils/VisitorRoute'
 import axios from 'axios';
 import { adminVerify } from '../../utils/AdminRoute';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser'
 function Admin() {
     const [data, setData] = useState();
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ function Admin() {
             navigate('/')
         }
         else {
-            axios.post(adminVerify, {token: localStorage.getItem('token')})
+            axios.post(adminVerify, { token: localStorage.getItem('token') })
                 .then(res => {
                     console.log(res);
                 })
@@ -39,8 +40,9 @@ function Admin() {
             return { ...v, selected: false }
         }))
     }
-    function approveSelected() {
-        let temp = data.filter(v => v.selected).map(v => v._id)
+    async function approveSelected() {
+        let temp = data.filter(v => v.selected && v.status !== 'approved').map(v => v._id)
+        let emailArray = data.filter(v => v.selected && v.status !== 'approved')
         axios.patch(statusBulkUpdate, {
             statusArray: temp,
             status: 'approved'
@@ -49,6 +51,12 @@ function Admin() {
                 setData(data.data.newList)
             })
             .catch(err => console.log(err))
+        emailArray.forEach(v => {
+            emailjs.send('service_u767x4d', 'cyberpro_confrence', {
+                name: v.name,
+                email: v.email
+            }, 'GsJXWtEpMGOvKuzDW')
+        })
     }
     function denieSelected() {
         let temp = data.filter(v => v.selected).map(v => v._id)
@@ -63,16 +71,18 @@ function Admin() {
 
     }
     function approveMe(index) {
-        axios.patch(statusUpdate, {
-            id: data[index]._id,
-            status: "approved"
-        })
-            .then((res) => {
-                const temp = data;
-                temp[index] = { ...res.data.data, selected: false }
-                setData([...temp])
+        if (data[index].status !== 'approved') {
+            axios.patch(statusUpdate, {
+                id: data[index]._id,
+                status: "approved"
             })
-            .catch(err => console.log(err))
+                .then((res) => {
+                    const temp = data;
+                    temp[index] = { ...res.data.data, selected: false }
+                    setData([...temp])
+                })
+                .catch(err => console.log(err))
+        }
     }
     function denyMe(index) {
         axios.patch(statusUpdate, {
@@ -86,9 +96,6 @@ function Admin() {
             })
             .catch(err => console.log(err))
     }
-    const [formState, setFormState] = useState([
-        false, false, false, false, false
-    ])
     async function clearFilter() {
         await axios.get(getAllVisitors)
             .then(({ data }) => {
@@ -109,6 +116,7 @@ function Admin() {
             status: '',
             association: ''
         };
+
         if (e.target.form[0].checked) filter.status = e.target.form[0].value;
         if (e.target.form[1].checked) filter.status = e.target.form[1].value;
         if (e.target.form[2].checked) filter.status = e.target.form[2].value;
@@ -124,7 +132,9 @@ function Admin() {
                 <div id="function-buttons">
                     <button type='button' onClick={selectAll}>סמן הכל</button>
                     <button type='button' onClick={unSelectAll}>ביטול כל הסימונים</button>
-                    <button type='button' onClick={approveSelected}>אשר את כל המסומנים</button>
+                    <button type='button' onClick={() => {
+                        approveSelected()
+                    }}>אשר את כל המסומנים</button>
                     <button type='button' onClick={denieSelected}>לפסול את כל המסומנים</button>
                 </div>
                 <div id="filter-buttons">
@@ -181,7 +191,7 @@ function Admin() {
                                     <td>{value?.name}</td>
                                     <td>{value?.email}</td>
                                     <td>{value?.phone}</td>
-                                    <td>{value?.association}</td>
+                                    <td>{value?.association === 'alumni' ? 'בוגר' : value?.association === 'partner' && 'שותף'}</td>
                                     <td>{value?.role}</td>
                                     <td>{value?.linkedin}</td>
                                     <td>{value?.status}</td>
