@@ -6,6 +6,7 @@ function OurSeniors() {
   const senior = SeniorData.seniros;
   return (
     <div className="our-seniors-container">
+      <br />
       <div className="our-seniors-title">הבוגרים שלנו</div>
       <br />
       <div className="our-senior-opening-div">

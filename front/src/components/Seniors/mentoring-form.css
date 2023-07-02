@@ -23,7 +23,7 @@
 @media screen and (min-width: 600px) {
     .logos-line1{
         grid-template-columns: 136px 136px 136px 136px ;
-        grid-template-rows: 136px 136px 136px ;
+        grid-template-rows: 136px 136px 136px 136px ;
        
     }
     .image-logo-mentor{

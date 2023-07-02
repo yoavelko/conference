@@ -66,11 +66,16 @@ function RegisterForm() {
                 <input className='input-text-style' type="text" placeholder=' תפקיד' />
                 <br />
                 <br />
+                <div className='linkedin-form'>
                 <input className='input-text-style' type="text" placeholder=' לינק לפרופיל שלך בלינקדאין' />
+                <a className='linkedin-link-form' href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">
+                <img  width="30" height="30" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>
+                </a>
+                </div>
                 <br />
                 <br />
                 <label className='spam-checkbox' htmlFor="">
-                    <input type="checkbox" name="spam" id="" value={spam} onChange={() => setSpam(!spam)} />
+                    <input type="checkbox" name="spam" id="" checked={spam} onChange={() => setSpam(!spam)} />
                     <div className='label-spam'> הנני מאשר קבלת מידע, הצעות שיווקיות ו/או דברי פרסום מחברת סייבר-פרו ישראל בע"מ</div>
                 </label>
                 <br />
