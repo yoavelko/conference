@@ -25,7 +25,9 @@ function Header() {
               </label>
             </div>
             <div id="header-logo-container">
-              <img id="header-logo" src={cyberprologo} alt="" />
+              <Link to={"/"}>
+                <img id="header-logo" src={cyberprologo} alt="" />
+              </Link>
             </div>
             <div id="spacer"></div>
           </div>
