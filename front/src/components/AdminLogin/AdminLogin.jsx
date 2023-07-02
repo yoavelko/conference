@@ -4,7 +4,7 @@ import { adminLogin } from '../../utils/AdminRoute';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
 function AdminLogin() {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit} = useForm();
     const navigate = useNavigate();
     function onSubmit(e) {
         axios.post(adminLogin, e)
