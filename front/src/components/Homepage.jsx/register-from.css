@@ -56,6 +56,11 @@
     height: 6vw;
 }
 
+#spam-checkbox {
+    width: 13px;
+    margin-top: 4px;
+}
+
 
 @media screen and (min-width: 768px) {
 
@@ -77,6 +82,12 @@
 
     .label-spam {
         width: 100%;
+        margin-right: 1.5vw;
+    }
+
+    #spam-checkbox {
+        width: 13px;
+        margin-top: 10px;
     }
 
     .spam-checkbox {
