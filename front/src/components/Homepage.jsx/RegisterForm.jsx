@@ -47,15 +47,15 @@ function RegisterForm() {
                 <input className='input-text-style' type="text" placeholder=' שם מלא*' required />
                 <br />
                 <br />
-                <input className='input-text-style' type="text" placeholder=' הנייד שלך*' required />
+                <input className='input-text-style' type="text" placeholder='טלפון*' required />
                 <br />
                 <br />
-                <input className='input-text-style' type="email" placeholder=' האימייל שלך*' required />
+                <input  className='input-text-style' type="email" placeholder='אימייל*' required />
                 <br />
                 <br />
                 <select name="" className='input-text-style'>
                     <option disabled selected value="0">מי את/ה?</option>
-                    <option value="alumni">בוגר סייבר פרו</option>
+                    <option value="alumni"> בוגר CYBERPRO </option>
                     <option value="partner">שותף עסקי</option>
                 </select>
                 <br />
