@@ -100,10 +100,6 @@
         width: 100vw;
     }
 
-    #intro-container {
-        display: none;
-    }
-
     .invation-black-title {
         font-size: xx-large;
         line-height: 10vh;

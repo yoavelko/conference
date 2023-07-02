@@ -12,3 +12,11 @@
     width: 100%;
     background-color: rgba(15, 19, 35, 0.137);
 }
+
+@media screen and (min-width: 768px) {
+
+    #intro-container {
+        background-image: url('../../media/wide-ladnscape.png');
+        height: 650px;
+    }
+}
