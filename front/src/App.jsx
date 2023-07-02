@@ -8,9 +8,11 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Fixed from "./components/Fixed/Fixed";
 import { useState } from "react";
+import Admin from "./components/Admin/Admin";
 
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import TermsOfUse from "./components/TermsOfUse/TemrsOfUse";
+import AdminLogin from "./components/AdminLogin/AdminLogin";
 
 function App() {
   const [isNavigating, setIsNavigating] = useState(false);
@@ -24,7 +26,7 @@ function App() {
             <div id="outlet-container">
               <Header />
               <Fixed setIsNavigating={setIsNavigating} />
-              <div style={{ top: "10vh", position: "absolute" }}>
+              <div id="outlet-inner">
                 <Outlet />
                 <Footer />
               </div>
@@ -43,6 +45,8 @@ function App() {
           <Route path="/cyberpro" element={<Cyberpro />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/seniors" element={<Seniors />} />
+          <Route path="/admin" element={<AdminLogin/>}/>
+          <Route path="/jk2l3s4j52da12a57lk9jf" element={<Admin/>}/>
           <Route path="/termsOfUse" element={<TermsOfUse />} />
           <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
         </Route>

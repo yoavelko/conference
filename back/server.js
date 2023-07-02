@@ -5,6 +5,8 @@ require('dotenv').config();
 const cors = require('cors');
 const mentorRoute = require('./routes/mentorRoute');
 const visitorRoute = require('./routes/visitorRoute');
+const adminRoute = require('./routes/adminRoute');
+
 app.use(express.json())
 
 app.use(cors());
@@ -18,6 +20,7 @@ mongoose.connect(process.env.SERVER, {})
 
 app.use('/mentor', mentorRoute);
 app.use('/visitor', visitorRoute);
+app.use('/admin', adminRoute)
 
 app.listen(3000, () => {
     console.log('banana initiated');
