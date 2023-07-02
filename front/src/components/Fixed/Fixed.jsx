@@ -1,7 +1,11 @@
 import "./Fixed.css";
 import { useLocation, useNavigate } from "react-router";
+import { useContext } from "react";
+import { FixedContext } from "../../contexts/FixedContext";
 
 function Fixed({ setIsNavigating }) {
+
+  const { fix, setFix } = useContext(FixedContext)
   const location = useLocation();
   const navigate = useNavigate();
   const handleNavigate = () => {
@@ -25,18 +29,30 @@ function Fixed({ setIsNavigating }) {
       </a>
       {location.pathname === "/" ? (
         <a href="#registration" id="fixed-sign-container">
-          <div>להרשמה</div>
+          <div id="sign-ref">להרשמה</div>
           <img
             id="sign-arrow"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACIklEQVR4nO2U22rUUBSGA54PVWs90Ez2yjhWxwNKRfRN5krrjGvFYAWfwWeR3hQvKiK2ICJaURRPNwWlWKvDZLLXZOj0DSJ7slWMps04SaEwP+ybZK39f3sl+zeMgQbS8kouSMC5QKBpZCy/dPOIFDTrg3MssYgFPmSgUAr63LauFbIyVweSAj+pvRnoQWLhKkwOS6C33UJBy2vSplTDrAkJtBgdDD96o+6hNRtWYXKYAd9oiG8Srpf6/KRf9FQ/NMyJkVSNHbt6gIFeRxD4nYV7vFfzZhFtBlrqmgO+q1t0sKcNVkrufhb0KtqA6q1C7UTaXt+uFlngVz32l+2xK/t6PUBX/tGre1jQUz0J6QvnrLGOWqZzUgI1NPiLoIxDRj/yRt3dLOiJhmBp1c4l1Qa2e0oCedr8OR++tTeTHPAUBOBjfY1askDn471Nm05LgU1t/ixu3ncOLNvVnQougsCAbWf8V5/tjHefRb2zqjaXHFg4U9nOQPe1Uce36HLLxgsM1NY/3KO4ec850DAnRqSg95p2SV2nvyAEzfyEUEsDz6h3mVzFzjo5EBqVLSxwSkOqb34vvOhuy8Q8bQ4oCAl0lwGnQ+PO1lxyICjjkASc1xBeUMRyHEKtP3qKWP6dAzi/uXIgSVnkQN9aHLu9Q91hPdqVpnXj0j9zAHCublV2GXlo4T9yIB8IkS4HclOYIgc2BEIm5MCGQoSxHBhooE2pH2l/5Z6/uF7IAAAAAElFTkSuQmCC"
+            src=
+            {
+              fix ?
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACIklEQVR4nO2U22rUUBSGA54PVWs90Ez2yjhWxwNKRfRN5krrjGvFYAWfwWeR3hQvKiK2ICJaURRPNwWlWKvDZLLXZOj0DSJ7slWMps04SaEwP+ybZK39f3sl+zeMgQbS8kouSMC5QKBpZCy/dPOIFDTrg3MssYgFPmSgUAr63LauFbIyVweSAj+pvRnoQWLhKkwOS6C33UJBy2vSplTDrAkJtBgdDD96o+6hNRtWYXKYAd9oiG8Srpf6/KRf9FQ/NMyJkVSNHbt6gIFeRxD4nYV7vFfzZhFtBlrqmgO+q1t0sKcNVkrufhb0KtqA6q1C7UTaXt+uFlngVz32l+2xK/t6PUBX/tGre1jQUz0J6QvnrLGOWqZzUgI1NPiLoIxDRj/yRt3dLOiJhmBp1c4l1Qa2e0oCedr8OR++tTeTHPAUBOBjfY1askDn471Nm05LgU1t/ixu3ncOLNvVnQougsCAbWf8V5/tjHefRb2zqjaXHFg4U9nOQPe1Uce36HLLxgsM1NY/3KO4ec850DAnRqSg95p2SV2nvyAEzfyEUEsDz6h3mVzFzjo5EBqVLSxwSkOqb34vvOhuy8Q8bQ4oCAl0lwGnQ+PO1lxyICjjkASc1xBeUMRyHEKtP3qKWP6dAzi/uXIgSVnkQN9aHLu9Q91hPdqVpnXj0j9zAHCublV2GXlo4T9yIB8IkS4HclOYIgc2BEIm5MCGQoSxHBhooE2pH2l/5Z6/uF7IAAAAAElFTkSuQmCC"
+              :
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABeElEQVR4nO2XT0sCQRTA91BUVIf+mKU7syqGXaKgz9KtUN+TpYI+Q98noogOEh2jOlldKohIELed5xr0DQx1CFJzG3dAFvxdf7DvzZuZN28NY8QfuFY2QQwuPpbzkUF8YASHInFsCIaP1djugqoPjJvaWyKGT+0g8FAxcV7Fa0EkMSoYvMiV3n/x/TkVr4V6vGAKDm/NIMTgzsvArIrXQjWWY8TgXZb7hiIHMypeC07K5sSw3ArC8boziJ/XApmYFhyrrXJzvKqY21MqXgu1eG5VcHTkSi/LVnZSxWvBS0BGMHTbQaD4mj6cUPFaEGZunTh4stxnjS17XMVrgRL5DeJYl33gpGEcjal4PUlYhU3i8Cn3/LgrCR8f7gRomFvgWfYaMRDtFoynnYfMz4f3GtaG2YhomK3Y6Xhs3OjOtIoP73Nc/zVw4G3/gaTbB0IkMUoMnuU9LvUayfr5cA+l4mfs7v1xPx8Yt/njwfHcWbEXB/EjRhj/5BsdP+dU0Ny7ygAAAABJRU5ErkJggg=="
+            }
           ></img>
         </a>
       ) : (
         <div id="fixed-sign-container" onClick={handleNavigate}>
-          <div>להרשמה</div>
+          <div id="sign-ref">להרשמה</div>
           <img
             id="sign-arrow"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACIklEQVR4nO2U22rUUBSGA54PVWs90Ez2yjhWxwNKRfRN5krrjGvFYAWfwWeR3hQvKiK2ICJaURRPNwWlWKvDZLLXZOj0DSJ7slWMps04SaEwP+ybZK39f3sl+zeMgQbS8kouSMC5QKBpZCy/dPOIFDTrg3MssYgFPmSgUAr63LauFbIyVweSAj+pvRnoQWLhKkwOS6C33UJBy2vSplTDrAkJtBgdDD96o+6hNRtWYXKYAd9oiG8Srpf6/KRf9FQ/NMyJkVSNHbt6gIFeRxD4nYV7vFfzZhFtBlrqmgO+q1t0sKcNVkrufhb0KtqA6q1C7UTaXt+uFlngVz32l+2xK/t6PUBX/tGre1jQUz0J6QvnrLGOWqZzUgI1NPiLoIxDRj/yRt3dLOiJhmBp1c4l1Qa2e0oCedr8OR++tTeTHPAUBOBjfY1askDn471Nm05LgU1t/ixu3ncOLNvVnQougsCAbWf8V5/tjHefRb2zqjaXHFg4U9nOQPe1Uce36HLLxgsM1NY/3KO4ec850DAnRqSg95p2SV2nvyAEzfyEUEsDz6h3mVzFzjo5EBqVLSxwSkOqb34vvOhuy8Q8bQ4oCAl0lwGnQ+PO1lxyICjjkASc1xBeUMRyHEKtP3qKWP6dAzi/uXIgSVnkQN9aHLu9Q91hPdqVpnXj0j9zAHCublV2GXlo4T9yIB8IkS4HclOYIgc2BEIm5MCGQoSxHBhooE2pH2l/5Z6/uF7IAAAAAElFTkSuQmCC"
+            src=
+            {
+              fix ?
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACIklEQVR4nO2U22rUUBSGA54PVWs90Ez2yjhWxwNKRfRN5krrjGvFYAWfwWeR3hQvKiK2ICJaURRPNwWlWKvDZLLXZOj0DSJ7slWMps04SaEwP+ybZK39f3sl+zeMgQbS8kouSMC5QKBpZCy/dPOIFDTrg3MssYgFPmSgUAr63LauFbIyVweSAj+pvRnoQWLhKkwOS6C33UJBy2vSplTDrAkJtBgdDD96o+6hNRtWYXKYAd9oiG8Srpf6/KRf9FQ/NMyJkVSNHbt6gIFeRxD4nYV7vFfzZhFtBlrqmgO+q1t0sKcNVkrufhb0KtqA6q1C7UTaXt+uFlngVz32l+2xK/t6PUBX/tGre1jQUz0J6QvnrLGOWqZzUgI1NPiLoIxDRj/yRt3dLOiJhmBp1c4l1Qa2e0oCedr8OR++tTeTHPAUBOBjfY1askDn471Nm05LgU1t/ixu3ncOLNvVnQougsCAbWf8V5/tjHefRb2zqjaXHFg4U9nOQPe1Uce36HLLxgsM1NY/3KO4ec850DAnRqSg95p2SV2nvyAEzfyEUEsDz6h3mVzFzjo5EBqVLSxwSkOqb34vvOhuy8Q8bQ4oCAl0lwGnQ+PO1lxyICjjkASc1xBeUMRyHEKtP3qKWP6dAzi/uXIgSVnkQN9aHLu9Q91hPdqVpnXj0j9zAHCublV2GXlo4T9yIB8IkS4HclOYIgc2BEIm5MCGQoSxHBhooE2pH2l/5Z6/uF7IAAAAAElFTkSuQmCC"
+              :
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABeElEQVR4nO2XT0sCQRTA91BUVIf+mKU7syqGXaKgz9KtUN+TpYI+Q98noogOEh2jOlldKohIELed5xr0DQx1CFJzG3dAFvxdf7DvzZuZN28NY8QfuFY2QQwuPpbzkUF8YASHInFsCIaP1djugqoPjJvaWyKGT+0g8FAxcV7Fa0EkMSoYvMiV3n/x/TkVr4V6vGAKDm/NIMTgzsvArIrXQjWWY8TgXZb7hiIHMypeC07K5sSw3ArC8boziJ/XApmYFhyrrXJzvKqY21MqXgu1eG5VcHTkSi/LVnZSxWvBS0BGMHTbQaD4mj6cUPFaEGZunTh4stxnjS17XMVrgRL5DeJYl33gpGEcjal4PUlYhU3i8Cn3/LgrCR8f7gRomFvgWfYaMRDtFoynnYfMz4f3GtaG2YhomK3Y6Xhs3OjOtIoP73Nc/zVw4G3/gaTbB0IkMUoMnuU9LvUayfr5cA+l4mfs7v1xPx8Yt/njwfHcWbEXB/EjRhj/5BsdP+dU0Ny7ygAAAABJRU5ErkJggg=="
+            }
           ></img>
         </div>
       )}

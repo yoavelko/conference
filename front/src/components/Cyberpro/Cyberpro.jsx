@@ -1,11 +1,12 @@
 import './Cyberpro.css'
-import { useState, useRef } from 'react'
+import { useState, useRef, useContext, useEffect } from 'react'
 import video from '../../media/video/2d-compressed.mp4'
 import ACE from '../../media/schedule/Syllabus-ACE.pdf'
 import CE from '../../media/schedule/Syllabus-CE.pdf'
 import BT from '../../media/schedule/Syllabus-BlueTeam.pdf'
 import RT from '../../media/schedule/Syllabus-RedTeam.pdf'
 import FS from '../../media/schedule/Syllabus-Fullstack.pdf'
+import { FixedContext } from '../../contexts/FixedContext'
 
 function Cyberpro() {
 
@@ -18,10 +19,15 @@ function Cyberpro() {
     const [fullstack, setFullstack] = useState(true)
     const [lochamim, setLochamim] = useState(true)
     const [auto, setAuto] = useState(true)
+    const { fix, setFix } = useContext(FixedContext)
 
     const myRef = useRef();
     // const y = myRef.current.offsetTop;
     window.onscroll = function () { scrollFunction() };
+
+    useEffect (() => {
+        setFix(false)
+    }, [])
 
     function scrollFunction() {
         if (document.body.scrollTop > y || document.documentElement.scrollTop > y) {
@@ -57,22 +63,22 @@ function Cyberpro() {
             <div className='cyberpro-containers'>
                 <div className='cyberpro-headers'>הקורסים שלנו</div>
                 <div className='cyberpro-containers'>
-                <div className='cyberpro-small-headers'>קורס הכשרת Full Stack Development</div>
-                {
-                    fullstack ?
-                        <>
-                            <div>קורס הכשרת Full Stack Development מכין את בוגריו לפתח מוצרים , אתרים, אפליקציות ופלטפורמות בעזרת עבודה עם הטכנולוגיות המתקדמות והנפוצות ביותר בתעשייה. <span className='about-show' onClick={() => setFullstack(!fullstack)}>הצג עוד...</span></div>
-                            <a className='syllabus-files' href={FS} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
-                        </>
-                        :
-                        <div>
-                            קורס הכשרת Full stack development מכין את בוגריו לפתח מוצרים , אתרים, אפליקציות ופלטפורמות בעזרת עבודה עם הטכנולוגיות המתקדמות והנפוצות ביותר בתעשייה. הידע הנרכש בקורס מפתח פול סטאק יסייע לך לפתח מוצר מרגע האפיון עד מוצר מוגמר. בהכשרה הייחודית של CYBERPRO הושם דגש על עבודה מעשית רבה שתבוצע בפרויקטים בצוותים ובעזרת הטכנולוגיות המבוקשות בתחום. בסיום הקורס תוכלו ליצור מוצר מאובטח, בעל מסובכות מורכבת ביותר, אשר יכול להכין מאות אלפי משתמשים. הקורס יכשיר אתכם לתעשיית הפיתוח לתפקידים כגון: Full stack developer, Front end developer, ו-Backend developer.
-                            <span className='about-show' onClick={() => setFullstack(!fullstack)}> הצג פחות</span>
-                            <br />
-                            <a className='syllabus-files' href={FS} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
-                        </div>
-                }
-            </div>
+                    <div className='cyberpro-small-headers'>קורס הכשרת Full Stack Development</div>
+                    {
+                        fullstack ?
+                            <>
+                                <div>קורס הכשרת Full Stack Development מכין את בוגריו לפתח מוצרים , אתרים, אפליקציות ופלטפורמות בעזרת עבודה עם הטכנולוגיות המתקדמות והנפוצות ביותר בתעשייה. <span className='about-show' onClick={() => setFullstack(!fullstack)}>הצג עוד...</span></div>
+                                <a className='syllabus-files' href={FS} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
+                            </>
+                            :
+                            <div>
+                                קורס הכשרת Full stack development מכין את בוגריו לפתח מוצרים , אתרים, אפליקציות ופלטפורמות בעזרת עבודה עם הטכנולוגיות המתקדמות והנפוצות ביותר בתעשייה. הידע הנרכש בקורס מפתח פול סטאק יסייע לך לפתח מוצר מרגע האפיון עד מוצר מוגמר. בהכשרה הייחודית של CYBERPRO הושם דגש על עבודה מעשית רבה שתבוצע בפרויקטים בצוותים ובעזרת הטכנולוגיות המבוקשות בתחום. בסיום הקורס תוכלו ליצור מוצר מאובטח, בעל מסובכות מורכבת ביותר, אשר יכול להכין מאות אלפי משתמשים. הקורס יכשיר אתכם לתעשיית הפיתוח לתפקידים כגון: Full stack developer, Front end developer, ו-Backend developer.
+                                <span className='about-show' onClick={() => setFullstack(!fullstack)}> הצג פחות</span>
+                                <br />
+                                <a className='syllabus-files' href={FS} download><button className='syllabus-btn'>סילבוס הקורס</button></a>
+                            </div>
+                    }
+                </div>
                 <div className='cyberpro-small-headers'>קורס הכשרת Blue Team Defender</div>
                 {
                     blueTeam ?

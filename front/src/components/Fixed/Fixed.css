@@ -40,6 +40,14 @@
     animation-iteration-count: infinite;
 }
 
+#sign-arrow:hover {
+    cursor: pointer;
+}
+
+#sign-ref:hover {
+    cursor: pointer;
+}
+
 @keyframes bounce {
     0% {transform: translateY(0px);}
     20% {transform: translateY(8px);}
