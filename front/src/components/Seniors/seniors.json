@@ -2,19 +2,19 @@
     "seniros":
     [
         {
-            "fullName": "עמית ברחנין",
-            "role": "מפתח FullStack בחברת Intel",
-            "image": "https://images.pexels.com/photos/4307869/pexels-photo-4307869.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            "fullName":"אסף אקסלרוד",
+            "role": "מיישם Dynatrace בחברת Matrix",
+            "image": "https://lh4.googleusercontent.com/rh7i9RtXGxFcJeVYb0W5uEdbuUndW2l61c_enXFilZQP-xBeGXcWQXhyYgGn-um2ByONFX5TTs3sRGSRJg5cU3s"
         },
         {
-            "fullName": "עומר אצילי",
-            "role": "מפתח Front-End בחברת WINWARD",
-            "image": "https://img.freepik.com/free-photo/close-up-portrait-young-indian-man-with-beard-white-shirt-isolated-standing-smiling_155003-23823.jpg?w=2000"
+            "fullName": "שחר צידון",
+            "role": "מפתח FullStack בחברת Enpitech",
+            "image": "https://lh3.googleusercontent.com/x-Rq0sOlvXxjpgZaTnA0YtTqz_PG0PTcjarDek-j_L5h6NJ4Io2OP7n1dRFhtLu9q-dkMIlIBU1PWH1h96hO9w"
         },
         {
-            "fullName": "אוסקר גלוך",
-            "role": "מנהל מוצר בחברת Unity",
-            "image": "https://t3.ftcdn.net/jpg/03/96/78/06/360_F_396780640_mO95sH5ITG2sD3RdOd7fh3olapEkupXW.jpg"
+            "fullName": "עמית אל על",
+            "role": "מפתח תוכנה בחברת אירונאוטיקס",
+            "image": "https://lh5.googleusercontent.com/yCjN4xpbkJ8kLoXO3odkA94x84V49iylr7FRfRtpuS3_FJSl252dsfLtaQNdk-BeOhEbudVwDHBGaRpGYyU3bxc"
         },
         {
             "fullName": "ליאל עבדה ",

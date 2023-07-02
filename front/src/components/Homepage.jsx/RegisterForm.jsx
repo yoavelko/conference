@@ -18,11 +18,21 @@ function RegisterForm() {
         .then(data => {
             console.log(data);
             alert("תודה רבה! מייל ישלח עם פרטים נוספים בהמשך")
+            e.target[0].value = ''
+            e.target[1].value = ''
+            e.target[2].value = ''
+            e.target[3].value = ''
+            e.target[4].value = ''
+            e.target[5].value = ''
+            e.target[6].value = ''
+            setSpam(false)
+            window.scrollTo(0,0)
+            console.log(spam);
             
         })
         .catch(error => {
             console.error(error);
-            alert(error.response)
+            alert(error.response.data)
         });
 
     }
@@ -60,7 +70,7 @@ function RegisterForm() {
                 <br />
                 <br />
                 <label className='spam-checkbox' htmlFor="">
-                    <input type="checkbox" name="spam" id="" onChange={() => setSpam(!spam)} />
+                    <input type="checkbox" name="spam" id="" value={spam} onChange={() => setSpam(!spam)} />
                     <div className='label-spam'> הנני מאשר קבלת מידע, הצעות שיווקיות ו/או דברי פרסום מחברת סייבר-פרו ישראל בע"מ</div>
                 </label>
                 <br />
