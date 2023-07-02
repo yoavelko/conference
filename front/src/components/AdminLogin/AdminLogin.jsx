@@ -10,7 +10,7 @@ function AdminLogin() {
         axios.post(adminLogin, e)
             .then(res => {
                 localStorage.setItem('token', res.data.token)
-                navigate('/jk2l3s4j52da12a57lk9jf')
+                navigate(`/${import.meta.env.VITE_LINK}`)
             })
             .catch(err => {
                 alert('Wrong credentials')

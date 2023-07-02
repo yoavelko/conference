@@ -4,9 +4,24 @@
     align-items: center;
 
 }
+.mentoring-details{
+    margin-right: 6vw;
+    width: 90%;
+}
+.mentoring-title{
+    font-size: xx-large;
+    color:  var(--red);
+    text-align: center;
+}
+.mentoring-subtitle{
+    font-weight: bold;
+}
 .mentoring-form-title{
     text-align: center;
-    font-size: xx-large;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .logos-line1{
     display: grid;
@@ -23,6 +38,15 @@
 
 .image-logo-mentor:hover {
     transform: scale(1.05);
+}
+#link-logo-mentoring{
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 4vw;
+    transition: 0.2s;
+}
+#link-logo-mentoring:hover{
+    transform: scale(1.1);
 }
 
 @media screen and (min-width: 600px) {

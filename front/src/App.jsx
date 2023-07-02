@@ -49,7 +49,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/seniors" element={<Seniors />} />
             <Route path="/admin" element={<AdminLogin />} />
-            <Route path="/jk2l3s4j52da12a57lk9jf" element={<Admin />} />
+            <Route path={`/${import.meta.env.VITE_LINK}`} element={<Admin/>}/>
             <Route path="/termsOfUse" element={<TermsOfUse />} />
             <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
           </Route>
