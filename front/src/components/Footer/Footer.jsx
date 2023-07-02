@@ -6,7 +6,7 @@ function Footer() {
     <div id="footer-outer-container">
       <div id="footer-container">
         <div className="footer-column">
-        <Link to="contact">
+          <Link to="contact">
             <div className="footer-column-link">יצירת קשר ודרכי הגעה</div>
           </Link>
           <Link to="/cyberpro">
@@ -15,7 +15,7 @@ function Footer() {
           <Link to="/seniors">
             <div className="footer-column-link">הבוגרים שלנו</div>
           </Link>
-          
+
         </div>
         <div className="footer-column">
           <a href="https://cyberpro-israel.co.il/">
@@ -38,7 +38,16 @@ function Footer() {
         </div>
       </div>
       <div id="copyrights">
-        © נוצר על ידי יואב אלקובי, עמית ברחנין וניתאי אלצור
+        © נוצר על ידי
+        <a href="https://www.linkedin.com/in/yoav-elkobi-082670256/" target="_blank" rel="noopener noreferrer" id="linked-in-links">
+          &nbsp;יואב אלקובי,&nbsp;
+        </a>
+        <a href="https://www.linkedin.com/in/amit-barhanin-588852262/" target="_blank" rel="noopener noreferrer" id="linked-in-links">
+          עמית ברחנין&nbsp;
+        </a>
+        <a href="https://www.linkedin.com/in/nitay-elzur-427b36280/" target="_blank" rel="noopener noreferrer" id="linked-in-links">
+          וניתאי אלצור&nbsp;
+        </a>
       </div>
     </div>
   );

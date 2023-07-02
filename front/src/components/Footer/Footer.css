@@ -48,6 +48,14 @@
     margin-top: 10%;
 }
 
+#linked-in-links {
+    color: rgba(255, 255, 255, 0.575);
+}
+
+#linked-in-links:hover {
+    color: white;
+}
+
 
 @media screen and (min-width: 768px) {
 
@@ -60,5 +68,9 @@
     #footer-outer-container {
         padding-left: 3vw;
         padding-right: 3vw;
+    }
+
+    #copyrights {
+        font-size: small;
     }
 }
