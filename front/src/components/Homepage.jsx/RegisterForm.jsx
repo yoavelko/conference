@@ -75,7 +75,7 @@ function RegisterForm() {
                 <br />
                 <br />
                 <label className='spam-checkbox' htmlFor="">
-                    <input type="checkbox" name="spam" id="" checked={spam} onChange={() => setSpam(!spam)} />
+                    <input type="checkbox" name="spam" id="spam-checkbox" checked={spam} onChange={() => setSpam(!spam)} />
                     <div className='label-spam'> הנני מאשר קבלת מידע, הצעות שיווקיות ו/או דברי פרסום מחברת סייבר-פרו ישראל בע"מ</div>
                 </label>
                 <br />
