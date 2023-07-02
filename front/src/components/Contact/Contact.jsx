@@ -1,6 +1,15 @@
 import './Contact.css'
+import { useContext, useEffect } from 'react'
+import { FixedContext } from '../../contexts/FixedContext'
 
 function Contact() {
+
+    const {fix, setFix} = useContext(FixedContext)
+
+    useEffect (() => {
+        setFix(false)
+    },[])
+
     return (
         <div id='contact-container'>
             <div id='contact-row'>
