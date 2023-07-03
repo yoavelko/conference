@@ -7,13 +7,13 @@ function Footer() {
       <div id="footer-container">
         <div className="footer-column">
           <Link to="contact">
-            <div className="footer-column-link">יצירת קשר ודרכי הגעה</div>
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>יצירת קשר ודרכי הגעה</div>
           </Link>
           <Link to="/cyberpro">
-            <div className="footer-column-link">אודות</div>
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>אודות</div>
           </Link>
           <Link to="/seniors">
-            <div className="footer-column-link">הבוגרים שלנו</div>
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>הבוגרים שלנו</div>
           </Link>
 
         </div>
@@ -30,10 +30,10 @@ function Footer() {
         </div>
         <div className="footer-column">
           <Link to="/privacyPolicy">
-            <div className="footer-column-link">מדיניות פרטיות</div>
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>מדיניות פרטיות</div>
           </Link>
           <Link to="/termsOfUse">
-            <div className="footer-column-link">תנאי שימוש</div>
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>תנאי שימוש</div>
           </Link>
         </div>
       </div>
