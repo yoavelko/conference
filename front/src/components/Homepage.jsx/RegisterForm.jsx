@@ -12,7 +12,11 @@ function RegisterForm() {
         const association = e.target[3].value
         const cooperation = e.target[4].value
         const role = e.target[5].value
-        const linkedin = e.target[6].value
+        let linkedin = e.target[6].value
+        if (!linkedin.includes('http'))
+        {
+            linkedin = `https://${linkedin}`
+        }
 
         axios.post(createVisitor, {name,phone, email, association, cooperation,role,linkedin, spam} )
         .then(data => {
@@ -54,7 +58,7 @@ function RegisterForm() {
                 <br />
                 <br />
                 <select name="" className='input-text-style'>
-                    <option disabled selected value="0">מי את/ה?</option>
+                    <option disabled selected value="0">מי את/ה?*</option>
                     <option value="alumni"> בוגר CYBERPRO </option>
                     <option value="partner">שותף עסקי</option>
                 </select>
