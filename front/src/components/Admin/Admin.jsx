@@ -197,7 +197,7 @@ function Admin() {
                                     <td>{value?.phone}</td>
                                     <td>{value?.association === 'alumni' ? 'בוגר' : value?.association === 'partner' && 'שותף'}</td>
                                     <td>{value?.role}</td>
-                                    <td>{value?.linkedin}</td>
+                                    <td><a id='linkedin-link-admin' href={`${value?.linkedin}`} target="_blank" rel="noopener noreferrer">{value?.linkedin}</a></td>
                                     <td>{value?.status}</td>
                                     <button type='button' onClick={() => approveMe(index)}>אשר</button>
                                     <button type='button' onClick={() => denyMe(index)}>סרב</button>
