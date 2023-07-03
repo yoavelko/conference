@@ -15,12 +15,6 @@ function Admin() {
     const { fix, setFix } = useContext(FixedContext)
 
     useEffect(() => {
-        return () => {
-            setFix(null)
-        }
-    }, [])
-
-    useEffect(() => {
         if (!localStorage.getItem('token')) {
             navigate('/')
         }
@@ -41,6 +35,9 @@ function Admin() {
                 }))
             })
             .catch(err => console.log(err))
+        return () => {
+            setFix(null)
+        }
     }, [])
 
     function selectAll() {
@@ -68,19 +65,20 @@ function Admin() {
             .catch(err => console.log(err))
         const emailTypeArr = [
             {
-                serviceID: 'service_ajh3txa',
+                serviceID: 'service_fizzara',
                 templateID: 'cyberpro_confrence',
-                publicKey: 'GdboFPtSqAEs23Uqv'
+                publicKey: 'h0nluwCQyOoucVvAQ'
             },
             {
-                serviceID: 'service_dey5gma',
+                serviceID: 'service_vi3wwbg',
                 templateID: 'cyberpro_confrence',
-                publicKey: 'Ys9sVGVqOYNSbVlPY'
+                publicKey: 'JOKmoWcByn6zBklXt'
             },
             {
-                serviceID: 'service_4f3r7bl',
+                //
+                serviceID: 'service_u767x4d',
                 templateID: 'cyberpro_confrence',
-                publicKey: 'wzIILVYuK7g5qlac1'
+                publicKey: 'GsJXWtEpMGOvKuzDW'
             }
 
         ];
@@ -90,21 +88,21 @@ function Admin() {
                     name: value.name,
                     email: value.email
                 }, emailTypeArr[0].publicKey)
-                .then(res => console.log(res))
+                    .then(res => console.log(res))
             }
             else if (index === 1 || (index - 1) % 3 === 0) {
                 await emailjs.send(emailTypeArr[1].serviceID, emailTypeArr[1].templateID, {
                     name: value.name,
                     email: value.email
                 }, emailTypeArr[1].publicKey)
-                .then(res => console.log(res))
+                    .then(res => console.log(res))
             }
             else if (index === 2 || (index - 2) % 3 === 0) {
                 await emailjs.send(emailTypeArr[2].serviceID, emailTypeArr[2].templateID, {
                     name: value.name,
                     email: value.email
                 }, emailTypeArr[2].publicKey)
-                .then(res => console.log(res))
+                    .then(res => console.log(res))
             }
 
         })
@@ -137,19 +135,19 @@ function Admin() {
             const rand = Math.floor(Math.random() * 3);
             const emailTypeArr = [
                 {
-                    serviceID: 'service_ajh3txa',
+                    serviceID: 'service_fizzara',
                     templateID: 'cyberpro_confrence',
-                    publicKey: 'GdboFPtSqAEs23Uqv'
+                    publicKey: 'h0nluwCQyOoucVvAQ'
                 },
                 {
-                    serviceID: 'service_dey5gma',
+                    serviceID: 'service_vi3wwbg',
                     templateID: 'cyberpro_confrence',
-                    publicKey: 'Ys9sVGVqOYNSbVlPY'
+                    publicKey: 'JOKmoWcByn6zBklXt'
                 },
                 {
-                    serviceID: 'service_4f3r7bl',
+                    serviceID: 'service_u767x4d',
                     templateID: 'cyberpro_confrence',
-                    publicKey: 'wzIILVYuK7g5qlac1'
+                    publicKey: 'GsJXWtEpMGOvKuzDW'
                 }
 
             ];
@@ -158,8 +156,8 @@ function Admin() {
                 name: data[index].name,
                 email: data[index].email
             }, publicKey)
-            .then(res => console.log(res))
-
+                .then(res => console.log(res))
+            emailjs.init()
         }
     }
 
