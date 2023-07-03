@@ -58,6 +58,18 @@ function Schedule() {
                 </div>
               </div>
             </div>
+            <br />
+            <div className="schedule-event-all">
+              <div className="arrow-triangle-mini"></div>
+              <div className="schedule-event">
+                <div className="info-event-mini">
+                  <div>
+                    <span>יואב מעוז- </span>
+                    <span>מנכ"ל ידידי עתידים </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <br />

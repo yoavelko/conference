@@ -7,6 +7,7 @@
 .mentoring-details{
     margin-right: 6vw;
     width: 90%;
+    line-height: 35px;
 }
 .mentoring-title{
     font-size: xx-large;
@@ -18,10 +19,21 @@
 }
 .mentoring-form-title{
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 5%;
+    line-height: 15vh;
+    color: var(--red);
+    font-weight: bold;
+    margin-bottom: 20vh;
+}
+#mentoring-icons-container{
+    display: flex;
+    width: 20%;
+    justify-content: space-evenly;
 }
 .logos-line1{
     display: grid;
@@ -42,7 +54,6 @@
 #link-logo-mentoring{
     height: 35px;
     border-radius: 50%;
-    margin-right: 4vw;
     transition: 0.2s;
 }
 #link-logo-mentoring:hover{
