@@ -5,9 +5,21 @@ import axios from 'axios';
 import { adminVerify } from '../../utils/AdminRoute';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser'
+import { FixedContext } from '../../contexts/FixedContext';
+import { useContext } from 'react';
+
 function Admin() {
+
     const [data, setData] = useState();
     const navigate = useNavigate();
+    const { fix, setFix } = useContext(FixedContext)
+
+    useEffect(() => {
+        return () => {
+            setFix(null)
+        }
+    }, [])
+
     useEffect(() => {
         if (!localStorage.getItem('token')) {
             navigate('/')
@@ -30,16 +42,19 @@ function Admin() {
             })
             .catch(err => console.log(err))
     }, [])
+
     function selectAll() {
         setData(prev => prev.map(v => {
             return { ...v, selected: true }
         }))
     }
+
     function unSelectAll() {
         setData(prev => prev.map(v => {
             return { ...v, selected: false }
         }))
     }
+
     async function approveSelected() {
         let temp = data.filter(v => v.selected && v.status !== 'approved').map(v => v._id)
         let emailArray = data.filter(v => v.selected && v.status !== 'approved')
@@ -58,6 +73,7 @@ function Admin() {
             }, 'GsJXWtEpMGOvKuzDW')
         })
     }
+
     function denieSelected() {
         let temp = data.filter(v => v.selected).map(v => v._id)
         axios.patch(statusBulkUpdate, {
@@ -68,8 +84,8 @@ function Admin() {
                 setData(data.data.newList)
             })
             .catch(err => console.log(err))
-
     }
+
     function approveMe(index) {
         if (data[index].status !== 'approved') {
             axios.patch(statusUpdate, {
@@ -88,6 +104,7 @@ function Admin() {
             }, 'GsJXWtEpMGOvKuzDW')
         }
     }
+
     function denyMe(index) {
         axios.patch(statusUpdate, {
             id: data[index]._id,
@@ -100,6 +117,7 @@ function Admin() {
             })
             .catch(err => console.log(err))
     }
+
     async function clearFilter() {
         await axios.get(getAllVisitors)
             .then(({ data }) => {
@@ -115,6 +133,7 @@ function Admin() {
         form[3].checked = false;
         form[4].checked = false;
     }
+
     async function complexFilter(e) {
         const filter = {
             status: '',
@@ -130,6 +149,7 @@ function Admin() {
             .then(res => setData(res.data))
             .catch(err => console.log(err))
     }
+
     return (
         <>
             <div id="admin-container">

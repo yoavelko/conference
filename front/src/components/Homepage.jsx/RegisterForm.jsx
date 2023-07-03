@@ -71,7 +71,7 @@ function RegisterForm() {
                 <br />
                 <br />
                 <div className='linkedin-form'>
-                <input className='input-text-style' type="text" placeholder=' לינק לפרופיל שלך בלינקדאין' />
+                <input className='input-text-style' type="text" placeholder=' לינק לפרופיל לינקדאין' />
                 <a className='linkedin-link-form' href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">
                 <img  width="30" height="30" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>
                 </a>

@@ -1,11 +1,12 @@
 import "./Fixed.css";
 import { useLocation, useNavigate } from "react-router";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FixedContext } from "../../contexts/FixedContext";
 
 function Fixed({ setIsNavigating }) {
 
   const { fix, setFix } = useContext(FixedContext)
+  const [containerID, setContainerID] = useState('fixed-container')
   const location = useLocation();
   const navigate = useNavigate();
   const handleNavigate = () => {
@@ -13,8 +14,16 @@ function Fixed({ setIsNavigating }) {
     setIsNavigating(true)
   };
 
+  useEffect (() => {
+    if (fix === null) {
+      setContainerID('hidden-container')
+    } else {
+      setContainerID('fixed-container')
+    }
+  })
+
   return (
-    <div id="fixed-container">
+    <div id={containerID}>
       <a
         href="https://api.whatsapp.com/send?phone=972502449054&text=שלום,%20ארצה%20לשמוע%20עוד%20על%20הכנס%20שיקרה%20ב-2.8"
         target="_blank"
