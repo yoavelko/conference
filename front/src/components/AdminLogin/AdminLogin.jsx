@@ -9,6 +9,7 @@ function AdminLogin() {
     function onSubmit(e) {
         axios.post(adminLogin, e)
             .then(res => {
+                console.log(res);
                 localStorage.setItem('token', res.data.token)
                 navigate(`/${import.meta.env.VITE_LINK}`)
             })

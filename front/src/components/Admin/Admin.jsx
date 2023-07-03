@@ -82,6 +82,10 @@ function Admin() {
                     setData([...temp])
                 })
                 .catch(err => console.log(err))
+            emailjs.send('service_u767x4d', 'cyberpro_confrence', {
+                name: data[index].name,
+                email: data[index].email
+            }, 'GsJXWtEpMGOvKuzDW')
         }
     }
     function denyMe(index) {
