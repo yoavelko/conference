@@ -51,11 +51,47 @@ function Admin() {
                 setData(data.data.newList)
             })
             .catch(err => console.log(err))
-        emailArray.forEach(v => {
-            emailjs.send('service_u767x4d', 'cyberpro_confrence', {
-                name: v.name,
-                email: v.email
-            }, 'GsJXWtEpMGOvKuzDW')
+        const emailTypeArr = [
+            {
+                serviceID: 'service_ajh3txa',
+                templateID: 'cyberpro_confrence',
+                publicKey: 'GdboFPtSqAEs23Uqv'
+            },
+            {
+                serviceID: 'service_dey5gma',
+                templateID: 'cyberpro_confrence',
+                publicKey: 'Ys9sVGVqOYNSbVlPY'
+            },
+            {
+                serviceID: 'service_4f3r7bl',
+                templateID: 'cyberpro_confrence',
+                publicKey: 'wzIILVYuK7g5qlac1'
+            }
+
+        ];
+        emailArray.forEach(async (value, index) => {
+            if (index === 0 || index % 3 === 0) {
+                await emailjs.send(emailTypeArr[0].serviceID, emailTypeArr[0].templateID, {
+                    name: value.name,
+                    email: value.email
+                }, emailTypeArr[0].publicKey)
+                .then(res => console.log(res))
+            }
+            else if (index === 1 || (index - 1) % 3 === 0) {
+                await emailjs.send(emailTypeArr[1].serviceID, emailTypeArr[1].templateID, {
+                    name: value.name,
+                    email: value.email
+                }, emailTypeArr[1].publicKey)
+                .then(res => console.log(res))
+            }
+            else if (index === 2 || (index - 2) % 3 === 0) {
+                await emailjs.send(emailTypeArr[2].serviceID, emailTypeArr[2].templateID, {
+                    name: value.name,
+                    email: value.email
+                }, emailTypeArr[2].publicKey)
+                .then(res => console.log(res))
+            }
+
         })
     }
     function denieSelected() {
@@ -70,7 +106,7 @@ function Admin() {
             .catch(err => console.log(err))
 
     }
-    function approveMe(index) {
+    async function approveMe(index) {
         if (data[index].status !== 'approved') {
             axios.patch(statusUpdate, {
                 id: data[index]._id,
@@ -82,10 +118,32 @@ function Admin() {
                     setData([...temp])
                 })
                 .catch(err => console.log(err))
-            emailjs.send('service_u767x4d', 'cyberpro_confrence', {
+            const rand = Math.floor(Math.random() * 3);
+            const emailTypeArr = [
+                {
+                    serviceID: 'service_ajh3txa',
+                    templateID: 'cyberpro_confrence',
+                    publicKey: 'GdboFPtSqAEs23Uqv'
+                },
+                {
+                    serviceID: 'service_dey5gma',
+                    templateID: 'cyberpro_confrence',
+                    publicKey: 'Ys9sVGVqOYNSbVlPY'
+                },
+                {
+                    serviceID: 'service_4f3r7bl',
+                    templateID: 'cyberpro_confrence',
+                    publicKey: 'wzIILVYuK7g5qlac1'
+                }
+
+            ];
+            const { serviceID, templateID, publicKey } = emailTypeArr[rand];
+            await emailjs.send(serviceID, templateID, {
                 name: data[index].name,
                 email: data[index].email
-            }, 'GsJXWtEpMGOvKuzDW')
+            }, publicKey)
+            .then(res => console.log(res))
+
         }
     }
     function denyMe(index) {
@@ -179,7 +237,7 @@ function Admin() {
                         <th>אימייל</th>
                         <th>טלפון</th>
                         <th>מי אני</th>
-                        <th>משרה</th>
+                        <th>שם החברה</th>
                         <th>linkedin</th>
                         <th>סטטוס</th>
                     </tr>
