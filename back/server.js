@@ -22,6 +22,10 @@ app.use('/mentor', mentorRoute);
 app.use('/visitor', visitorRoute);
 app.use('/admin', adminRoute)
 
+app.use('/', (req, res) => {
+    res.status(200).send('Hello World!')
+})
+
 app.listen(3000, () => {
     console.log('banana initiated');
 })
