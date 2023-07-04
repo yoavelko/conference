@@ -7,10 +7,14 @@ function RegisterForm() {
     const [spam, setSpam] = useState(false);
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = (e) => {
-        if (!e.linkedin.includes('http')) {
+        if (e.linkedin && !e.linkedin.includes('http')) {
             e.linkedin = `https://${e.linkedin}`
         }
-        axios.post(createVisitor, { name, phone, email, association, cooperation, role, linkedin, spam })
+        if(!e.linkedin) delete e.linkedin;
+        if(!e.role) delete e.role;
+        if(!e.cooperation) delete e.cooperation;
+        if(!e.spam) delete e.spame;
+        axios.post(createVisitor, e)
             .then(() => {
                 alert("תודה רבה! מייל ישלח עם פרטים נוספים בהמשך")
                 setSpam(false)
