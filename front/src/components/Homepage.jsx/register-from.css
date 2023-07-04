@@ -10,6 +10,7 @@
 .register-form-title{
     font-size: xx-large;
     color: var(--red);
+    margin-bottom: var(--line);
 }
 .input-text-style{
     width: 280px;
@@ -17,10 +18,18 @@
     border-radius: 7px;
     font-size: var(--text);
     font-weight: bold;
+    margin-bottom: var(--line);
 }
 
 .input-text-style::placeholder {
     padding-right: 5px;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .register-form-container #form-container select {
@@ -32,14 +41,16 @@
     display: flex;
     width: 280px;
     align-items: start;
+    margin-bottom: var(--line);
 }
 .label-spam{
     margin-right: 3vw;
+    width: calc(95% - 13px);
     font-weight: bold;
     color: rgb(174, 173, 173);
 }
 .submit-register{
-    height: 12vw;
+    height: 35px;
     background: rgb(241,133,18);
     background: linear-gradient(17deg, rgba(241,133,18,1) 0%, rgba(233,30,99,1) 50%);  
     width: 280px;
@@ -54,7 +65,10 @@
     align-items: center;
 }
 .linkedin-link-form{
-    height: 30px;
+    height: 35px;
+    right: 20px;
+    margin-bottom: 10px;
+    position: absolute;
 }
 
 .submit-register:hover{
