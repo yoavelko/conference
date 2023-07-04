@@ -1,21 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 
-*{
-    scroll-behavior: smooth;
-}
-
-
-#app-container {
-    --red: rgb(233,30,99);
-    --black: rgb(15,19,35);
-    font-family: 'Heebo', sans-serif;
-    background-color: var(--black);
-}
-
 * {
+    scroll-behavior: smooth;
+    font-family: 'Heebo', sans-serif;
     margin: 0;
     box-sizing: border-box;
+}
+
+#app-container {
+    --red: rgb(233, 30, 99);
+    --black: rgb(15, 19, 35);
+    background-color: var(--black);
 }
 
 #outlet-inner {

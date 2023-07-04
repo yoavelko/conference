@@ -9,7 +9,6 @@ import { FixedContext } from '../../contexts/FixedContext';
 import { useContext } from 'react';
 
 function Admin() {
-
     const [data, setData] = useState();
     const navigate = useNavigate();
     const { fix, setFix } = useContext(FixedContext)
@@ -89,6 +88,7 @@ function Admin() {
                     email: value.email
                 }, emailTypeArr[0].publicKey)
                     .then(res => console.log(res))
+                    .catch(err => console.log({err, email: value.email}))
             }
             else if (index === 1 || (index - 1) % 3 === 0) {
                 await emailjs.send(emailTypeArr[1].serviceID, emailTypeArr[1].templateID, {
@@ -96,6 +96,7 @@ function Admin() {
                     email: value.email
                 }, emailTypeArr[1].publicKey)
                     .then(res => console.log(res))
+                    .catch(err => console.log({err, email: value.email}))
             }
             else if (index === 2 || (index - 2) % 3 === 0) {
                 await emailjs.send(emailTypeArr[2].serviceID, emailTypeArr[2].templateID, {
@@ -103,6 +104,7 @@ function Admin() {
                     email: value.email
                 }, emailTypeArr[2].publicKey)
                     .then(res => console.log(res))
+                    .catch(err => console.log({err, email: value.email}))
             }
 
         })
