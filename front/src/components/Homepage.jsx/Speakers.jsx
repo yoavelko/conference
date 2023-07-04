@@ -1,7 +1,7 @@
 import "./speakers.css";
+import './schedule.css'
 import Logos from "./../Seniors/mentoringLogo.json";
 import SpeakersData from "./speakers.json";
-import {Link} from 'react-router-dom'
 function Speakers() {
   const logo = Logos.logos;
   const speaker = SpeakersData.speakers;
