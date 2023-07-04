@@ -1,12 +1,22 @@
+import { useRef } from "react";
 import "./mentoring-form.css";
 import logos from "./mentoringLogo.json";
+import { useLocation, useNavigate } from "react-router";
 function MentoringForm() {
   const logo = logos.logos;
+  const {state} = useLocation();
+  console.log(state?.location);
+  
+  const mentors = useRef(null)
+  if(state)
+  {
+    mentors?.current?.scrollIntoView() 
+  }
   return (
     <div className="mentoring-form-container">
-      <div className="mentoring-details">
+      <div ref={mentors} className="mentoring-details">
         <br />
-        <div className="mentoring-title">קהילת המנטורים</div>
+        <div className="mentoring-title" id="mentors">קהילת המנטורים</div>
         <br />
         <div className="mentoring-explain"></div>
         <span className="mentoring-subtitle">תכנית המנטורינג-</span>

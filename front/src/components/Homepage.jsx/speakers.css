@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     background-color: var(--black);
-    line-height: 4.5vh;
     background-color: var(--black);
 }
 .speakers-title{
@@ -35,3 +34,4 @@
 .speaker-name{
     color: var(--red);
 }
+

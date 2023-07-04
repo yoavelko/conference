@@ -91,12 +91,7 @@ function Schedule() {
           </div>
         </div>
       </div>
-      <div className="schedule-opening">
-        <span className="reder">הזדמנות</span><span> יחידה במינה</span>
-        <br />
-        <span>לתת <span className="reder">למישהו</span> את <span className="reder">ההזדמנות</span> הראשונה</span>
-      </div>
-      <div className="space-holder"></div>
+    
     </div>
   );
 }
