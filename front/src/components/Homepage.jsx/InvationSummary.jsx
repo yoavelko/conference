@@ -5,12 +5,13 @@ function InvationSummary() {
         <div className='invationSummary-container'>
             <div className="invation-black-title">
                 <div>
-                    <span>CYBERPRO</span> <span className='reder'>Israel </span>
-                    <span>מזמינה</span>
-                    <div>אתכם לכנס ייחודי בו</div>
+                    <span className='invataion-text'>CYBERPRO</span> <span className='invataion-text-red'>Israel </span>
+                    <br />
+                    <span className='invataion-text'></span>
+                    <div className='invataion-text'>מזמינה אתכם לכנס ייחודי</div>
                 </div>
                 <div>
-                    <span className='reder'>לוחמים</span> <span>ועולם</span> <span className='reder'>ההייטק</span> <span>נפגשים</span>
+                    <span className='invataion-text'>בו</span> <span className='invataion-text-red'>לוחמים</span> <span className='invataion-text'>ועולם</span> <span className='invataion-text-red'>ההייטק</span> <span className='invataion-text'>נפגשים</span>
                 </div>
             </div>
             <a href='#registration' className="invation-summary-button-div">

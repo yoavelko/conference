@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 5%;
-    padding-top: 10%;
+    padding-top: 0;
+    padding-bottom: 0;
     background-color: var(--black);
 }
 
@@ -14,7 +15,7 @@
     font-weight: bold;
     font-size: xx-large;
     line-height: 7vh;
-    margin-top: 8vh;
+    margin-top: 5vh;
     margin-bottom: 4vh;
 }
 
@@ -75,6 +76,15 @@
 }
 .more-details-event{
     margin-right:  15vw;
+}
+
+.opportunity {
+    font-size: var(--h2);
+}
+
+.opportunity-red {
+    font-size: 35px;
+    color: var(--red);
 }
 
 @media screen and (min-width: 768px) {
