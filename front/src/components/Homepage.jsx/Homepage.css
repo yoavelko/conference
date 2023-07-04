@@ -89,11 +89,11 @@
     height: 12vw;
     display: flex;
     justify-content: center;
-    background: rgb(241,133,18);
-    background: linear-gradient(17deg, rgba(241,133,18,1) 0%, rgba(233,30,99,1) 50%);    
+    background: rgb(90,58,119);
+    background: linear-gradient(100deg, rgba(90,58,119,1) 0%, rgba(161,63,102,1) 48%, rgba(246,70,81,1) 100%);  
     width: 50%;
     border-radius: 8px;
-    border: solid white 2px;
+    border: solid rgba(255, 255, 255, 0.507) 2px;
 }
 
 .invation-summary-button-div:hover{
