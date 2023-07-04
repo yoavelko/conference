@@ -10,10 +10,10 @@ function RegisterForm() {
         if (e.linkedin && !e.linkedin.includes('http')) {
             e.linkedin = `https://${e.linkedin}`
         }
-        if(!e.linkedin) delete e.linkedin;
-        if(!e.role) delete e.role;
-        if(!e.cooperation) delete e.cooperation;
-        if(!e.spam) delete e.spame;
+        if (!e.linkedin) delete e.linkedin;
+        if (!e.role) delete e.role;
+        if (!e.cooperation) delete e.cooperation;
+        if (!e.spam) delete e.spame;
         axios.post(createVisitor, e)
             .then(() => {
                 alert("תודה רבה! מייל ישלח עם פרטים נוספים בהמשך")
@@ -38,6 +38,7 @@ function RegisterForm() {
     }
     return (
         <div className='register-form-container' id='registration'>
+            <div id='register-effect'></div>
             <div className="register-form-title">רישום לכנס</div>
             <form id='form-container' onSubmit={handleSubmit(onSubmit)}>
                 <input className='input-text-style' type="text" placeholder=' שם מלא*' {
@@ -86,6 +87,7 @@ function RegisterForm() {
             </form>
             <div className='space-holder'></div>
         </div>
+
     )
 }
 

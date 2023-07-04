@@ -1,7 +1,8 @@
 import "./speakers.css";
+import "./schedule.css";
 import Logos from "./../Seniors/mentoringLogo.json";
 import SpeakersData from "./speakers.json";
-import {Link} from 'react-router-dom'
+
 function Speakers() {
   const logo = Logos.logos;
   const speaker = SpeakersData.speakers;
@@ -28,12 +29,12 @@ function Speakers() {
         })}
       </div>
       <div className="schedule-opening">
-        <span className="reder">הזדמנות</span>
-        <span> יחידה במינה</span>
+        <span className="opportunity-red">הזדמנות</span>
+        <span className="opportunity"> יחידה במינה</span>
         <br />
-        <span>
-          לתת <span className="reder">למישהו</span> את{" "}
-          <span className="reder">ההזדמנות</span> הראשונה
+        <span className="opportunity">
+          לתת <span className="opportunity-red">למישהו</span><br />את{" "}
+          <span className="opportunity-red">ההזדמנות</span> הראשונה
         </span>
         
       </div>

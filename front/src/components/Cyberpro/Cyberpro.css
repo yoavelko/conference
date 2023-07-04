@@ -2,7 +2,9 @@
     padding: 10%;
     line-height: 4.5vh;
     color: white;
-    background-color: var(--black);
+    background-image: url('../../media/bgn2.jpg');
+    background-size: 180vw;
+    background-position: 40%;
 }
 
 .about-show {

@@ -1,6 +1,7 @@
 .seniors-container{
-    background-color: var(--black);
     color: white;
     width: 100vw;
-
+    background-image: url('../../media/bgn2.jpg');
+    background-size: 180vw;
+    background-position: 40%;
 }
