@@ -3,8 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--black);
-    background-color: var(--black);
 }
 .speakers-title{
     font-size: xx-large;
