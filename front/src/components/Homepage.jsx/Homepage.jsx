@@ -8,6 +8,7 @@ import RegisterForm from "./RegisterForm";
 import Schedule from "./Schedule";
 import Speakers from "./Speakers";
 import Intro from "./Intro";
+import Slider from "./Slider";
 
 
 function Homepage({ isNavigating, setIsNavigating }) {
@@ -28,6 +29,7 @@ function Homepage({ isNavigating, setIsNavigating }) {
       <InvationSummary />
       <Schedule />
       <Speakers />
+      <Slider />
       <MiniVideo />
       <MiniLocation />
       <RegisterForm />

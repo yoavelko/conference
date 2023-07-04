@@ -14,9 +14,11 @@
     text-align: center;
     font-weight: bold;
     font-size: xx-large;
-    line-height: 7vh;
-    margin-top: 5vh;
-    margin-bottom: 4vh;
+
+   /* line-height: 7vh;
+    margin-top: 8vh;
+    margin-bottom: 4vh; */
+
 }
 
 .schedule-subtitle {

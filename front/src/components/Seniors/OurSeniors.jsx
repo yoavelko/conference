@@ -18,6 +18,7 @@ function OurSeniors() {
       <br />
       <div className="carousel-div">
         <Carousel>
+
           {senior?.map((senior, index) => {
             return(
             <div key={index} className="senior-box-all">
