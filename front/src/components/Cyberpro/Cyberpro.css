@@ -16,13 +16,19 @@
 
 .cyberpro-headers {
     color: var(--red);
-    font-size: xx-large;
+    font-size: var(--h2);
+    font-weight: bold;
+}
+
+.cyberpro-main-header {
+    color: var(--red);
+    font-size: var(--h1);
     font-weight: bolder;
 }
 
 .cyberpro-small-headers {
     color: var(--red);
-    font-size: larger;
+    font-size: var(--h3);
     margin-top: 2vh;
 }
 
@@ -65,6 +71,7 @@
     #cyberpro-container {
         line-height: 8vh;
         padding: 15%;
+        padding-top: 10%;
     }
 
     .syllabus-btn {

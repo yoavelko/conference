@@ -14,8 +14,8 @@ function Contact() {
         <div id='contact-container'>
             <div id='contact-row'>
                 <div>
-                    <div id="contact-header">
-                        <h1>
+                    <div>
+                        <h1 id="contact-header">
                             צור קשר
                         </h1>
                     </div>
@@ -45,7 +45,7 @@ function Contact() {
                 <div>
 
                     <div id='contact-travel'>
-                        <h1>דרכי הגעה</h1>
+                        <h2 className='contact-small-header'>דרכי הגעה</h2>
                         <div id="contact-travel-icons">
                             <a className='icon-container' id='link-adress-a' href="https://www.waze.com/he/live-map/directions?to=ll.32.071474%2C34.789345">
                                 <img width={60} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAElUlEQVR4nO1ZzU8rVRSvbtSNG10av2PizvjxH5jowo0Lo0t9C11q3ouaqLw+3sw5d6Dlm/Bh2AAJJHzIV5BvI4QCJm74MEopLQkkJEih+LAMtMwx59rbNC/yZqbtlBfTX3LTycw9c35nzrnnnnvq85VRRhll3A9EfAsAvkLEQQBYQ8Q4IqYyI873AGBA1/UvdV1/0/cwIBgMPo2I3yJiFBHJ5YgCwDeI+FTJidfU1DyBiBWIeE8Rqquro+HhYVpbW6Pd3V06Ojqii4sLOfia762urtLQ0JCcm2PIPQD4zu/3P14S8kKINxDxd0Wgq6uLtre3ybIscgrLsigSiVBnZ2euIb/puv66p+QB4CNEPGOF7e3tFIvFqFDEYjFqa2uTRgBAEhE/9IS8rus3EPGSFQ0ODpJpmlQsnJ+f08jIiDLCAoDPik3+HQBIs4JQKEReYXFxUYUTf6j3ikJe07TnACDBL56amiKvMTs7qzyRMAzj2YINAIApfmF/fz+VApZlUV9fn/LEjwWRR8R3+UWBQIASiQSVCicnJ1In6xZCvF2IAT/zS5aWlqjUCIVCKpTm8iX/CmeEYDBom3G2traoqalJDs7vhc5TmYl1MwdN015ybQAA3OIvMDY2RnZgQmpDam5uLniewujoqPLC5/kYMMzCGxsbdF0GrK+vKwN+cG0AIoZZ+PDw0FYRhwOTY1JcVhQ6T+Hg4EAZ/Ec+HviLhTkWrwumaWb3hHw8IMsGN0VasXF5eak8kHJFvqGh4TEWrK6udqSIs4tdVslFJBJxFEJ5e8AwjGecLjQGbzqGYVAymbSde3Z2RlVVVTJFerYGhBDvs2BPT48jA3p7e6WihYUFxwVbv4PSRGUhPqY6Jk9Ej6j6Z2VlxZEBm5ubUhF7gk9eV2Fvby9bIjgJOVf7gN/vf1QI8Twifs9C9fX1rmp+pYxDiSvK/f19mcF48PXc3JwMHUSk8fFx2/fl7sRCiBevJK5p2gtcbyDiudpkePHu7OyQ24zB5faDDvJCCJqZmZFz7bC8vKzkZh/45TPk5ZdraWmRpUM8Hqd8wV97YmJCHjk5XHjwNd/jZ05wenpKtbW1zqpRADjliVzCPgywLEsu8Ezsj9vGPiL+xJMHBgYcudZrTE9PK/JHnM6dGPAyT1aH9essHRYzKZbP33wO97ns9XArkFpbW4vSLnED0zRlU0x1JYQQn/rcwjCMVxFxVWWM7u5uCofDlE6nPSUfjUazfSFE/FsI8YEvX3B7TwjxNQAcKkM4G3Bm4rbg5OSk9BDnc/7lnTeVSjkiyi3G+fn5rHxjY6MsVZQeANjQdf21vMnfZ8iTiPgFIv5i16RlQlzMcYo8Pj6Wg+sdHgxODNwQ6Ojo+E95AEgLIW571hvNLHJZWng1AOCOJ+RzjIgoZTfvVtGN2wG6WWnkEkgCwK9cNQLANgD8yZkt0ya8QMS0jfyW1wZky4xPKqrp44qAJJFDwPRSvrgeqDQkiVt3/y3MMiPspXzBQMRKmzj2eylflH9kAGDpCuUhfu6lfFGQIXGHFxzHdObX71R5ofJllFHG/wj/AB9zeoFoc/VTAAAAAElFTkSuQmCC"></img>

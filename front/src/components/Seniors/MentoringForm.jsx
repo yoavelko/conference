@@ -6,7 +6,7 @@ function MentoringForm() {
     <div className="mentoring-form-container">
       <div className="mentoring-details">
         <br />
-        <div className="mentoring-title">קהילת המנטורים</div>
+        <h2 className="mentoring-title">קהילת המנטורים</h2>
         <br />
         <div className="mentoring-explain"></div>
         <span className="mentoring-subtitle">תכנית המנטורינג-</span>
@@ -28,8 +28,8 @@ function MentoringForm() {
         </div>
       </div>
       <br />
-      <div className="mentoring-form-title">
-        <div>רוצים לקחת חלק בקהילת המנטורינג?</div>
+      <div>
+        <h2 className="mentoring-form-title">רוצים לקחת חלק בקהילת המנטורינג?</h2>
         <div id="mentoring-icons-container">
           <div>
             <a

@@ -12,9 +12,9 @@
 }
 .our-seniors-title{
     text-align: center;
-    font-size: xx-large;
+    font-size: var(--h1);
     color: var(--red);
-    font-weight: 600;
+    font-weight: bolder;
 }
 .senior-box{
     width: 300px;
@@ -44,7 +44,7 @@
 .senior-name{
     color: var(--red);
     font-weight: bold;
-    font-size: 20px;
+    font-size: var(--h3);
 }
 
 .responsive-seniors{

@@ -9,9 +9,22 @@
 }
 
 #app-container {
-    --red: rgb(233, 30, 99);
-    --black: rgb(15, 19, 35);
+    --red: rgb(233,30,99);
+    --black: rgb(15,19,35);
+    --bars: #2b2c42;
+    --h1: 40px;
+    --h2: 30px;
+    --h3: 20px;
+    --text: 15px;
+    --radius: 7px;
+    font-family: 'Heebo', sans-serif;
     background-color: var(--black);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: var(--text);
 }
 
 #outlet-inner {
