@@ -39,33 +39,21 @@ function Schedule() {
               <div className="schedule-event">
                 <div className="info-event-mini">
                   <div>
+                    <span>יואב מעוז- </span>
+                    <span>מנכ"ל ידידי עתידים </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div className="schedule-event-all">
+              <div className="arrow-triangle-mini"></div>
+              <div className="schedule-event">
+                <div className="info-event-mini">
+                  <div>
                     {" "}
                     עודד רביד- מנכ"ל בית הספר ללימודי המשך של הטכניון ע"ש
                     עזריאלי
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-            <div className="schedule-event-all">
-              <div className="arrow-triangle-mini"></div>
-              <div className="schedule-event">
-                <div className="info-event-mini">
-                  <div>
-                    <span>ברק לייבוביץ- </span>
-                    <span> COO</span> <span>סייברפרו ישראל </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-            <div className="schedule-event-all">
-              <div className="arrow-triangle-mini"></div>
-              <div className="schedule-event">
-                <div className="info-event-mini">
-                  <div>
-                    <span>יואב מעוז- </span>
-                    <span>מנכ"ל ידידי עתידים </span>
                   </div>
                 </div>
               </div>
@@ -104,9 +92,9 @@ function Schedule() {
         </div>
       </div>
       <div className="schedule-opening">
-        <span className="reder">הזדמנות</span><span> יחידה במינה</span>
+        <span className="opportunity-red">הזדמנות</span><span className="opportunity"> יחידה במינה</span>
         <br />
-        <span>לתת <span className="reder">למישהו</span> את <span className="reder">ההזדמנות</span> הראשונה</span>
+        <span className="opportunity">לתת <span className="opportunity-red">למישהו</span> את <span className="opportunity-red">ההזדמנות</span> הראשונה</span>
       </div>
       <div className="space-holder"></div>
     </div>

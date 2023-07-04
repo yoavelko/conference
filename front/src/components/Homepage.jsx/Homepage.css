@@ -11,13 +11,11 @@
 }
 .invationSummary-container{
     background-color: var(--black);
-    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    line-height: 7vh;
-    letter-spacing: 2px;
+    padding: 9%;
 }
 
 .reder {
@@ -43,10 +41,18 @@
 .invation-black-title{
     font-weight: bold;
     text-align: center;
-    font-size: x-large;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.invataion-text-red {
+    font-size: 35px;
+    color: var(--red);
+}
+
+.invataion-text {
+    font-size: var(--h2);
 }
 .save-the-date{
     display: flex;
@@ -70,7 +76,7 @@
     font-weight: bold;
 }
 .invation-summary-button-div{
-
+    margin-top: 5vh;
     display: flex;
     text-decoration: none;
     align-items: center;
