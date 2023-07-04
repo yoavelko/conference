@@ -39,9 +39,8 @@ function Schedule() {
               <div className="schedule-event">
                 <div className="info-event-mini">
                   <div>
-                    {" "}
-                    עודד רביד- מנכ"ל בית הספר ללימודי המשך של הטכניון ע"ש
-                    עזריאלי
+                    <span>יואב מעוז- </span>
+                    <span>מנכ"ל ידידי עתידים </span>
                   </div>
                 </div>
               </div>
@@ -52,8 +51,9 @@ function Schedule() {
               <div className="schedule-event">
                 <div className="info-event-mini">
                   <div>
-                    <span>ברק לייבוביץ- </span>
-                    <span> COO</span> <span>סייברפרו ישראל </span>
+                    {" "}
+                    עודד רביד- מנכ"ל בית הספר ללימודי המשך של הטכניון ע"ש
+                    עזריאלי
                   </div>
                 </div>
               </div>
@@ -91,7 +91,7 @@ function Schedule() {
           </div>
         </div>
       </div>
-    
+
     </div>
   );
 }

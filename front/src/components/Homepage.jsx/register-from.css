@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--black);
+    font-family: 'Heebo', sans-serif;
 }
 .register-form-title{
     font-size: xx-large;
@@ -13,10 +14,19 @@
 .input-text-style{
     width: 280px;
     height: 35px;
-    border-radius: 25px;
-    font-size: 18px;
+    border-radius: 7px;
+    font-size: var(--text);
     font-weight: bold;
 }
+
+.input-text-style::placeholder {
+    padding-right: 5px;
+}
+
+.register-form-container #form-container select {
+    padding-right: 5px;
+}
+
 .spam-checkbox{
     margin-right: 2vw;
     display: flex;

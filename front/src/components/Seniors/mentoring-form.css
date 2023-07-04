@@ -1,3 +1,8 @@
+.mentoring-form-container {
+    padding: 15%;
+    padding-top: 5%;
+}
+
 .logos-mentoring-icon{
     display: flex;
     flex-direction: column;
@@ -7,9 +12,11 @@
 .mentoring-details{
     margin-right: 6vw;
     width: 90%;
+    line-height: 35px;
 }
 .mentoring-title{
-    font-size: xx-large;
+    font-size: var(--h2);
+    font-weight: bold;
     color:  var(--red);
     text-align: center;
 }
@@ -18,10 +25,15 @@
 }
 .mentoring-form-title{
     text-align: center;
-    font-size: x-large;
+    font-size: var(--h2);
+    margin: 5%;
+    color: var(--red);
+    font-weight: bold;
+}
+#mentoring-icons-container{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 20%;
+    justify-content: space-evenly;
 }
 .logos-line1{
     display: grid;
@@ -42,7 +54,6 @@
 #link-logo-mentoring{
     height: 35px;
     border-radius: 50%;
-    margin-right: 4vw;
     transition: 0.2s;
 }
 #link-logo-mentoring:hover{

@@ -17,7 +17,7 @@ import AdminLogin from "./components/AdminLogin/AdminLogin";
 function App() {
 
   const [isNavigating, setIsNavigating] = useState(false);
-  const [fix, setFix] = useState(true)
+  const [fix, setFix] = useState(false);
 
   return (
     <div id="app-container">

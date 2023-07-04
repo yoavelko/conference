@@ -7,19 +7,19 @@ function Footer() {
       <div id="footer-container">
         <div className="footer-column">
           <Link to="contact">
-            <div className="footer-column-link">יצירת קשר ודרכי הגעה</div>
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>יצירת קשר ודרכי הגעה</div>
           </Link>
           <Link to="/cyberpro">
-            <div className="footer-column-link">אודות</div>
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>אודות</div>
           </Link>
           <Link to="/seniors">
-            <div className="footer-column-link">הבוגרים שלנו</div>
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>הבוגרים שלנו</div>
           </Link>
 
         </div>
         <div className="footer-column">
           <a href="https://cyberpro-israel.co.il/">
-            <div className="footer-column-link">CYBERPRO</div>
+            <div className="footer-column-link">CYBERPRO Israel</div>
           </a>
           <a href="https://atidim.org/">
             <div className="footer-column-link">עתידים</div>
@@ -30,10 +30,10 @@ function Footer() {
         </div>
         <div className="footer-column">
           <Link to="/privacyPolicy">
-            <div className="footer-column-link">מדיניות פרטיות</div>
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>מדיניות פרטיות</div>
           </Link>
           <Link to="/termsOfUse">
-            <div className="footer-column-link">תנאי שימוש</div>
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>תנאי שימוש</div>
           </Link>
         </div>
       </div>
@@ -48,6 +48,7 @@ function Footer() {
         <a href="https://www.linkedin.com/in/nitay-elzur-427b36280/" target="_blank" rel="noopener noreferrer" id="linked-in-links">
           וניתאי אלצור&nbsp;
         </a>
+        2023
       </div>
     </div>
   );

@@ -5,9 +5,14 @@ import axios from 'axios';
 import { adminVerify } from '../../utils/AdminRoute';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser'
+import { FixedContext } from '../../contexts/FixedContext';
+import { useContext } from 'react';
+
 function Admin() {
     const [data, setData] = useState();
     const navigate = useNavigate();
+    const { fix, setFix } = useContext(FixedContext)
+
     useEffect(() => {
         if (!localStorage.getItem('token')) {
             navigate('/')
@@ -29,17 +34,23 @@ function Admin() {
                 }))
             })
             .catch(err => console.log(err))
+        return () => {
+            setFix(null)
+        }
     }, [])
+
     function selectAll() {
         setData(prev => prev.map(v => {
             return { ...v, selected: true }
         }))
     }
+
     function unSelectAll() {
         setData(prev => prev.map(v => {
             return { ...v, selected: false }
         }))
     }
+
     async function approveSelected() {
         let temp = data.filter(v => v.selected && v.status !== 'approved').map(v => v._id)
         let emailArray = data.filter(v => v.selected && v.status !== 'approved')
@@ -51,13 +62,53 @@ function Admin() {
                 setData(data.data.newList)
             })
             .catch(err => console.log(err))
-        emailArray.forEach(v => {
-            emailjs.send('service_u767x4d', 'cyberpro_confrence', {
-                name: v.name,
-                email: v.email
-            }, 'GsJXWtEpMGOvKuzDW')
+        const emailTypeArr = [
+            {
+                serviceID: 'service_fizzara',
+                templateID: 'cyberpro_confrence',
+                publicKey: 'h0nluwCQyOoucVvAQ'
+            },
+            {
+                serviceID: 'service_vi3wwbg',
+                templateID: 'cyberpro_confrence',
+                publicKey: 'JOKmoWcByn6zBklXt'
+            },
+            {
+                serviceID: 'service_u767x4d',
+                templateID: 'cyberpro_confrence',
+                publicKey: 'GsJXWtEpMGOvKuzDW'
+            }
+
+        ];
+        emailArray.forEach(async (value, index) => {
+            if (index === 0 || index % 3 === 0) {
+                await emailjs.send(emailTypeArr[0].serviceID, emailTypeArr[0].templateID, {
+                    name: value.name,
+                    email: value.email
+                }, emailTypeArr[0].publicKey)
+                    .then(res => console.log(res))
+                    .catch(err => console.log({ err, email: value.email }))
+            }
+            else if (index === 1 || (index - 1) % 3 === 0) {
+                await emailjs.send(emailTypeArr[1].serviceID, emailTypeArr[1].templateID, {
+                    name: value.name,
+                    email: value.email
+                }, emailTypeArr[1].publicKey)
+                    .then(res => console.log(res))
+                    .catch(err => console.log({ err, email: value.email }))
+            }
+            else if (index === 2 || (index - 2) % 3 === 0) {
+                await emailjs.send(emailTypeArr[2].serviceID, emailTypeArr[2].templateID, {
+                    name: value.name,
+                    email: value.email
+                }, emailTypeArr[2].publicKey)
+                    .then(res => console.log(res))
+                    .catch(err => console.log({ err, email: value.email }))
+            }
+
         })
     }
+
     function denieSelected() {
         let temp = data.filter(v => v.selected).map(v => v._id)
         axios.patch(statusBulkUpdate, {
@@ -68,9 +119,9 @@ function Admin() {
                 setData(data.data.newList)
             })
             .catch(err => console.log(err))
-
     }
-    function approveMe(index) {
+
+    async function approveMe(index) {
         if (data[index].status !== 'approved') {
             axios.patch(statusUpdate, {
                 id: data[index]._id,
@@ -82,12 +133,35 @@ function Admin() {
                     setData([...temp])
                 })
                 .catch(err => console.log(err))
-            emailjs.send('service_u767x4d', 'cyberpro_confrence', {
+            const rand = Math.floor(Math.random() * 3);
+            const emailTypeArr = [
+                {
+                    serviceID: 'service_fizzara',
+                    templateID: 'cyberpro_confrence',
+                    publicKey: 'h0nluwCQyOoucVvAQ'
+                },
+                {
+                    serviceID: 'service_vi3wwbg',
+                    templateID: 'cyberpro_confrence',
+                    publicKey: 'JOKmoWcByn6zBklXt'
+                },
+                {
+                    serviceID: 'service_u767x4d',
+                    templateID: 'cyberpro_confrence',
+                    publicKey: 'GsJXWtEpMGOvKuzDW'
+                }
+
+            ];
+            const { serviceID, templateID, publicKey } = emailTypeArr[rand];
+            await emailjs.send(serviceID, templateID, {
                 name: data[index].name,
                 email: data[index].email
-            }, 'GsJXWtEpMGOvKuzDW')
+            }, publicKey)
+                .then(res => console.log(res))
+            emailjs.init()
         }
     }
+
     function denyMe(index) {
         axios.patch(statusUpdate, {
             id: data[index]._id,
@@ -100,6 +174,7 @@ function Admin() {
             })
             .catch(err => console.log(err))
     }
+
     async function clearFilter() {
         await axios.get(getAllVisitors)
             .then(({ data }) => {
@@ -114,11 +189,14 @@ function Admin() {
         form[2].checked = false;
         form[3].checked = false;
         form[4].checked = false;
+        form[5].checked = false;
     }
+
     async function complexFilter(e) {
         const filter = {
             status: '',
-            association: ''
+            association: '',
+            linkedin: false
         };
 
         if (e.target.form[0].checked) filter.status = e.target.form[0].value;
@@ -126,10 +204,14 @@ function Admin() {
         if (e.target.form[2].checked) filter.status = e.target.form[2].value;
         if (e.target.form[3].checked) filter.association = e.target.form[3].value;
         if (e.target.form[4].checked) filter.association = e.target.form[4].value;
-        axios.post(multipleFieldFilter, filter)
-            .then(res => setData(res.data))
-            .catch(err => console.log(err))
+        if (e.target.form[5].checked) filter.linkedin = true;
+        else delete filter.linkedin;
+        console.log(filter);
+            axios.post(multipleFieldFilter, filter)
+                .then(res => setData(res.data))
+                .catch(err => console.log(err))
     }
+
     return (
         <>
             <div id="admin-container">
@@ -170,6 +252,10 @@ function Admin() {
                                 שותף
                             </div>
                         </div>
+                        <div>
+                            <input type="checkbox" onChange={complexFilter}/>
+                            {' לינקדאין קיים'}
+                        </div>
                     </form>
                 </div>
                 <table>
@@ -179,7 +265,7 @@ function Admin() {
                         <th>אימייל</th>
                         <th>טלפון</th>
                         <th>מי אני</th>
-                        <th>משרה</th>
+                        <th>שם החברה</th>
                         <th>linkedin</th>
                         <th>סטטוס</th>
                     </tr>

@@ -3,7 +3,7 @@
     top: 60%;
     left: 0;
     padding: 3%;
-    height: 35vh;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -13,9 +13,19 @@
     border-bottom-right-radius: 20px;
 }
 
+#hidden-container {
+    display: none;
+}
+
 #whatsapp-logo {
     width: 50px;
     border-radius: 50px;
+    transition: .2s;
+}
+
+#whatsapp-logo:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 #whatsapp-container {
@@ -38,6 +48,7 @@
 #sign-arrow {
     animation: bounce 1s linear;
     animation-iteration-count: infinite;
+    transition: .2s;
 }
 
 #sign-arrow:hover {
