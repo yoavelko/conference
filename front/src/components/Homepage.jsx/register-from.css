@@ -1,5 +1,4 @@
 .register-form-container{
-    background-color: var(--black);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,6 +63,8 @@
 .linkedin-form{
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: center;
 }
 .linkedin-link-form{
     height: 35px;
@@ -101,7 +102,6 @@
 
     #form-container {
         width: 100vw;
-        margin-right: 50vw;
         line-height: 5vh;
     }
 
@@ -123,12 +123,17 @@
     .submit-register {
         height: 8vh;
         border: 3px solid white;
-        border-radius: 25px;
+        border-radius: var(--radius);
+        width: 50%;
     }
 
     #submit-container {
         display: flex;
         justify-content: center;
         width: 50vw;
+    }
+
+    .linkedin-link-form {
+        display: none;
     }
 }
