@@ -1,5 +1,5 @@
 import "./speakers.css";
-import "./schedule.css";
+import './schedule.css'
 import Logos from "./../Seniors/mentoringLogo.json";
 import SpeakersData from "./speakers.json";
 
