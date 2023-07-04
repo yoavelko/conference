@@ -22,10 +22,9 @@ function Cyberpro() {
     const { fix, setFix } = useContext(FixedContext)
 
     const myRef = useRef();
-    // const y = myRef.current.offsetTop;
     window.onscroll = function () { scrollFunction() };
 
-    useEffect (() => {
+    useEffect(() => {
         setFix(false)
     }, [])
 
@@ -41,7 +40,7 @@ function Cyberpro() {
         <div id='cyberpro-container'>
             <div id='image-video-container'></div>
             <div className='cyberpro-containers'>
-                <div className='cyberpro-headers'>אודות סייבר-פרו ישראל</div>
+                <h1 className='cyberpro-main-header'>אודות</h1>
                 {
                     showMore ?
                         <div>CYBERPRO Israel הינה השלוחה הישראלית של CYBERPRO Global, אשר הוקמה על מנת לתת מענה לצורך הולך וגדל באנשי מקצוע בשוק הישראלי והרחבת שיתוף הפעולה עם חברות טכנולוגיות ישראליות המפתחות כלי סייבר מתקדמים. <span className='about-show' onClick={() => setShowMore(!showMore)}>הצג עוד...</span></div>
@@ -55,15 +54,31 @@ function Cyberpro() {
                         </div>
                 }
             </div>
+            <div id='video-container' ref={myRef}>
+                <a href="https://www.cyberpro-global.com/" target="_blank" rel="noopener noreferrer">
+                    <h2 className='cyberpro-headers' style={{ textAlign: 'center' }}>CYBERPRO GLOBAL</h2>
+                </a>
+                <br />
+                {
+                    auto ?
+                        <video width={'100%'} controls >
+                            <source src={video} type="video/mp4" />
+                        </video>
+                        :
+                        <video width={'100%'} autoPlay >
+                            <source src={video} type="video/mp4" />
+                        </video>
+                }
+            </div>
             <div className='cyberpro-containers'>
-                <div className='cyberpro-headers'>תוכנית לוחמים להייטק</div>
+                <h2 className='cyberpro-headers'>תוכנית לוחמים להייטק</h2>
                 <div>תוכנית בשיתוף עמותת עתידים, מנהלת שער לעתיד וארגון Start-Up Nation Central והאגף והקרן לחיילים משוחררים. מיועדת ללוחמים/ות לקראת שחרור או משוחררים עד חמש שנים מיום השחרור. התוכנית מעניקה הכשרות מגוונות במתכונת BOOTCAMP ברמה הגבוהה ביותר במגוון מקצועות בתחום ההייטק, ובשיתוף פעולה מלא עם תעשיית ההייטק בישראל. הלימודים הינם אינטנסיביים ובמשך כל ימות השבוע, א'-ה' בין השעות 9:00-17:00</div>
                 <a id='lochamim-link' href="https://techidf.co.il/" target="_blank" rel="noopener noreferrer">לקריאה עוד על התוכנית</a>
             </div>
             <div className='cyberpro-containers'>
-                <div className='cyberpro-headers'>הקורסים שלנו</div>
+                <h2 className='cyberpro-headers'>הקורסים שלנו</h2>
                 <div className='cyberpro-containers'>
-                    <div className='cyberpro-small-headers'>קורס הכשרת Full Stack Development</div>
+                    <h3 className='cyberpro-small-headers'>קורס הכשרת Full Stack Development</h3>
                     {
                         fullstack ?
                             <>
@@ -79,7 +94,7 @@ function Cyberpro() {
                             </div>
                     }
                 </div>
-                <div className='cyberpro-small-headers'>קורס הכשרת Blue Team Defender</div>
+                <h3 className='cyberpro-small-headers'>קורס הכשרת Blue Team Defender</h3>
                 {
                     blueTeam ?
                         <>
@@ -99,7 +114,7 @@ function Cyberpro() {
                 }
             </div>
             <div className='cyberpro-containers'>
-                <div className='cyberpro-small-headers'>קורס הכשרת Red Team Expert</div>
+                <h3 className='cyberpro-small-headers'>קורס הכשרת Red Team Expert</h3>
                 {
                     redTeam ?
                         <>
@@ -120,7 +135,7 @@ function Cyberpro() {
                 }
             </div>
             <div className='cyberpro-containers'>
-                <div className='cyberpro-small-headers'>קורס הכשרת Cyber Essentials</div>
+                <h3 className='cyberpro-small-headers'>קורס הכשרת Cyber Essentials</h3>
                 {
                     cyberEssentials ?
                         <>
@@ -143,7 +158,7 @@ function Cyberpro() {
                 }
             </div>
             <div className='cyberpro-containers'>
-                <div className='cyberpro-small-headers'>קורס הכשרת Accelerated Cyber Essentials</div>
+                <h3 className='cyberpro-small-headers'>קורס הכשרת Accelerated Cyber Essentials</h3>
                 {
                     acceleratedEssentials ?
                         <>
@@ -164,23 +179,6 @@ function Cyberpro() {
                 }
             </div>
             <br />
-            <div id='video-container' ref={myRef}>
-                <a href="https://www.cyberpro-global.com/" target="_blank" rel="noopener noreferrer">
-                    <div className='cyberpro-headers' style={{ textAlign: 'center' }}>CYBERPRO GLOBAL</div>
-                </a>
-                <br />
-                {
-                    auto ?
-                        <video width={'100%'} controls >
-                            <source src={video} type="video/mp4" />
-                        </video>
-                        :
-                        <video width={'100%'} autoPlay >
-                            <source src={video} type="video/mp4" />
-                        </video>
-                }
-
-            </div>
         </div>
     )
 }

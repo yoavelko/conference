@@ -7,7 +7,7 @@ function OurSeniors() {
   return (
     <div className="our-seniors-container">
       <br />
-      <div className="our-seniors-title">הבוגרים שלנו</div>
+      <h1 className="our-seniors-title">הבוגרים שלנו</h1>
       <br />
       <div className="our-senior-opening-div">
         <div className="our-seniors-openning">
@@ -32,7 +32,7 @@ function OurSeniors() {
                 </div>
                 <div className="details-senior">
                   <div className="senior-dry">
-                    <div className="senior-name">{senior.fullName} </div>
+                    <h3 className="senior-name">{senior.fullName} </h3>
                   </div>
                   <div className="senior-job-title" dir="rtl">
                     <div> {senior.role} </div>
