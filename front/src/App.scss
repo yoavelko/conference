@@ -17,8 +17,9 @@
     --h3: 20px;
     --text: 15px;
     --radius: 7px;
+    --line: 15px;
     font-family: 'Heebo', sans-serif;
-    background-color: var(--black);
+    background-image: url('./media/bgn3.jpg');
 }
 
 * {
@@ -30,6 +31,7 @@
 #outlet-inner {
     position: absolute;
     top: 10vh;
+    background-color: var(--black);
 }
 
 @media screen and (min-width: 768px) {

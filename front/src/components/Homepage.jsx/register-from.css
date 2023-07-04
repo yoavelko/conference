@@ -1,65 +1,84 @@
-.register-form-container {
-  background-color: var(--black);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--black);
-  font-family: "Heebo", sans-serif;
+
+.register-form-container{
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Heebo', sans-serif;
 }
-.register-form-title {
-  font-size: xx-large;
-  color: var(--red);
+
+
+.register-form-title{
+    font-size: xx-large;
+    color: var(--red);
+    margin-bottom: var(--line);
 }
-.input-text-style {
-  width: 280px;
-  height: 35px;
-  border-radius: 7px;
-  font-size: var(--text);
-  font-weight: bold;
+.input-text-style{
+    width: 280px;
+    height: 35px;
+    border-radius: 7px;
+    font-size: var(--text);
+    font-weight: bold;
+    margin-bottom: var(--line);
 }
 
 .input-text-style::placeholder {
   padding-right: 5px;
 }
 
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .register-form-container #form-container select {
   padding-right: 5px;
 }
 
-.spam-checkbox {
-  margin-right: 2vw;
-  display: flex;
-  width: 280px;
-  align-items: start;
+
+.spam-checkbox{
+    margin-right: 2vw;
+    display: flex;
+    width: 280px;
+    align-items: start;
+    margin-bottom: var(--line);
 }
-.label-spam {
-  margin-right: 3vw;
-  font-weight: bold;
-  color: rgb(174, 173, 173);
+.label-spam{
+    margin-right: 3vw;
+    width: calc(95% - 13px);
+    font-weight: bold;
+    color: rgb(174, 173, 173);
 }
-.submit-register {
-  height: 12vw;
-  background: rgb(90, 58, 119);
-  background: linear-gradient(
+.submit-register{
+    height: 35px;
+    background: rgb(241,133,18);
+    background: linear-gradient(
     110deg,
     rgba(90, 58, 119, 1) 0%,
     rgba(161, 63, 102, 1) 48%,
     rgba(246, 70, 81, 1) 100%
   );
-  width: 280px;
-  border-radius: 8px;
-  border: solid rgba(255, 255, 255, 0.516) 0.5vw;
-  color: white;
-  font-weight: bold;
-  font-size: large;
+    width: 280px;
+    border-radius: 8px;
+    border: solid white 0.5vw;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+
 }
 .linkedin-form {
   display: flex;
   align-items: center;
 }
-.linkedin-link-form {
-  height: 30px;
+
+.linkedin-link-form{
+    height: 35px;
+    right: 20px;
+    margin-bottom: 10px;
+    position: absolute;
 }
 
 .submit-register:hover {
