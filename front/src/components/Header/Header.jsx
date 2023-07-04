@@ -33,13 +33,13 @@ function Header() {
           </div>
           <div id="dropmenu-content">
             <Link to={"/cyberpro"} onClick={() => window.scrollTo(0, 0)}>
-              <div onClick={() => setMenu(false)}>אודות סייבר-פרו ישראל</div>
+              <div onClick={() => setMenu(false)} className="menu-text">אודות</div>
             </Link>
             <Link to={"/seniors"} onClick={() => window.scrollTo(0, 0)}>
-              <div onClick={() => setMenu(false)}>הבוגרים שלנו</div>
+              <div onClick={() => setMenu(false)} className="menu-text">הבוגרים שלנו</div>
             </Link>
             <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
-              <div onClick={() => setMenu(false)}>צור קשר</div>
+              <div onClick={() => setMenu(false)} className="menu-text">צור קשר</div>
             </Link>
           </div>
         </div>

@@ -1,5 +1,5 @@
 #header-inner-container {
-    background-color: var(--black);
+    background-color: var(--bars);
     height: 10vh;
     width: 100%;
     display: flex;
@@ -29,12 +29,15 @@
     position: fixed;
     top: 10vh;
     color: white;
-    background-color: var(--black);
+    background-color: var(--bars);
     width: 100%;
     text-align: center;
-    line-height: 6vh;
-    font-size: 18px;
+    line-height: 7vh;
     z-index: 999;
+}
+
+.menu-text {
+    font-size: var(--h3);
 }
 
 #menuToggle {
