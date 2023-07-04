@@ -105,41 +105,44 @@ exports.filterByAssociation = async (req, res) => {
 
 exports.complexFilter = async (req, res) => {
     try {
-        let filter;
-        if (req.body.association && req.body.status) {
+        const filterRequest = {
+            status: "",
+            association: "",
+            linkedin: ""
+        }
+        if (req.body.association) {
             if (req.body.association !== 'alumni' && req.body.association !== 'partner') {
-                res.status(400).send({ message: 'association must be alumni or partner' })
-            }
-            else if (req.body.status !== 'pending' && req.body.status !== 'denied' && req.body.status !== 'approved') {
-                res.status(400).send({ message: 'status must be pending, denied, or approved' })
+                return res.status(400).send({ message: 'association must be alumni or partner' });
             }
             else {
-
-                filter = await Visitor.find({
-                    association: req.body.association,
-                    status: req.body.status
-                })
+                filterRequest.association = req.body.association;
             }
         }
-        else if (req.body.association) {
-            if (req.body.association !== 'alumni' && req.body.association !== 'partner') {
-                res.status(400).send({ message: 'association must be alumni or partner' })
-            }
-            else {
-                filter = await Visitor.find({ association: req.body.association })
-            }
-        }
-        else if (req.body.status) {
+        else delete filterRequest.association;
+        if (req.body.status) {
             if (req.body.status !== 'pending' && req.body.status !== 'denied' && req.body.status !== 'approved') {
-                res.status(400).send({ message: 'status must be pending, denied, or approved' })
+                return res.status(400).send({ message: 'status must be pending, denied, or approved' })
             }
             else {
-                filter = await Visitor.find({ status: req.body.status })
+                filterRequest.status = req.body.status;
             }
         }
-        res.send(filter)
+        else delete filterRequest.status;
+        if (req.body.linkedin) {
+            const filterResult = await Visitor.find({
+                ...filterRequest,
+                linkedin: {$exists: true, $ne: null}
+            });
+            return res.status(200).send(filterResult)
+        }
+        else {
+            delete filterRequest.linkedin;
+            const filterResult = await Visitor.find(filterRequest);
+            return res.status(200).send(filterResult)
+        }
+
     }
     catch (err) {
-        res.send(err.message)
+        res.status(500).send(err.message);
     }
 }

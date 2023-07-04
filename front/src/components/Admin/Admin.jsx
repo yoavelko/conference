@@ -74,7 +74,6 @@ function Admin() {
                 publicKey: 'JOKmoWcByn6zBklXt'
             },
             {
-                //
                 serviceID: 'service_u767x4d',
                 templateID: 'cyberpro_confrence',
                 publicKey: 'GsJXWtEpMGOvKuzDW'
@@ -88,7 +87,7 @@ function Admin() {
                     email: value.email
                 }, emailTypeArr[0].publicKey)
                     .then(res => console.log(res))
-                    .catch(err => console.log({err, email: value.email}))
+                    .catch(err => console.log({ err, email: value.email }))
             }
             else if (index === 1 || (index - 1) % 3 === 0) {
                 await emailjs.send(emailTypeArr[1].serviceID, emailTypeArr[1].templateID, {
@@ -96,7 +95,7 @@ function Admin() {
                     email: value.email
                 }, emailTypeArr[1].publicKey)
                     .then(res => console.log(res))
-                    .catch(err => console.log({err, email: value.email}))
+                    .catch(err => console.log({ err, email: value.email }))
             }
             else if (index === 2 || (index - 2) % 3 === 0) {
                 await emailjs.send(emailTypeArr[2].serviceID, emailTypeArr[2].templateID, {
@@ -104,7 +103,7 @@ function Admin() {
                     email: value.email
                 }, emailTypeArr[2].publicKey)
                     .then(res => console.log(res))
-                    .catch(err => console.log({err, email: value.email}))
+                    .catch(err => console.log({ err, email: value.email }))
             }
 
         })
@@ -190,12 +189,14 @@ function Admin() {
         form[2].checked = false;
         form[3].checked = false;
         form[4].checked = false;
+        form[5].checked = false;
     }
 
     async function complexFilter(e) {
         const filter = {
             status: '',
-            association: ''
+            association: '',
+            linkedin: false
         };
 
         if (e.target.form[0].checked) filter.status = e.target.form[0].value;
@@ -203,9 +204,12 @@ function Admin() {
         if (e.target.form[2].checked) filter.status = e.target.form[2].value;
         if (e.target.form[3].checked) filter.association = e.target.form[3].value;
         if (e.target.form[4].checked) filter.association = e.target.form[4].value;
-        axios.post(multipleFieldFilter, filter)
-            .then(res => setData(res.data))
-            .catch(err => console.log(err))
+        if (e.target.form[5].checked) filter.linkedin = true;
+        else delete filter.linkedin;
+        console.log(filter);
+            axios.post(multipleFieldFilter, filter)
+                .then(res => setData(res.data))
+                .catch(err => console.log(err))
     }
 
     return (
@@ -247,6 +251,10 @@ function Admin() {
                                 <input type="radio" name='association-filter' value={'partner'} onChange={complexFilter} />
                                 שותף
                             </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" onChange={complexFilter}/>
+                            {' לינקדאין קיים'}
                         </div>
                     </form>
                 </div>
