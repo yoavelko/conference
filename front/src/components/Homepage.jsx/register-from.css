@@ -72,6 +72,8 @@
 .linkedin-form {
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 .linkedin-link-form{
@@ -112,7 +114,6 @@
 
   #form-container {
     width: 100vw;
-    margin-right: 50vw;
     line-height: 5vh;
   }
 
