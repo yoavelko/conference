@@ -39,7 +39,7 @@ function RegisterForm() {
   return (
     <div className="register-form-container" id="registration">
       <div id="register-effect"></div>
-      <div className="register-form-title">רישום לכנס</div>
+     <h2> <div className="register-form-title">רישום לכנס</div></h2>
       <form id="form-container" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-text-style"

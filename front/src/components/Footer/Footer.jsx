@@ -35,6 +35,9 @@ function Footer() {
           <Link to="/termsOfUse">
             <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>תנאי שימוש</div>
           </Link>
+          <Link to="/accessibilityStatement">
+            <div className="footer-column-link" onClick={() => window.scrollTo(0, 0)}>הצהרת נגישות </div>
+          </Link>
         </div>
       </div>
       <div id="copyrights">

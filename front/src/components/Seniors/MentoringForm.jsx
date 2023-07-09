@@ -41,6 +41,7 @@ function MentoringForm() {
       <div>
         <h2 className="mentoring-form-title">רוצים לקחת חלק בקהילת המנטורינג?</h2>
         <div id="mentoring-icons-container">
+          <h3>צרו איתנו קשר! &nbsp; &nbsp;</h3>
           <div>
             <a
               href="https://api.whatsapp.com/send?phone=972502449054&text=שלום,%20ארצה%20לשמוע%20עוד%20על%20תכנית%20המנטורינג"
@@ -55,6 +56,7 @@ function MentoringForm() {
               </div>
             </a>
           </div>
+          <div>&nbsp; &nbsp;</div>
           <div>
             <a
               className="icon-container"

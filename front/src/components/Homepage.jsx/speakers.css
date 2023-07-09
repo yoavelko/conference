@@ -20,6 +20,7 @@
 }
 .speaker-img{
     width: 250px;
+    height: 250px;
 }
 .speaker-image{
     transition: 0.5s;

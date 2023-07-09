@@ -13,6 +13,7 @@ import { FixedContext } from "./contexts/FixedContext";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import TermsOfUse from "./components/TermsOfUse/TemrsOfUse";
 import AdminLogin from "./components/AdminLogin/AdminLogin";
+import AccessibilityStatement from "./components/AccessibilityStatement/AccessibilityStatement";
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
             <Route path={`/${import.meta.env.VITE_LINK}`} element={<Admin/>}/>
             <Route path="/termsOfUse" element={<TermsOfUse />} />
             <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="/accessibilityStatement" element={<AccessibilityStatement />} />
           </Route>
         </Routes>
       </FixedContext.Provider>

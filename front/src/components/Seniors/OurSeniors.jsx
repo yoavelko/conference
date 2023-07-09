@@ -7,7 +7,7 @@ function OurSeniors() {
   return (
     <div className="our-seniors-container">
       <br />
-      <h1 className="our-seniors-title">הבוגרים שלנו</h1>
+      <h2 className="our-seniors-title">הבוגרים שלנו</h2>
       <br />
       <div className="our-senior-opening-div">
         <div className="our-seniors-openning">
