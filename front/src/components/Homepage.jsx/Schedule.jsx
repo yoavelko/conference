@@ -15,6 +15,7 @@ function Schedule() {
           </div>
         </div>
         <br />
+
         <div className="schedule-event-all">
           <div className="arrow-triangle"></div>
           <div className="schedule-event">
@@ -24,6 +25,7 @@ function Schedule() {
           </div>
         </div>
         <br />
+
         <div className="big-event">
           <div className="schedule-event-all">
             <div className="arrow-triangle"></div>
@@ -98,6 +100,7 @@ function Schedule() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }

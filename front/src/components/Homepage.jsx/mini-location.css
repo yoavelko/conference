@@ -3,7 +3,6 @@
     padding: 10%;
     line-height: 7vh;
     font-size: larger;
-    background-color: var(--black);
 }
 
 .links-to-address {
@@ -17,7 +16,7 @@
     display: flex;
     align-items: center;
 
-    transition: .4s;
+    transition: .2s;
 }
 
 .link-adress-a:hover {
@@ -48,12 +47,14 @@
         width: 50%;
         margin-right: 25%;
     }
+
     .link-adress-a {
        transform: scale(2);
     }
     .link-adress-a:hover {
         transform: scale(2.1);
     }
+
 
     .mini-location-container {
         line-height: 10vh;
@@ -62,6 +63,7 @@
     .location-icons {
         margin-left: 0.6vw;
     }
+
 }
 @media screen and (max-width: 900px) {
 
@@ -83,4 +85,5 @@
     }
 
    
+
 }
