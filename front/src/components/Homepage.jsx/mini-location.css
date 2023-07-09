@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
 
-    transition: .4s;
+    transition: .2s;
 }
 
 .link-adress-a:hover {
@@ -47,9 +47,6 @@
         width: 50%;
         margin-right: 25%;
     }
-    .link-adress-a {
-       transform: scale(2);
-    }
 
     .mini-location-container {
         line-height: 10vh;
@@ -58,22 +55,4 @@
     .location-icons {
         margin-left: 0.6vw;
     }
-}
-@media screen and (max-width: 900px) {
-
-  
-    .link-adress-a {
-       transform: scale(1.6);
-    }
-
-   
-}
-@media screen and (max-width: 600px) {
-
-  
-    .link-adress-a {
-       transform: scale(1);
-    }
-
-   
 }

@@ -77,27 +77,22 @@
     font-weight: bold;
 }
 .invation-summary-button-div{
+    height: 50px;
+    width: 200px;
     margin-top: 5vh;
     display: flex;
-    text-decoration: none;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    font-size: larger;
-}
-.invation-summary-button-div{
-    height: 12vw;
-    display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: var(--h2);
+    font-weight: bold;
     background: rgb(90,58,119);
     background: linear-gradient(100deg, rgba(90,58,119,1) 0%, rgba(161,63,102,1) 48%, rgba(246,70,81,1) 100%);  
-    width: 50%;
     border-radius: 8px;
     border: solid rgba(255, 255, 255, 0.507) 2px;
 }
 
 .invation-summary-button-div:hover{
-    background: linear-gradient(17deg, rgb(170, 100, 24) 0%, rgb(155, 26, 69) 50%);    
+    background: linear-gradient(100deg, rgba(90, 58, 119, 0.6) 0%, rgba(161,63,102, 0.6) 48%, rgba(246,70,81, 0.6) 100%);
 }
 
 
