@@ -48,6 +48,14 @@
         margin-right: 25%;
     }
 
+    .link-adress-a {
+       transform: scale(2);
+    }
+    .link-adress-a:hover {
+        transform: scale(2.1);
+    }
+
+
     .mini-location-container {
         line-height: 10vh;
     }
@@ -55,4 +63,27 @@
     .location-icons {
         margin-left: 0.6vw;
     }
+
+}
+@media screen and (max-width: 900px) {
+
+  
+    .link-adress-a {
+       transform: scale(1.6);
+    }
+    .link-adress-a:hover {
+        transform: scale(1.7);
+    }
+
+   
+}
+@media screen and (max-width: 600px) {
+
+  
+    .link-adress-a {
+       transform: scale(1);
+    }
+
+   
+
 }

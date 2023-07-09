@@ -16,6 +16,16 @@ function Schedule() {
         </div>
         <br />
 
+        <div className="schedule-event-all">
+          <div className="arrow-triangle"></div>
+          <div className="schedule-event">
+            <div className="time-event">19:00-18:45 </div>
+            <div> | </div>
+            <div className="info-event"> הזדמנות לפגוש את הבוגרים שלנו</div>
+          </div>
+        </div>
+        <br />
+
         <div className="big-event">
           <div className="schedule-event-all">
             <div className="arrow-triangle"></div>
@@ -30,7 +40,7 @@ function Schedule() {
             <div className="schedule-event-all">
               <div className="arrow-triangle-mini"></div>
               <div className="schedule-event">
-                <div className="info-event-mini"> רא"ל (במיל) גבי אשכנזי </div>
+                <div className="info-event-mini">רא"ל (במיל') גבי אשכנזי, CYBERPRO, שר החוץ לשעבר</div>
               </div>
             </div>
             <br />
@@ -40,7 +50,7 @@ function Schedule() {
                 <div className="info-event-mini">
                   <div>
                     <span>יואב מעוז- </span>
-                    <span>מנכ"ל ידידי עתידים </span>
+                    <span>מנכ"ל ידידי עתידים ע"ר</span>
                   </div>
                 </div>
               </div>
@@ -52,8 +62,7 @@ function Schedule() {
                 <div className="info-event-mini">
                   <div>
                     {" "}
-                    עודד רביד- מנכ"ל בית הספר ללימודי המשך של הטכניון ע"ש
-                    עזריאלי
+                    עודד רביד- מנכ"ל בית הספר ללימודי המשך 
                   </div>
                 </div>
               </div>
