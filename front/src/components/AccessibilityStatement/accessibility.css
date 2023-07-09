@@ -1,7 +1,8 @@
-.accessibility-container{
-    margin-right: 6vw;
-    margin-left: 2vw;
-    background-color: var(--black);
-    color: white;
-
+.accessibility-container {
+  background-color: var(--black);
+  color: white;
+}
+.margin-accessibilty {
+  margin-right: 6vw;
+  margin-left: 2vw;
 }
