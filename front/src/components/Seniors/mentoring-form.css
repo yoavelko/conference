@@ -66,7 +66,8 @@
     background-color: rgb(67,230,94);
     border-radius: var(--radius);
     padding: 5%;
-    width: 100%;
+    width: 240px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,10 +77,15 @@
     background-color: rgb(112, 166, 236);
     border-radius: var(--radius);
     padding: 5%;
-    width: 100%;
+    width: 240px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#mail-mentor-container:hover {
+    background-color: rgb(112, 166, 236, 0.5);
 }
 
 #whatsapp-mentor-container:hover {
