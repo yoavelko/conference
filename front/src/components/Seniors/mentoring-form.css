@@ -26,7 +26,6 @@
 .mentoring-form-title{
     text-align: center;
     font-size: var(--h2);
-    margin: 5%;
     color: var(--red);
     font-weight: bold;
 }
@@ -35,7 +34,7 @@
     flex-direction: column;
 }
 #whatsapp-mentor {
-    padding: 5%;
+    padding-top: 10%;
 }
 .logos-line1{
     display: grid;
@@ -94,6 +93,14 @@
 
 .mentoring-text {
     font-size: var(--h3);
+}
+
+#mentoring-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
 }
 
 @media screen and (min-width: 600px) {
