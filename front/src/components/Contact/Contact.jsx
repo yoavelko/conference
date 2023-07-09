@@ -1,6 +1,7 @@
-import './Contact.css'
-import { useContext, useEffect } from 'react'
-import { FixedContext } from '../../contexts/FixedContext'
+import './Contact.css';
+import { useContext, useEffect } from 'react';
+import { FixedContext } from '../../contexts/FixedContext';
+import RegisterForm from '../Homepage.jsx/RegisterForm'
 
 function Contact() {
 
@@ -57,6 +58,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
+            <RegisterForm/>
             <iframe src="https://www.google.com/maps/d/embed?mid=1kAGy6WRb-0mp0q7Gce9GCSuYR_DzPYc&ehbc=2E312F" width="100%" height="480" ></iframe>
         </div >
     )

@@ -15,7 +15,6 @@ function InvationSummary() {
             </div>
             <a href='#registration' className="invation-summary-button-div">
                 <div style={{ marginLeft: "2vw" }}>להרשמה </div>
-                <img width="20" height="20" src="https://img.icons8.com/ios/50/FFFFFF/double-down--v1.png" alt="double-down--v1" />
             </a>
         </div>
     )
