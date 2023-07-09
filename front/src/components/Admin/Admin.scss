@@ -38,7 +38,13 @@
 
     table {
         background-color: white;
+        overflow-y: scroll;
+        height: 70vh;
+        display: block;
         width: 100%;
+        td {
+            width: 100%;
+        }
     }
 
 }
@@ -76,7 +82,8 @@
     transform-style: preserve-3d;
     perspective: 1000px;
 }
-#linkedin-link-admin{
+
+#linkedin-link-admin {
     color: rgb(1, 22, 130);
     text-decoration: none;
 }

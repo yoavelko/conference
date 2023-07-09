@@ -88,7 +88,7 @@ function Header() {
           onClick={() => window.scrollTo(0, 0)}
           className="header-links"
         >
-          <div onClick={() => setMenu(false)}>אודות סייבר-פרו ישראל</div>
+          <div onClick={() => setMenu(false)}>אודות</div>
         </Link>
         <Link
           to={"/seniors"}

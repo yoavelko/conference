@@ -207,9 +207,9 @@ function Admin() {
         if (e.target.form[5].checked) filter.linkedin = true;
         else delete filter.linkedin;
         console.log(filter);
-            axios.post(multipleFieldFilter, filter)
-                .then(res => setData(res.data))
-                .catch(err => console.log(err))
+        axios.post(multipleFieldFilter, filter)
+            .then(res => setData(res.data))
+            .catch(err => console.log(err))
     }
 
     return (
@@ -253,26 +253,27 @@ function Admin() {
                             </div>
                         </div>
                         <div>
-                            <input type="checkbox" onChange={complexFilter}/>
+                            <input type="checkbox" onChange={complexFilter} />
                             {' לינקדאין קיים'}
                         </div>
                     </form>
                 </div>
                 <table>
-                    <tr>
+                    <tr style={{ tableLayout: 'fixed' }}>
                         <th></th>
                         <th>שם</th>
                         <th>אימייל</th>
                         <th>טלפון</th>
                         <th>מי אני</th>
                         <th>שם החברה</th>
+                        <th>התפקיד שלי</th>
                         <th>linkedin</th>
                         <th>סטטוס</th>
                     </tr>
                     {data &&
                         data?.map((value, index) => {
                             return (
-                                <tr key={index} style={{ backgroundColor: `${value?.status === 'pending' ? 'orange' : value?.status === 'approved' ? 'green' : value?.status === 'denied' && 'red'}` }}>
+                                <tr key={index} style={{ tableLayout: 'fixed',backgroundColor: `${value?.status === 'pending' ? 'orange' : value?.status === 'approved' ? 'green' : value?.status === 'denied' && 'red'}` }}>
                                     <input type="checkbox" checked={value?.selected} onChange={() => {
                                         const temp = data;
                                         temp[index].selected = !temp[index].selected;
@@ -282,6 +283,7 @@ function Admin() {
                                     <td>{value?.email}</td>
                                     <td>{value?.phone}</td>
                                     <td>{value?.association === 'alumni' ? 'בוגר' : value?.association === 'partner' && 'שותף'}</td>
+                                    <td>{value?.cooperation}</td>
                                     <td>{value?.role}</td>
                                     <td><a id='linkedin-link-admin' href={`${value?.linkedin}`} target="_blank" rel="noopener noreferrer">{value?.linkedin}</a></td>
                                     <td>{value?.status}</td>
