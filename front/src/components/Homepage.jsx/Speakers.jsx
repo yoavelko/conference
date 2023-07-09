@@ -10,7 +10,7 @@ function Speakers() {
     <div className="speakers-container">
       <br />
       <br />
-      <h2><div className="speakers-title"> הדוברים באירוע: </div></h2>
+      <div className="speakers-title"> הדוברים באירוע: </div>
       <br />
       <br />
       <div className="all-speakers">
@@ -28,7 +28,6 @@ function Speakers() {
           );
         })}
       </div>
-      <h2>
       <div className="schedule-opening">
         <span className="opportunity-red">הזדמנות</span>
         <span className="opportunity"> יחידה במינה</span>
@@ -39,7 +38,6 @@ function Speakers() {
         </span>
         
       </div>
-      </h2>
       <br />
       <br />
     </div>

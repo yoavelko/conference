@@ -39,7 +39,7 @@ function RegisterForm() {
   return (
     <div className="register-form-container" id="registration">
       <div id="register-effect"></div>
-     <h2> <div className="register-form-title">רישום לכנס</div></h2>
+      <div className="register-form-title">רישום לכנס</div>
       <form id="form-container" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-text-style"
@@ -100,19 +100,6 @@ function RegisterForm() {
           />
         </div>
         <label className="spam-checkbox" htmlFor="">
-          <a
-            className="linkedin-link-form-new"
-            href="https://www.linkedin.com/in/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              width="30"
-              height="30"
-              src="https://img.icons8.com/fluency/48/linkedin.png"
-              alt="linkedin"
-            />
-          </a>
           <input
             type="checkbox"
             name="spam"

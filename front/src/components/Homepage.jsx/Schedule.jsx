@@ -3,32 +3,24 @@ import "./schedule.css";
 function Schedule() {
   return (
     <div className="schedule-container">
-     <h2> <div className="schedule-title">מה באג'נדה?</div></h2>
+      <div className="schedule-title">לוז הכנס:</div>
       <br />
       <div className="the-schedule">
         <div className="schedule-event-all">
           <div className="arrow-triangle"></div>
           <div className="schedule-event">
-            <div className="time-event">17:30-18:45 </div>
+            <div className="time-event">18:45-17:30 </div>
             <div> | </div>
             <div className="info-event">התכנסות</div>
           </div>
         </div>
         <br />
-        <div className="schedule-event-all">
-          <div className="arrow-triangle"></div>
-          <div className="schedule-event">
-            <div className="time-event">18:45-19:00 </div>
-            <div> | </div>
-            <div className="info-event">הזדמנות לפגוש את הבוגרים שלנו</div>
-          </div>
-        </div>
-        <br />
+
         <div className="big-event">
           <div className="schedule-event-all">
             <div className="arrow-triangle"></div>
             <div className="schedule-event">
-              <div className="time-event">19:00-19:30 </div>
+              <div className="time-event">19:30-19:00 </div>
               <div> | </div>
               <div className="info-event">דברי פתיחה</div>
             </div>
@@ -72,7 +64,7 @@ function Schedule() {
         <div className="schedule-event-all">
           <div className="arrow-triangle"></div>
           <div className="schedule-event">
-            <div className="time-event">19:30-20:15 </div>
+            <div className="time-event">20:30-19:30 </div>
             <div> | </div>
             <div className="info-event">פאנל - פרדוקס הג'וניורים</div>
           </div>
@@ -81,7 +73,7 @@ function Schedule() {
         <div className="schedule-event-all">
           <div className="arrow-triangle"></div>
           <div className="schedule-event">
-            <div className="time-event">20:15-20:30 </div>
+            <div className="time-event">20:45-20:30 </div>
             <div> | </div>
             <div className="info-event">
               <div>הצגת תוכנית</div>
@@ -93,12 +85,13 @@ function Schedule() {
         <div className="schedule-event-all">
           <div className="arrow-triangle"></div>
           <div className="schedule-event">
-            <div className="time-event">20:30-20:45 </div>
+            <div className="time-event">21:00-20:45 </div>
             <div> | </div>
             <div className="info-event">הוקרה למנטורים פעילים</div>
           </div>
         </div>
       </div>
+
     </div>
   );
 }
