@@ -54,6 +54,10 @@
 .carousel-div{
     display: none;
 }
+.responsive-seniors-flex{
+    display: flex;
+    justify-content: center;
+}
 
 @media screen and (max-width: 600px) {
    .responsive-seniors{
@@ -62,4 +66,10 @@
    .carousel-div{
     display: block;
    }
+  }
+@media screen and (min-width: 1200px) {
+ .responsive-seniors{
+    width: 80%;
+
+ }
   }

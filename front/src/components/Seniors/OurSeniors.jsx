@@ -45,6 +45,7 @@ function OurSeniors() {
           })}
         </Carousel>
       </div>
+      <div className="responsive-seniors-flex">
       <div className="responsive-seniors">
       {senior?.map((senior, index) => {
             return(
@@ -71,6 +72,7 @@ function OurSeniors() {
             )
           })}
       </div>
+    </div>
     </div>
   );
 }
