@@ -6,7 +6,7 @@ function AccessibilityStatement() {
       <div className="margin-accessibilty">
         <br />
         <br />
-        <h1>הצהרת נגישות - CYBERPRO</h1>
+        <h1>הצהרת נגישות -  CYBERPRO</h1>
         <br />
 
         <p>
