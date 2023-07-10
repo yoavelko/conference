@@ -17,6 +17,6 @@
 
     #intro-container {
         background-image: url('../../media/wide-ladnscape.png');
-        height: 650px;
+        height: 40vw;
     }
 }
