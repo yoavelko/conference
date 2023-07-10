@@ -93,6 +93,8 @@
 
 .mentoring-text {
     font-size: var(--h3);
+    color: white;
+    margin-top: 5px;
 }
 
 #mentoring-container {
