@@ -40,14 +40,17 @@
 
 #copyrights {
     text-align: center;
-    font-size: 10px;
+    font-size: var(--text) !important;
     color: rgba(255, 255, 255, 0.575);
     margin-top: 10%;
+}
+.linkedin-us{
+    font-size: var(--text);
 }
 
 #linked-in-links {
     color: rgba(255, 255, 255, 0.575);
-    font-size: 10px;
+    font-size: 14px;
 }
 
 #linked-in-links:hover {
