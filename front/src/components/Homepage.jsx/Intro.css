@@ -1,5 +1,5 @@
 #intro-container {
-    background-image: url("../../media/final-bgnd.png");
+    background-image: url("https://res.cloudinary.com/deiofeueo/image/upload/v1688995419/%D7%98%D7%9E%D7%A4%D7%9C%D7%98_%D7%9B%D7%A0%D7%A1_%D7%A1%D7%99%D7%99%D7%91%D7%A8%D7%A4%D7%A8%D7%95_-_%D7%91%D7%95%D7%92%D7%A8%D7%99%D7%9D_650_1700_%D7%A4%D7%99%D7%A7%D7%A1%D7%9C_gdn4br.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -16,7 +16,7 @@
 @media screen and (min-width: 768px) {
 
     #intro-container {
-        background-image: url('../../media/wide-ladnscape.png');
+        background-image: url('https://res.cloudinary.com/deiofeueo/image/upload/v1688995432/%D7%98%D7%9E%D7%A4%D7%9C%D7%98_%D7%9B%D7%A0%D7%A1_%D7%A1%D7%99%D7%99%D7%91%D7%A8%D7%A4%D7%A8%D7%95_-_%D7%91%D7%95%D7%92%D7%A8%D7%99%D7%9D_550_400_%D7%A4%D7%99%D7%A7%D7%A1%D7%9C_vymkwf.png');
         height: 40vw;
     }
 }
