@@ -18,14 +18,15 @@
 
 #contact-row {
     margin-bottom: 5vh;
-    margin-top: 4vh;
     padding: 5%;
-    line-height: 8vh;
 }
-
-#contact-header {
-    width: 100%;
-    text-align: center;
+.contact-title{
+    display: flex;
+    justify-content: center;
+    
+}
+#contact-header 
+{
     color: var(--red);
     font-size: var(--h1);
     font-weight: bolder;
@@ -50,7 +51,6 @@
 .contact-link-section {
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     font-size: small;
 }
