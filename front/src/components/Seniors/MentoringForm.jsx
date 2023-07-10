@@ -37,7 +37,7 @@ function MentoringForm() {
         </div>
       </div>
       <br />
-      <div>
+      <div id="mentoring-container">
         <h2 className="mentoring-form-title">רוצים לקחת חלק בקהילת המנטורינג?</h2>
         <div id="mentoring-icons-container">
           <div id="whatsapp-mentor">
