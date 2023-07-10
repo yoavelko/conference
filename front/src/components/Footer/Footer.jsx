@@ -84,7 +84,7 @@ function Footer() {
       <div id="copyrights">
         © נוצר על ידי
         <a
-        className="linkedin-us"
+        
           href="https://www.linkedin.com/in/yoav-elkobi-082670256/"
           target="_blank"
           rel="noopener noreferrer"
@@ -93,7 +93,7 @@ function Footer() {
           &nbsp;יואב אלקובי,&nbsp;
         </a>
         <a
-        className="linkedin-us"
+        
           href="https://www.linkedin.com/in/amit-barhanin-588852262/"
           target="_blank"
           rel="noopener noreferrer"
@@ -102,7 +102,7 @@ function Footer() {
           עמית ברחנין&nbsp;
         </a>
         <a
-        className="linkedin-us"
+  
           href="https://www.linkedin.com/in/nitay-elzur-427b36280/"
           target="_blank"
           rel="noopener noreferrer"
