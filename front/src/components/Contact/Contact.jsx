@@ -1,9 +1,11 @@
-import './Contact.css';
-import { useContext, useEffect } from 'react';
-import { FixedContext } from '../../contexts/FixedContext';
-import RegisterForm from '../Homepage.jsx/RegisterForm'
+import "./Contact.css";
+import { useContext, useEffect } from "react";
+import { FixedContext } from "../../contexts/FixedContext";
+import RegisterForm from "../Homepage.jsx/RegisterForm";
 
 function Contact() {
+  const { fix, setFix } = useContext(FixedContext);
+
 
     const { fix, setFix } = useContext(FixedContext)
 
@@ -83,4 +85,4 @@ function Contact() {
     )
 }
 
-export default Contact
+export default Contact;

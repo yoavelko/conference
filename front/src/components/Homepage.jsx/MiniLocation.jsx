@@ -2,9 +2,9 @@ import './mini-location.css'
 function MiniLocation() {
   return (
     <div className='mini-location-container' >
-        <div className="title-mini-location">
+        <h2 className="title-mini-location">
             איפה? 
-        </div>
+        </h2>
         <div className="mini-location-links">
             <div className="adress-mini-location">דרך מנחם בגין 121, תל אביב-יפו</div>
             <div className="links-to-address">

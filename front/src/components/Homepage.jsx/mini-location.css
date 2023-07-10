@@ -24,8 +24,7 @@
 }
 
 .title-mini-location {
-    font-size: xx-large;
-    font-weight: bold;
+    font-size: var(--h2);
     color: var(--red);
 }
 
