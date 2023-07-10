@@ -6,9 +6,7 @@ import RegisterForm from "../Homepage.jsx/RegisterForm";
 function Contact() {
   const { fix, setFix } = useContext(FixedContext);
 
-  useEffect(() => {
-    setFix(false);
-  }, []);
+
 
   return (
     <div id='contact-container'>
@@ -84,6 +82,7 @@ function Contact() {
     <iframe src="https://www.google.com/maps/d/embed?mid=1kAGy6WRb-0mp0q7Gce9GCSuYR_DzPYc&ehbc=2E312F" width="100%" height="480" ></iframe>
 </div >
   );
+
 }
 
 export default Contact;

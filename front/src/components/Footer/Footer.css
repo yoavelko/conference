@@ -66,11 +66,18 @@
     }
 
     #footer-outer-container {
-        padding-left: 3vw;
-        padding-right: 3vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
     }
 
     #copyrights {
+        font-size: small;
+        margin-top: 5%;
+    }
+
+    #linked-in-links {
         font-size: small;
     }
 }
