@@ -15,7 +15,7 @@ function InvationSummary() {
                 </div>
             </div>
             <a href='#registration' className="invation-summary-button-div">
-                <div style={{ marginLeft: "2vw" }}>להרשמה </div>
+                <div>להרשמה </div>
             </a>
         </div>
     )

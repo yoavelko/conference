@@ -37,6 +37,9 @@
 #whatsapp-mentor {
     padding: 5%;
 }
+#whatsapp-mentor div:hover {
+    cursor: pointer;
+}
 .logos-line1{
     display: grid;
     grid-template-columns: 20vw  20vw 20vw 20vw;
