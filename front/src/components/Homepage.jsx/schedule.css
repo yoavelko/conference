@@ -28,7 +28,7 @@
 
 .schedule-title {
     font-weight: bold;
-    font-size: xx-large;
+    font-size: var(--h2)
 }
 
 .schedule-event {
