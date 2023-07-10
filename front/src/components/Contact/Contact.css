@@ -98,6 +98,12 @@
 iframe {
     margin-bottom: 50px;
 }
+.all-icons-buttons{
+    display: flex ;
+}
+.only-contact-us-icons{
+    margin-left: 1vw;
+}
 
 .i4ewOd-pzNkMb-haAclf {
     display: none !important;
@@ -158,4 +164,16 @@ iframe {
         display: flex;
         align-items: flex-end;
     }
+  
 }
+@media screen and (max-width: 768px) {
+    .all-icons-buttons{
+        display: flex ;
+        flex-direction: column;
+    }
+    .only-contact-us-icons{
+        margin-left: 1vw;
+    }
+  
+}
+
