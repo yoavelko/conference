@@ -32,8 +32,12 @@
 }
 .speaker-name{
     color: var(--red);
+    text-align: center;
+    font-size: 18px;
 }
-
+.speaker-background{
+    display: none;
+}
 .Yoav-slogan{
     /* font-size: var(--h2) !important; */
 }

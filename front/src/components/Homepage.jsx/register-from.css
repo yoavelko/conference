@@ -84,9 +84,7 @@
 }
 
 .submit-register:hover {
-  background: linear-gradient(17deg,
-      rgb(170, 100, 24) 0%,
-      rgb(155, 26, 69) 50%);
+  background: linear-gradient(100deg, rgba(90, 58, 119, 0.6) 0%, rgba(161,63,102, 0.6) 48%, rgba(246,70,81, 0.6) 100%);
   cursor: pointer;
 }
 
