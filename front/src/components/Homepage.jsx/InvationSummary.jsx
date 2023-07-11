@@ -17,7 +17,6 @@ function InvationSummary() {
             <a href='#registration' className="invation-summary-button-div">
                 <div>להרשמה </div>
             </a>
-            <br />
         </div>
     )
 }

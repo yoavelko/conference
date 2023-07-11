@@ -102,7 +102,6 @@ iframe {
 .all-icons-buttons{
     display: flex ;
     justify-content: space-evenly;
-    width: 60%;
 }
 .only-contact-us-icons{
     margin-left: 1vw;
