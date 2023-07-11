@@ -5,8 +5,8 @@ function Slider() {
   return (
     <div className="slider-container">
       <div className="link-to-mentors">
-        <h3>קהילת המנטורים</h3>
-        <p>
+        <h3 id="mentor-hp-header">קהילת המנטורים</h3>
+        <p id="mentor-hp-content">
           מטרתו לייצר עבור לוחם והלוחמת "אח גדול" בתעשיה , שילווה את הלוחם יעניק
           לו הכשרה מקצועית ואישית ויכין אותו בצורה המרבית   
           &nbsp;
