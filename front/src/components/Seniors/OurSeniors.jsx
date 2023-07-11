@@ -10,9 +10,6 @@ function OurSeniors() {
       <h1 className="our-seniors-title">הבוגרים שלנו</h1>
       <br />
       <div className="our-senior-opening-div">
-        <div className="our-seniors-openning">
-          קצת מהישגי הבוגרים שלנו שסיימו את הקורס...
-        </div>
       </div>
       <br />
       <br />

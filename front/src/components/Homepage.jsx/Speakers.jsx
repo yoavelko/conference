@@ -10,7 +10,7 @@ function Speakers() {
     <div className="speakers-container">
       <br />
       <br />
-      <h2 className="speakers-title"> הדוברים באירוע: </h2>
+      <h2 className="speakers-title"> הדוברים באירוע </h2>
       <br />
       <br />
       <div className="all-speakers">
