@@ -3,7 +3,7 @@ import "./schedule.css";
 function Schedule() {
   return (
     <div className="schedule-container">
-      <h2 className="schedule-title">לוז הכנס:</h2>
+      <h2 className="schedule-title">לוז הכנס</h2>
       <br />
       <div className="the-schedule">
         <div className="schedule-event-all">

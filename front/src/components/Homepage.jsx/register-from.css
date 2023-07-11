@@ -48,7 +48,7 @@
 }
 
 .label-spam {
-  margin-right: 3vw;
+  margin-right: 1vw;
   width: calc(95% - 13px);
   font-weight: bold;
   color: rgb(174, 173, 173);
@@ -56,17 +56,15 @@
 
 .submit-register {
   height: 35px;
-  background: rgb(241, 133, 18);
-  background: linear-gradient(110deg,
-      rgba(90, 58, 119, 1) 0%,
-      rgba(161, 63, 102, 1) 48%,
-      rgba(246, 70, 81, 1) 100%);
+  background-color: var(--red);
   width: 280px;
   border-radius: 8px;
-  border: solid white 1.5px;
+  border-style: solid;
+  border-color: var(--black); 
   color: white;
   font-weight: bold;
   font-size: large;
+  transition: .15s;
 
 }
 
@@ -85,8 +83,9 @@
 }
 
 .submit-register:hover {
-  background: linear-gradient(100deg, rgba(90, 58, 119, 0.6) 0%, rgba(161,63,102, 0.6) 48%, rgba(246,70,81, 0.6) 100%);
-  cursor: pointer;
+  background-color: var(--black);
+  border-color: var(--red) ;
+    cursor: pointer;
 }
 
 .space-holder {
@@ -135,13 +134,13 @@
   }
 
   .spam-checkbox {
-    width: 45vw;
+    width: 50vw;
     font-size: large;
   }
 
   .submit-register {
     height: 8vh;
-    border: 3px solid white;
+    border: 3px solid var(--black);
     border-radius: var(--radius);
     width: 50%;
   }

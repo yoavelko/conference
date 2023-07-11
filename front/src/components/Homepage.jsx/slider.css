@@ -11,6 +11,9 @@
     transform: translateX(-100%);
   }
 }
+.mentor-comunity-title{
+  font-size: var(--h2);
+}
 .logos-slide img {
   height: 150px;
   border-radius: 50%;
