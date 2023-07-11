@@ -3,6 +3,10 @@
     padding: 10%;
     line-height: 7vh;
     font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .links-to-address {
@@ -26,6 +30,7 @@
 .title-mini-location {
     font-size: var(--h2);
     color: var(--red);
+    margin-bottom: -2vh;
 }
 
 .adress-mini-location {
@@ -36,6 +41,18 @@
     display: flex;
     align-items: center;
     margin-left: 2vw;
+}
+
+#waze-hp-mentor-container {
+    background-color: rgb(112, 166, 236);
+    border-radius: var(--radius);
+    padding: 5%;
+    width: 240px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 
