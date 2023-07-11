@@ -35,6 +35,8 @@
 }
 #whatsapp-mentor {
     padding-top: 10%;
+    display: flex;
+    justify-content: center;
 }
 #whatsapp-mentor div:hover {
     cursor: pointer;
