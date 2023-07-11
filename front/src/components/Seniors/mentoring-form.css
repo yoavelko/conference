@@ -3,51 +3,61 @@
     padding-top: 5%;
 }
 
-.logos-mentoring-icon{
+.logos-mentoring-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-.mentoring-details{
+
+.mentoring-details {
     margin-right: 6vw;
     width: 90%;
     line-height: 35px;
 }
-.mentoring-title{
+
+.mentoring-title {
     font-size: var(--h2);
     font-weight: bold;
-    color:  var(--red);
+    color: var(--red);
     text-align: center;
 }
-.mentoring-subtitle{
+
+.mentoring-subtitle {
     font-weight: bold;
 }
-.mentoring-form-title{
+
+.mentoring-form-title {
     text-align: center;
     font-size: var(--h2);
     color: var(--red);
     font-weight: bold;
 }
-#mentoring-icons-container{
+
+#mentoring-icons-container {
     display: flex;
     flex-direction: column;
 }
+
 #whatsapp-mentor {
     padding-top: 10%;
     display: flex;
     justify-content: center;
 }
+
 #whatsapp-mentor div:hover {
     cursor: pointer;
 }
-.logos-line1{
+
+.logos-line1 {
     display: grid;
-    grid-template-columns: 15vw  15vw 15vw 15vw 15vw;
-    grid-template-rows: 15vw  15vw 15vw 15vw;
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw;
+    grid-template-rows: 15vw 15vw 15vw 15vw;
     grid-gap: 2vw;
+    margin-top: 2vh;
 }
-.image-logo-mentor{
+
+.image-logo-mentor {
     height: 15vw;
     width: 15vw;
     border-radius: 50%;
@@ -57,17 +67,23 @@
 .image-logo-mentor:hover {
     transform: scale(1.05);
 }
-#link-logo-mentoring{
+
+#link-logo-mentoring {
     height: 35px;
     border-radius: 50%;
     transition: 0.2s;
 }
-#link-logo-mentoring:hover{
+
+#whatsapp-mentor-container:hover #link-logo-mentoring {
+    transform: scale(1.1);
+}
+
+#mail-mentor-container:hover #link-logo-mentoring {
     transform: scale(1.1);
 }
 
 #whatsapp-mentor-container {
-    background-color: rgb(67,230,94);
+    background-color: rgb(67, 230, 94);
     border-radius: var(--radius);
     padding: 5%;
     width: 240px;
@@ -93,7 +109,7 @@
 }
 
 #whatsapp-mentor-container:hover {
-    background-color: rgb(67,230,94,0.5);
+    background-color: rgb(67, 230, 94, 0.5);
 }
 
 .mentoring-text {
@@ -104,23 +120,31 @@
 
 
 @media screen and (min-width: 700px) {
-#mentoring-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5%;
-}
-
-    .logos-line1{
-        grid-template-columns: 120px 120px 120px 120px 120px ;
-        grid-template-rows: 120px 120px 120px 120px ;
-       
+    #mentoring-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5%;
     }
-    .image-logo-mentor{
+
+    .logos-line1 {
+        grid-template-columns: 120px 120px 120px 120px 120px;
+        grid-template-rows: 120px 120px 120px 120px;
+
+    }
+
+    .image-logo-mentor {
         height: 120px;
         width: 120px;
 
     }
-   }
- 
+
+    #whatsapp-mentor-container {
+        width: 400px;
+    }
+
+    #mail-mentor-container {
+        width: 400px;
+    }
+}

@@ -107,7 +107,7 @@
     .invation-black-title {
         font-size: xx-large;
         line-height: 10vh;
-        margin-top: 10vh;
+        padding: 5%;
         height: auto;
     }
 
@@ -119,10 +119,6 @@
     .schedule-container {
         margin-top: 10vh;
         line-height: 4vh;
-    }
-
-    .schedule-opening {
-        padding-top: 15vh;
     }
 
     .schedule-title {
