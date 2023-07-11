@@ -99,18 +99,13 @@
 
 @media screen and (min-width: 768px) {
   .register-form-title {
-    font-size: 45px;
+    font-size: var(--h2);
     font-weight: bold;
   }
 
   .input-text-style {
     width: 50%;
     height: 6vh;
-  }
-
-  .register-form-title {
-    font-size: 45px;
-    font-weight: bold;
   }
 
   .input-text-style {
@@ -140,7 +135,7 @@
 
   .submit-register {
     height: 8vh;
-    border: 2px solid white;
+    border: 2px solid var(--red);
     border-radius: var(--radius);
     width: 50%;
   }

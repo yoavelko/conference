@@ -59,6 +59,18 @@
     background-color: rgb(112, 166, 236, 0.5);
 }
 
+#waze-hp-mentor-container:hover .mentoring-text {
+    transform: scale(1.05);
+}
+
+#google-hp-mentor-container:hover .mentoring-text {
+    transform: scale(1.05);
+}
+
+.mentoring-text {
+    transition: .2s;
+}
+
 #google-hp-mentor-container {
     background-color: rgb(251,188,5);
     border-radius: var(--radius);
