@@ -36,7 +36,8 @@
     font-size: 18px;
 }
 .speaker-background{
-    display: none;
+    /* display: none; */
+    text-align: center;
 }
 .Yoav-slogan{
     /* font-size: var(--h2) !important; */
