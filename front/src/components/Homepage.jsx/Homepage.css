@@ -107,7 +107,6 @@
         font-size: xx-large;
         line-height: 10vh;
         padding: 5%;
-        margin-top: 10vh;
         height: auto;
     }
 
@@ -119,10 +118,6 @@
     .schedule-container {
         margin-top: 10vh;
         line-height: 4vh;
-    }
-
-    .schedule-opening {
-        padding-top: 15vh;
     }
 
     .schedule-title {

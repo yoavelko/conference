@@ -66,7 +66,6 @@ function Header() {
               </Link>
             </div>
             <div id="spacer"></div>
-
           </div>
         </div>
       )}

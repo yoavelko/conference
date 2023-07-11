@@ -25,11 +25,12 @@
     justify-content: center;
     
 }
-#contact-header 
-{
+#contact-header {
     color: var(--red);
     font-size: var(--h1);
     font-weight: bolder;
+    text-align: center;
+    margin-top: 3vh;
 }
 
 #contact-links {
@@ -100,6 +101,8 @@ iframe {
 }
 .all-icons-buttons{
     display: flex ;
+    justify-content: space-evenly;
+    width: 60%;
 }
 .only-contact-us-icons{
     margin-left: 1vw;
@@ -163,6 +166,19 @@ iframe {
     #contact-row {
         display: flex;
         align-items: flex-end;
+    }
+
+    #contact-mentoring-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5%;
+        width: 100%;
+    }
+
+    #google-mentor-container, #waze-mentor-container {
+        width: 400px;
     }
   
 }

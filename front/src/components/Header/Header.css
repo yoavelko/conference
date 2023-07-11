@@ -141,6 +141,8 @@ a:visited {
         border-bottom: 2px solid var(--red);
         height: 12vh;
         background-color: var(--bars);
+        padding-right: 3vw;
+        padding-left: 3vw;
     }
 
     .header-links:hover {
