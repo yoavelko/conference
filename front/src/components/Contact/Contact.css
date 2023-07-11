@@ -150,6 +150,14 @@ iframe {
     text-align: center;
 }
 
+#whatsapp-mentor:hover .contact-scale-icons {
+    transform: scale(1.1);
+}
+
+.contact-scale-icons {
+    transition: .2s;
+}
+
 @media screen and (min-width: 500px) {
     #contact-row {
         width: 100%;
