@@ -62,7 +62,7 @@ function Schedule() {
                 <div className="info-event-mini">
                   <div>
                     {" "}
-                    עודד רביד- מנכ"ל בית הספר ללימודי המשך 
+                     עודד רביד- מנכ"ל בית הספר ללימודי המשך של הטכניון
                   </div>
                 </div>
               </div>
