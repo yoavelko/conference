@@ -5,16 +5,7 @@ function Slider() {
   return (
     <div className="slider-container">
       <div className="link-to-mentors">
-        <h2 className="mentor-comunity-title">קהילת המנטורים</h2>  
-        <p id="mentor-hp-content">
-          מטרתו לייצר עבור לוחם והלוחמת "אח גדול" בתעשיה , שילווה את הלוחם יעניק
-          לו הכשרה מקצועית ואישית ויכין אותו בצורה המרבית   
-          &nbsp;
-          <Link className="link-mentors" to="/seniors" state={{ location: "#mentors" }}>
-             למידע נוסף...
-        </Link>{" "}
-        </p>
-       
+        <h2 className="mentor-comunity-title">שילוב הבוגרים בחברות המובילות בתעשייה</h2>
       </div>
       <div className="only-the-slider" dir="ltr">
         <div className="logos">

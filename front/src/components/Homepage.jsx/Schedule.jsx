@@ -3,7 +3,7 @@ import "./schedule.css";
 function Schedule() {
   return (
     <div className="schedule-container">
-      <h2 className="schedule-title">לוז הכנס</h2>
+      <h2 className="schedule-title">לו"ז הכנס</h2>
       <br />
       <div className="the-schedule">
         <div className="schedule-event-all">
@@ -40,7 +40,7 @@ function Schedule() {
             <div className="schedule-event-all">
               <div className="arrow-triangle-mini"></div>
               <div className="schedule-event">
-                <div className="info-event-mini">רא"ל (במיל') גבי אשכנזי, CYBERPRO, שר החוץ לשעבר</div>
+                <div className="info-event-mini">רא"ל (במיל') גבי אשכנזי, שר החוץ לשעבר, CYBERPRO </div>
               </div>
             </div>
             <br />
@@ -50,7 +50,7 @@ function Schedule() {
                 <div className="info-event-mini">
                   <div>
                     <span>יואב מעוז- </span>
-                    <span>מנכ"ל ידידי עתידים ע"ר</span>
+                    <span>מנכ"ל עמותת ידידי עתידים ע"ר</span>
                   </div>
                 </div>
               </div>
@@ -85,8 +85,9 @@ function Schedule() {
             <div className="time-event">20:45-20:30 </div>
             <div> | </div>
             <div className="info-event">
-              <div>הצגת תוכנית</div>
-              <div>המנטורינג- התור שלנו לתרום</div>
+              <div>הצגת תוכנית&nbsp;
+              <span>המנטורים- התור שלנו לתרום</span>
+              </div>
             </div>
           </div>
         </div>

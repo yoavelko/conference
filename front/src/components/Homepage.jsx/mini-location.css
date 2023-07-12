@@ -102,6 +102,10 @@
     .link-adress-a:hover {
         transform: scale(2.1);
     }
+    .title-mini-location {
+        
+        margin-bottom: -5vh;
+    }
 
 
     .mini-location-container {
