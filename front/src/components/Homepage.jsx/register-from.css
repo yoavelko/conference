@@ -87,18 +87,24 @@
   border-color: var(--red) ;
     cursor: pointer;
 }
-.link-to-google-form{
-  display: flex;
-}
+
 .link-google-form{
   color: var(--red) !important;
+  text-align: center;
+}
+.link-to-google-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .space-holder {
   height: 6vw;
 }
-.persuasion-to-register{
-  padding: 0,10%,0,10%;
+.second-register-form-google{
+  display: flex;
+  justify-content: center;
 }
 
 #spam-checkbox {
