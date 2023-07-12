@@ -51,6 +51,7 @@ function Cyberpro() {
           <div id="image-video-container"></div>
           <div className="cyberpro-containers">
             <h1 className="cyberpro-main-header">אודות</h1>
+            <br />
             <div>
               CYBERPRO Israel הינה השלוחה הישראלית של CYBERPRO Global, אשר הוקמה
               על מנת לתת מענה לצורך הולך וגדל באנשי מקצוע בשוק הישראלי והרחבת
