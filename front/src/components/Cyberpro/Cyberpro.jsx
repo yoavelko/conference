@@ -256,12 +256,12 @@ function Cyberpro() {
             <h2 className="cyberpro-headers">הקורסים שלנו</h2>
             <div className="cyberpro-containers">
               <h3 className="cyberpro-small-headers">
-                קורס הכשרת Full Stack Development
+                קורס  Full Stack Development
               </h3>
               {fullstack ? (
                 <>
                     <div>
-                  קורס הכשרת Full stack development מכין את בוגריו לפתח מוצרים ,
+                  קורס  Full stack development מכין את בוגריו לפתח מוצרים ,
                   אתרים, אפליקציות ופלטפורמות בעזרת עבודה עם הטכנולוגיות
                   המתקדמות והנפוצות ביותר בתעשייה. הידע הנרכש בקורס מפתח פול
                   סטאק יסייע לך לפתח מוצר מרגע האפיון עד מוצר מוגמר. בהכשרה
@@ -279,7 +279,7 @@ function Cyberpro() {
                 </>
               ) : (
                 <div>
-                  קורס הכשרת Full stack development מכין את בוגריו לפתח מוצרים ,
+                  קורס  Full stack development מכין את בוגריו לפתח מוצרים ,
                   אתרים, אפליקציות ופלטפורמות בעזרת עבודה עם הטכנולוגיות
                   המתקדמות והנפוצות ביותר בתעשייה. הידע הנרכש בקורס מפתח פול
                   סטאק יסייע לך לפתח מוצר מרגע האפיון עד מוצר מוגמר. בהכשרה
