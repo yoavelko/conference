@@ -73,6 +73,9 @@
     border-radius: 50%;
     transition: 0.2s;
 }
+.dots-for-mentors{
+    margin-right: 3vw;
+}
 
 #whatsapp-mentor-container:hover #link-logo-mentoring {
     transform: scale(1.1);
