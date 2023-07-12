@@ -87,9 +87,18 @@
   border-color: var(--red) ;
     cursor: pointer;
 }
+.link-to-google-form{
+  display: flex;
+}
+.link-google-form{
+  color: var(--red) !important;
+}
 
 .space-holder {
   height: 6vw;
+}
+.persuasion-to-register{
+  padding: 0,10%,0,10%;
 }
 
 #spam-checkbox {

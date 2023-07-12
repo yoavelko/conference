@@ -40,7 +40,7 @@ function Schedule() {
             <div className="schedule-event-all">
               <div className="arrow-triangle-mini"></div>
               <div className="schedule-event">
-                <div className="info-event-mini">רא"ל (במיל') גבי אשכנזי, שר החוץ לשעבר, CYBERPRO </div>
+                <div className="info-event-mini">רא"ל (במיל') גבי אשכנזי, שר החוץ לשעבר </div>
               </div>
             </div>
             <br />

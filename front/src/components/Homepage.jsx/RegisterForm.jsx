@@ -40,6 +40,13 @@ function RegisterForm() {
     <div className="register-form-container" id="registration">
       <div id="register-effect"></div>
       <h2 className="register-form-title">רישום לכנס</h2>
+      <div className="link-to-google-form">
+      <div className="persuasion-to">
+      לקבלת גרפיקת מותאמת אישית לפרסום ברשתות החברתיות
+      </div>
+      <a className="link-google-form" href="https://docs.google.com/forms/d/e/1FAIpQLSe1jrCNEBLzdzHDDkJEX7xkxprxNdBEpTTXl8Y2uQK8uvAM_w/viewform" target="_blank" rel="noopener noreferrer"> &nbsp; לחץ כאן</a>
+      </div>
+      <br />
       <form id="form-container" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-text-style"
@@ -95,7 +102,7 @@ function RegisterForm() {
           <input
             className="input-text-style"
             type="text"
-            placeholder=" לינק לפרופיל לינקדאין"
+            placeholder=" קישור לפרופיל לינקדאין"
             {...register("linkedin")}
           />
         </div>
