@@ -78,8 +78,8 @@ function MentoringForm() {
         </div>
       </div>
       <br />
-      {/* <div className="logos-mentoring-icon">
-        <div className="logos-line1">
+      <div className="logos-mentoring-icon">
+        {/* <div className="logos-line1">
           {logo?.map((value, index) => {
             return (
               <div key={index} className="image-logo-mentor">
@@ -89,8 +89,8 @@ function MentoringForm() {
               </div>
             );
           })}
-        </div>
-      </div> */}
+        </div> */}
+      </div>
     </div>
   );
 }
