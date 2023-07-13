@@ -7,6 +7,7 @@
 .speakers-title{
     font-size: var(--h2);
     font-weight: bold;
+    color: var(--red);
 }
 .all-speakers{
     display: flex;
