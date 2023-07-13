@@ -40,7 +40,9 @@ function Schedule() {
             <div className="schedule-event-all">
               <div className="arrow-triangle-mini"></div>
               <div className="schedule-event">
-                <div className="info-event-mini">רא"ל (במיל') גבי אשכנזי, שר החוץ לשעבר </div>
+                <div className="info-event-mini">
+                  רא"ל (במיל') גבי אשכנזי, שר החוץ לשעבר{" "}
+                </div>
               </div>
             </div>
             <br />
@@ -60,10 +62,7 @@ function Schedule() {
               <div className="arrow-triangle-mini"></div>
               <div className="schedule-event">
                 <div className="info-event-mini">
-                  <div>
-                    {" "}
-                     עודד רביד- מנכ"ל בית הספר ללימודי המשך של הטכניון
-                  </div>
+                  <div> עודד רביד- מנכ"ל בית הספר ללימודי המשך של הטכניון</div>
                 </div>
               </div>
             </div>
@@ -75,18 +74,22 @@ function Schedule() {
           <div className="schedule-event">
             <div className="time-event">20:30-19:30 </div>
             <div> | </div>
-            <div className="info-event">פאנל - פרדוקס הג'וניורים</div>
+            <div className="info-event">
+              {" "}
+              פאנל – פרדוקס הג’וניורים בהנחיית יונתן בן עזרא
+            </div>
           </div>
         </div>
         <br />
         <div className="schedule-event-all">
           <div className="arrow-triangle"></div>
           <div className="schedule-event">
-            <div className="time-event">20:45-20:30 </div>
+            <div className="time-event">21:00-20:30 </div>
             <div> | </div>
             <div className="info-event">
-              <div>הצגת תוכנית&nbsp;
-              <span>המנטורים- התור שלנו לתרום</span>
+              <div>
+                הצגת תוכנית המנטורים – &nbsp;
+                <span> התור שלנו לתרום - ניר אלפנדרי, NTO, מיקרוסופט</span>
               </div>
             </div>
           </div>
@@ -95,13 +98,12 @@ function Schedule() {
         <div className="schedule-event-all">
           <div className="arrow-triangle"></div>
           <div className="schedule-event">
-            <div className="time-event">21:00-20:45 </div>
+            <div className="time-event">21:15-21:00 </div>
             <div> | </div>
-            <div className="info-event">הוקרה למנטורים פעילים</div>
+            <div className="info-event">דברי סיכום</div>
           </div>
         </div>
       </div>
-
     </div>
   );
 }

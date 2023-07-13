@@ -4,9 +4,11 @@ import axios from "axios";
 import { createVisitor } from "../../utils/VisitorRoute";
 import { useForm } from "react-hook-form";
 function RegisterForm() {
+  const [loader, setLoader] = useState(false)
   const [spam, setSpam] = useState(false);
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (e) => {
+    setLoader(true)
     if (e.linkedin && !e.linkedin.includes("http")) {
       e.linkedin = `https://${e.linkedin}`;
     }
@@ -30,10 +32,12 @@ function RegisterForm() {
           linkedin: "",
           spam: false,
         });
+        setLoader(false)
       })
       .catch((error) => {
         console.error(error);
         alert(error.response.data);
+        setLoader(false)
       });
   };
   return (
@@ -129,7 +133,16 @@ function RegisterForm() {
           </div>
         </label>
         <div id="submit-container">
-          <input className="submit-register" value={"הרשמה"} type="submit" />
+         {loader? 
+         <div class="wrapper">
+         <div class="circle"></div>
+         <div class="circle"></div>
+         <div class="circle"></div>
+         <div class="shadow"></div>
+         <div class="shadow"></div>
+         <div class="shadow"></div>
+     </div>
+         :<input className="submit-register" value={"הרשמה"} type="submit" />}
         </div>
       </form>
       <div className="space-holder"></div>
