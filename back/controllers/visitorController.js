@@ -34,6 +34,15 @@ exports.create = async (req, res) => {
         }
     }
 }
+exports.delete = async (req, res) => {
+    try{
+        const deletedPost = await Post.findByIdAndDelete(req.body._id)
+        res.status(200).json(deletedPost)
+    }
+    catch (err){
+      res.status(500).json(err.message)
+    }
+}
 
 exports.status = async (req, res) => {
     try {
