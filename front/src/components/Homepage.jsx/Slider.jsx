@@ -5,7 +5,7 @@ function Slider() {
   return (
     <div className="slider-container">
       <div className="link-to-mentors">
-        <h2 className="mentor-comunity-title">שילוב הבוגרים בחברות המובילות בתעשייה</h2>
+        <h2 className="mentor-comunity-title">שיתופי פעולה עם תוכנית לוחמים להייטק</h2>
       </div>
       <div className="only-the-slider" dir="ltr">
         <div className="logos">
