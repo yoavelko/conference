@@ -13,8 +13,7 @@ import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { FixedContext } from "../../contexts/FixedContext";
 import { useContext } from "react";
-import * as XLSX from 'xlsx';
-
+import * as XLSX from "xlsx";
 
 function Admin() {
   const [data, setData] = useState();
@@ -283,7 +282,15 @@ function Admin() {
     <>
       <div id="admin-container">
         <div id="function-buttons">
-          <button onClick={() => downloadExcel(data)}>הורדה לאקסל</button>
+          <button onClick={() => downloadExcel(data)}>
+            {" "}
+            <img
+              width="48"
+              height="48"
+              src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png"
+              alt="microsoft-excel-2019--v1"
+            />
+          </button>
           <button type="button" onClick={selectAll}>
             סמן הכל
           </button>
@@ -428,7 +435,7 @@ function Admin() {
                   <button type="button" onClick={() => denyMe(index)}>
                     סרב
                   </button>
-                  <button onClick={() => handleDelete(index)}>מחק</button>
+                  <button style={{backgroundColor: "red"}} onClick={() => handleDelete(index)}>מחק</button>
                 </tr>
               );
             })}
