@@ -62,7 +62,7 @@ function Schedule() {
               <div className="arrow-triangle-mini"></div>
               <div className="schedule-event">
                 <div className="info-event-mini">
-                  <div> עודד רביד- מנכ"ל בית הספר ללימודי המשך של הטכניון</div>
+                  <div> עודד רביב- מנכ"ל בית הספר ללימודי המשך של הטכניון</div>
                 </div>
               </div>
             </div>
@@ -72,7 +72,7 @@ function Schedule() {
         <div className="schedule-event-all">
           <div className="arrow-triangle"></div>
           <div className="schedule-event">
-            <div className="time-event">20:30-19:30 </div>
+            <div className="time-event shmonevaheti">20:30-19:30 </div>
             <div> | </div>
             <div className="info-event">
               {" "}
@@ -84,7 +84,7 @@ function Schedule() {
         <div className="schedule-event-all">
           <div className="arrow-triangle"></div>
           <div className="schedule-event">
-            <div className="time-event">21:00-20:30 </div>
+            <div className="time-event teshaagol">21:00-20:30 </div>
             <div> | </div>
             <div className="info-event">
               <div>

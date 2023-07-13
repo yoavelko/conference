@@ -32,6 +32,7 @@
     color: var(--red);
 }
 
+
 .schedule-event {
     display: flex;
 }
@@ -108,4 +109,24 @@
         margin-bottom: 0;
         font-size: 40px;
     }
+}
+
+
+@media screen and (max-width: 500px) {
+    .shmonevaheti{
+        width: 28vw;
+    }
+    .teshaagol{
+        width: 44vw;
+    }
+ 
+}
+@media screen and (max-width: 370px) {
+    .shmonevaheti{
+        width: 32vw;
+    }
+    .teshaagol{
+        width: 50vw;
+    }
+ 
 }
