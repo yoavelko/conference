@@ -50,6 +50,12 @@ function Admin() {
             return { ...v, selected: false }
         }))
     }
+    const handleDelete = (index) =>
+    {
+    const id = data[index]._id
+        console.log(id);
+        console.log(data[index]);
+    }
 
     async function approveSelected() {
         let temp = data.filter(v => v.selected && v.status !== 'approved').map(v => v._id)
@@ -289,6 +295,7 @@ function Admin() {
                                     <td>{value?.status}</td>
                                     <button type='button' onClick={() => approveMe(index)}>אשר</button>
                                     <button type='button' onClick={() => denyMe(index)}>סרב</button>
+                                    <button onClick={() => handleDelete(index)}>מחק</button>
                                 </tr>
                             )
                         })
