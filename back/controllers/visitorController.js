@@ -34,10 +34,10 @@ exports.create = async (req, res) => {
         }
     }
 }
-exports.delete = async (req, res) => {
+exports.deleteVisitor = async (req, res) => {
     try{
-        const deletedPost = await Post.findByIdAndDelete(req.body._id)
-        res.status(200).json(deletedPost)
+        const deleted = await Visitor.findByIdAndDelete(req.body._id)
+        res.status(200).json(deleted)
     }
     catch (err){
       res.status(500).json(err.message)
