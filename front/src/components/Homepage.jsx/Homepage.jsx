@@ -10,18 +10,19 @@ import Speakers from "./Speakers";
 import Intro from "./Intro";
 import Slider from "./Slider";
 
-
 function Homepage({ isNavigating, setIsNavigating }) {
-
-  const {fix, setFix} = useContext(FixedContext)
+  const { fix, setFix } = useContext(FixedContext);
 
   useEffect(() => {
-    setFix(true)
+    setFix(true);
     if (isNavigating) {
       window.scrollTo({ top: 5000 });
       setIsNavigating(false);
     }
   }, []);
+
+  
+  
 
   return (
     <div className="homepage-container">
