@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Admin.scss'
-import { getAllVisitors, multipleFieldFilter, statusBulkUpdate, statusUpdate } from '../../utils/VisitorRoute'
+import { getAllVisitors, multipleFieldFilter, statusBulkUpdate, statusUpdate, deleteVisitor } from '../../utils/VisitorRoute'
 import axios from 'axios';
 import { adminVerify } from '../../utils/AdminRoute';
 import { useNavigate } from 'react-router-dom';
@@ -53,8 +53,19 @@ function Admin() {
     const handleDelete = (index) =>
     {
     const id = data[index]._id
-        console.log(id);
-        console.log(data[index]);
+    const nameToDelete = data[index].name
+    let ans = prompt(`delete ${nameToDelete}? enter: "del" to finish`)
+    if (ans === "del")
+    {
+        axios.delete(deleteVisitor,{_id: id})
+        .then(()=>{
+            alert('המחיקה הושלמה!')
+        })
+        .catch(err =>
+            {
+                alert(err.response.data)
+            })
+    }
     }
 
     async function approveSelected() {
