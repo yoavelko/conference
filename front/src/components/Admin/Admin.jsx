@@ -282,7 +282,7 @@ function Admin() {
     <>
       <div id="admin-container">
         <div id="function-buttons">
-          <div><span>מספר רשומים:</span> <span>&nbsp; {data?.length}</span></div>
+        
           <button onClick={() => downloadExcel(data)}>
             {" "}
             <img
@@ -309,6 +309,7 @@ function Admin() {
           <button type="button" onClick={denieSelected}>
             לפסול את כל המסומנים
           </button>
+          <div className="num-of-acounts"><span>מספר רשומים:</span> <span>&nbsp; {data?.length}</span></div>
         </div>
         <div id="filter-buttons">
           <button type="button" onClick={clearFilter}>
