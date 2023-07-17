@@ -282,6 +282,7 @@ function Admin() {
     <>
       <div id="admin-container">
         <div id="function-buttons">
+          <div><span>מספר רשומים:</span> <span>&nbsp; {data.length}</span></div>
           <button onClick={() => downloadExcel(data)}>
             {" "}
             <img
@@ -411,7 +412,7 @@ function Admin() {
                   <td>{value?.name}</td>
                   <td>{value?.email}</td>
                   <td>{value?.phone}</td>
-                  <td>
+                  <td className={value?.association}>
                     {value?.association === "alumni"
                       ? "בוגר"
                       : value?.association === "partner" && "שותף"}
