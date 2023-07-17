@@ -282,7 +282,7 @@ function Admin() {
     <>
       <div id="admin-container">
         <div id="function-buttons">
-          <div><span>מספר רשומים:</span> <span>&nbsp; {data.length}</span></div>
+          <div><span>מספר רשומים:</span> <span>&nbsp; {data?.length}</span></div>
           <button onClick={() => downloadExcel(data)}>
             {" "}
             <img
