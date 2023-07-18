@@ -262,6 +262,7 @@ function Admin() {
       status: "",
       association: "",
       linkedin: false,
+      cooperation: false
     };
 
     if (e.target.form[0].checked) filter.status = e.target.form[0].value;
@@ -271,6 +272,8 @@ function Admin() {
     if (e.target.form[4].checked) filter.association = e.target.form[4].value;
     if (e.target.form[5].checked) filter.linkedin = true;
     else delete filter.linkedin;
+    if (e.target.form[6].checked) filter.cooperation = true;
+    else delete filter.cooperation;
     console.log(filter);
     axios
       .post(multipleFieldFilter, filter)
@@ -282,7 +285,7 @@ function Admin() {
     <>
       <div id="admin-container">
         <div id="function-buttons">
-        
+
           <button onClick={() => downloadExcel(data)}>
             {" "}
             <img
@@ -371,6 +374,10 @@ function Admin() {
               <input type="checkbox" onChange={complexFilter} />
               {" לינקדאין קיים"}
             </div>
+            <div>
+              <input type="checkbox" onChange={complexFilter} />
+              {"קיים ערך בחברה"}
+            </div>
           </form>
         </div>
         <table>
@@ -392,13 +399,12 @@ function Admin() {
                   key={index}
                   style={{
                     tableLayout: "fixed",
-                    backgroundColor: `${
-                      value?.status === "pending"
+                    backgroundColor: `${value?.status === "pending"
                         ? "orange"
                         : value?.status === "approved"
-                        ? "green"
-                        : value?.status === "denied" && "red"
-                    }`,
+                          ? "green"
+                          : value?.status === "denied" && "red"
+                      }`,
                   }}
                 >
                   <input
@@ -437,7 +443,7 @@ function Admin() {
                   <button type="button" onClick={() => denyMe(index)}>
                     סרב
                   </button>
-                  <button style={{backgroundColor: "red"}} onClick={() => handleDelete(index)}>מחק</button>
+                  <button style={{ backgroundColor: "red" }} onClick={() => handleDelete(index)}>מחק</button>
                 </tr>
               );
             })}

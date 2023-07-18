@@ -141,7 +141,7 @@ exports.complexFilter = async (req, res) => {
         if (req.body.linkedin && req.body.cooperation) {
             const filterRequest = await Visitor.find({
                 ...filterRequest,
-                cooperation: { $exists: true, $ne: null },
+                cooperation: { $exists: true, $regex: /[^ ]/ },
                 linkedin: { $exists: true, $ne: null }
             })
             return res.status(200).send(filterRequest)
@@ -159,7 +159,7 @@ exports.complexFilter = async (req, res) => {
         if (req.body.cooperation) {
             const filterResult = await Visitor.find({
                 ...filterRequest,
-                cooperation: { $exists: true, $ne: null }
+                cooperation: { $exists: true, $regex: /[^ ]/ }
             });
             return res.status(200).send(filterResult)
         }
