@@ -35,12 +35,12 @@ exports.create = async (req, res) => {
     }
 }
 exports.deleteVisitor = async (req, res) => {
-    try{
+    try {
         const deleted = await Visitor.findByIdAndDelete(req.body._id)
         res.status(200).json(deleted)
     }
-    catch (err){
-      res.status(500).json(err.message)
+    catch (err) {
+        res.status(500).json(err.message)
     }
 }
 
@@ -117,7 +117,8 @@ exports.complexFilter = async (req, res) => {
         const filterRequest = {
             status: "",
             association: "",
-            linkedin: ""
+            linkedin: "",
+            cooperation: ""
         }
         if (req.body.association) {
             if (req.body.association !== 'alumni' && req.body.association !== 'partner') {
@@ -137,15 +138,33 @@ exports.complexFilter = async (req, res) => {
             }
         }
         else delete filterRequest.status;
+        if (req.body.linkedin && req.body.cooperation) {
+            const filterRequest = await Visitor.find({
+                ...filterRequest,
+                cooperation: { $exists: true, $ne: null },
+                linkedin: { $exists: true, $ne: null }
+            })
+            return res.status(200).send(filterRequest)
+        }
         if (req.body.linkedin) {
             const filterResult = await Visitor.find({
                 ...filterRequest,
-                linkedin: {$exists: true, $ne: null}
+                linkedin: { $exists: true, $ne: null }
             });
             return res.status(200).send(filterResult)
         }
         else {
             delete filterRequest.linkedin;
+        }
+        if (req.body.cooperation) {
+            const filterResult = await Visitor.find({
+                ...filterRequest,
+                cooperation: { $exists: true, $ne: null }
+            });
+            return res.status(200).send(filterResult)
+        }
+        else {
+            delete filterRequest.cooperation;
             const filterResult = await Visitor.find(filterRequest);
             return res.status(200).send(filterResult)
         }
