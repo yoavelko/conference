@@ -132,7 +132,13 @@ function Admin() {
             emailTypeArr[0].publicKey
           )
           .then((res) => console.log(res))
-          .catch((err) => console.log({ err, email: value.email }));
+          .catch((err) => {
+            console.log({ err, email: value.email })
+            axios.post(statusUpdate, {
+              id: value.id,
+              status: 'pending'
+            })
+          });
       } else if (index === 1 || (index - 1) % 3 === 0) {
         await emailjs
           .send(
@@ -400,10 +406,10 @@ function Admin() {
                   style={{
                     tableLayout: "fixed",
                     backgroundColor: `${value?.status === "pending"
-                        ? "orange"
-                        : value?.status === "approved"
-                          ? "green"
-                          : value?.status === "denied" && "red"
+                      ? "orange"
+                      : value?.status === "approved"
+                        ? "green"
+                        : value?.status === "denied" && "red"
                       }`,
                   }}
                 >
