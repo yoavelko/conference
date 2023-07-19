@@ -2,7 +2,7 @@ const Visitor = require('../models/visitor');
 
 exports.fetchAll = async (req, res) => {
     try {
-        const data = await Visitor.find({});
+        const data = (await Visitor.find({})).reverse();
         res.send({ message: 'Success', data })
     }
     catch (err) {
