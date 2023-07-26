@@ -174,3 +174,16 @@ exports.complexFilter = async (req, res) => {
         res.status(500).send(err.message);
     }
 }
+
+exports.findDuplicates = async (req, res) => {
+    try {
+        const data = await Visitor.aggregate([
+            { $group: { _id: "$email", count: { $sum: 1 } } },
+            { $match: { count: { $gt: 1 } } }
+        ])
+        res.status(200).send(data)
+    }
+    catch (err) {
+        res.status(500).send(err.message);
+    }
+}

@@ -71,7 +71,10 @@ function RegisterForm() {
           className="input-text-style"
           type="text"
           placeholder="טלפון*"
-          {...register("phone", { required: true })}
+          {...register("phone", { required: true, validate: {
+            value: /^\+\d{3}-?\d{2}-?\d{3}-?\d{4}$|^\d{3}-?\d{3}-?\d{4}$/,
+            message: "Phone must be a valid israel number"
+          } })}
         />
         <input
           className="input-text-style"
