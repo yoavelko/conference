@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 function RegisterForm() {
   const [loader, setLoader] = useState(false)
   const [spam, setSpam] = useState(false);
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, formState: {errors} } = useForm();
   const onSubmit = (e) => {
     setLoader(true)
     if (e.linkedin && !e.linkedin.includes("http")) {
@@ -71,11 +71,12 @@ function RegisterForm() {
           className="input-text-style"
           type="text"
           placeholder="טלפון*"
-          {...register("phone", { required: true, validate: {
+          {...register("phone", { required: true, pattern: {
             value: /^\+\d{3}-?\d{2}-?\d{3}-?\d{4}$|^\d{3}-?\d{3}-?\d{4}$/,
             message: "Phone must be a valid israel number"
           } })}
         />
+        {errors && errors?.phone && errors.phone.message}
         <input
           className="input-text-style"
           type="email"
@@ -83,11 +84,12 @@ function RegisterForm() {
           {...register("email", {
             required: true,
             pattern: {
-              value:
-                /(?=.*.@.)(?=.*([.]com|[.]net|[.]co[.]il|[.]org|[.]gov|[.]ac[.]il|[.]muni[.]il))/,
+              value:/(?=.*.@.)(?=.*([.]com|[.]net|[.]co[.]il|[.]org|[.]gov|[.]ac[.]il|[.]muni[.]il))/,
+              message: "Email must be valid"
             },
           })}
         />
+        {errors && errors?.email && errors.email.message}
         <select
           name=""
           className="input-text-style"
