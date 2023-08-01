@@ -60,7 +60,7 @@ function Schedule() {
         <br />
         <div className="big-event">
           <div className="schedule-event-all">
-            <div className="arrow-triangle"></div>
+            <div className="arrow-triangle yonathan-triangle2"></div>
             <div className="schedule-event">
               <div className="time-event yonathan2"> 18:30-18:15 </div>
               <div> | </div>
