@@ -108,7 +108,7 @@ function Schedule() {
               <div className="schedule-event">
                 <div className="info-event-mini">
                   <div>
-                    נועה ליכטינג, Talent Acquisition Specialist, Playtika
+                    נועה ליכטיג, Talent Acquisition Specialist, Playtika
                   </div>
                 </div>
               </div>
