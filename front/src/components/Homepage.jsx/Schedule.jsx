@@ -9,28 +9,17 @@ function Schedule() {
         <div className="schedule-event-all">
           <div className="arrow-triangle"></div>
           <div className="schedule-event">
-            <div className="time-event">17:45-17:30 </div>
+            <div className="time-event">18:00-17:30 </div>
             <div> | </div>
-            <div className="info-event">התכנסות</div>
+            <div className="info-event">הזדמנות לפגוש את הבוגרים שלנו</div>
           </div>
         </div>
         <br />
-
-        <div className="schedule-event-all">
-          <div className="arrow-triangle"></div>
-          <div className="schedule-event">
-            <div className="time-event">18:30-17:45</div>
-            <div> | </div>
-            <div className="info-event"> הזדמנות לפגוש את הבוגרים שלנו</div>
-          </div>
-        </div>
-        <br />
-
         <div className="big-event">
           <div className="schedule-event-all">
             <div className="arrow-triangle"></div>
             <div className="schedule-event">
-              <div className="time-event"> 18:45-18:30 </div>
+              <div className="time-event"> 18:15-18:00 </div>
               <div> | </div>
               <div className="info-event">דברי פתיחה</div>
             </div>
@@ -71,9 +60,31 @@ function Schedule() {
         <br />
         <div className="big-event">
           <div className="schedule-event-all">
+            <div className="arrow-triangle"></div>
+            <div className="schedule-event">
+              <div className="time-event yonathan2"> 18:30-18:15 </div>
+              <div> | </div>
+              <div className="info-event "> הרצאה - "החיבור בין טכנולוגיה, עסקים ואנשים"</div>
+            </div>
+          </div>
+          <br />
+          <div className="more-details-event">
+            <div className="schedule-event-all">
+              <div className="arrow-triangle-mini"></div>
+              <div className="schedule-event">
+                <div className="info-event-mini">
+                אריאל נגרין, Azure Core Business Lead, Microsoft Southeast Europe
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div className="big-event">
+          <div className="schedule-event-all">
             <div className="arrow-triangle yonathan-triangle"></div>
             <div className="schedule-event">
-              <div className="time-event yonathan"> 19:15-18:45 </div>
+              <div className="time-event yonathan"> 19:00-18:30 </div>
               <div> | </div>
               <div className="info-event">
                 {" "}
@@ -127,7 +138,7 @@ function Schedule() {
           <div className="schedule-event-all">
             <div className="arrow-triangle yonathan-triangle"></div>
             <div className="schedule-event">
-              <div className="time-event yonathan"> 19:45-19:15</div>
+              <div className="time-event yonathan"> 19:30-19:00</div>
               <div> | </div>
               <div className="info-event">
                 פאנל – "יזמות, חדשנות ורוח לחימה" בהנחיית הילה ברנר, ובהשתתפות:
@@ -193,12 +204,12 @@ function Schedule() {
         <br />
         <div className="big-event">
           <div className="schedule-event-all">
-            <div className="arrow-triangle mentor-big-event-triangle"></div>
+            <div className="arrow-triangle "></div>
             <div className="schedule-event">
-              <div className="time-event mentor-big-event">20:15-19:45 </div>
+              <div className="time-event ">19:45-19:30 </div>
               <div> | </div>
               <div className="info-event">
-                הצגת תוכנית המנטורינג – התור שלנו לתרום
+             הרצאה – התור שלנו לתרום
               </div>
             </div>
           </div>
@@ -215,14 +226,31 @@ function Schedule() {
             <br />
           </div>
         </div>
-        <div className="schedule-event-all">
-          <div className="arrow-triangle"></div>
-          <div className="schedule-event">
-            <div className="time-event">20:30-20:15 </div>
-            <div> | </div>
-            <div className="info-event">דברי סיכום</div>
+        <br />
+        <div className="big-event">
+          <div className="schedule-event-all">
+            <div className="arrow-triangle "></div>
+            <div className="schedule-event">
+              <div className="time-event ">20:00-19:45 </div>
+              <div> | </div>
+              <div className="info-event">
+                הצגת תוכנית המנטורים ודברי סיכום
+              </div>
+            </div>
+          </div>
+          <br />
+          <div className="more-details-event">
+            <div className="schedule-event-all">
+              <div className="arrow-triangle-mini"></div>
+              <div className="schedule-event">
+                <div className="info-event-mini">
+                שני כדורי, מנהלת קשרי קהילה והשמה, CYBERPRO Israel                </div>
+              </div>
+            </div>
+            <br />
           </div>
         </div>
+        <br />
       </div>
     </div>
   );
